@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SEO 与 GEO 权威建设系统 | Eastlink Media</title>
+  <meta name="description" content="Eastlink Media 的 AI 权威建设系统：一套完整的 SEO 技术审查与生成式引擎优化（GEO）重建服务。让 ChatGPT、Deepseek、百度文心等 AI 系统优先引用您的品牌。" />
+  <meta name="keywords" content="GEO, 生成式引擎优化, SEO审计, AI引用, AI搜索, 实体权威, 技术SEO, Eastlink Media" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SEO 与 GEO 权威建设系统 | Eastlink Media" />
+  <meta property="og:description" content="不要在 AI 时代隐身。我们的两阶段审查与重建服务，将您的品牌工程化地植入 AI 的回答之中——在竞争对手之前抢占制高点。" />
+  <meta property="og:url" content="https://eastlinkmedia.com/zh/seo-geo-authority" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/geo-hero-bg.jpg" />
+
+  <!-- 结构化数据 Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO 与 GEO 权威建设系统",
+    "provider": {
+      "@type": "Organization",
+      "name": "Eastlink Media",
+      "url": "https://eastlinkmedia.com",
+      "email": "hello@eastlinkmedia.com"
+    },
+    "description": "一套完整的两阶段 SEO 技术审查与生成式引擎优化（GEO）重建服务，将您的品牌植入 ChatGPT、Deepseek、百度文心、Google SGE、Perplexity 等 AI 系统的回答之中。",
+    "serviceType": "SEO 与生成式引擎优化",
+    "areaServed": "全球",
+    "inLanguage": "zh-CN",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO 与 GEO 服务",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO 权威审计" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO 权威建设" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- 字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 图标 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- 样式 -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/geo.css" />
+  <link rel="stylesheet" href="css/zh-style.css" />
+  <link rel="stylesheet" href="css/zh-geo.css" />
+</head>
+<body class="is-loading theme-dark zh-page">
+
+  <!-- 预加载 -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__logo-e">E</span>
+      </div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+      <div class="preloader__count">0%</div>
+    </div>
+  </div>
+
+  <!-- 自定义光标 -->
+  <div id="cursor" class="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <span class="cursor__label"></span>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav id="nav" class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">E</span>
+        <span class="nav__logo-text">astlink<span class="nav__logo-accent"> Media</span></span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html#services" class="nav__link">服务</a></li>
+        <li><a href="index.html#work" class="nav__link">案例</a></li>
+        <li><a href="index.html#about" class="nav__link">关于我们</a></li>
+        <li><a href="index.html#contact" class="nav__link nav__link--cta">立即合作 →</a></li>
+      </ul>
+
+      <!-- 主题切换 -->
+      <button id="themeToggle" class="theme-toggle" aria-label="切换明暗模式">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb">
+            <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+            <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+          </span>
+        </span>
+        <span class="theme-toggle__label" id="themeLabel">深色</span>
+      </button>
+
+      <!-- 语言切换 -->
+      <a href="../seo-geo-authority.html" class="nav__lang-switch" title="Switch to English">EN</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="打开菜单">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div class="nav__mobile" id="mobileMenu">
+      <div class="nav__mobile-inner">
+        <ul class="nav__mobile-links">
+          <li><a href="index.html#services" class="nav__mobile-link">服务</a></li>
+          <li><a href="index.html#work" class="nav__mobile-link">案例</a></li>
+          <li><a href="index.html#about" class="nav__mobile-link">关于我们</a></li>
+          <li><a href="index.html#contact" class="nav__mobile-link">联系我们</a></li>
+        </ul>
+        <div class="nav__mobile-footer">
+          <div class="nav__mobile-theme">
+            <span>主题</span>
+            <button id="themeToggleMobile" class="theme-toggle theme-toggle--mobile" aria-label="切换明暗模式">
+              <span class="theme-toggle__track">
+                <span class="theme-toggle__thumb">
+                  <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                  <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                </span>
+              </span>
+              <span class="theme-toggle__label" id="themeLabelMobile">深色</span>
+            </button>
+          </div>
+          <a href="mailto:hello@eastlinkmedia.com" class="nav__mobile-email">hello@eastlinkmedia.com</a>
+          <a href="../seo-geo-authority.html" class="nav__mobile-lang">🌐 English</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== 首屏 HERO ===================== -->
+  <section id="geo-hero" class="geo-hero">
+    <div class="geo-hero__bg">
+      <img src="../images/geo-hero-bg.jpg" alt="" class="geo-hero__bg-img" aria-hidden="true" />
+      <div class="geo-hero__bg-overlay"></div>
+    </div>
+    <div class="geo-hero__orb geo-hero__orb--1" aria-hidden="true"></div>
+    <div class="geo-hero__orb geo-hero__orb--2" aria-hidden="true"></div>
+
+    <div class="container geo-hero__content">
+      <div class="geo-hero__eyebrow reveal-up">
+        <span class="geo-hero__eyebrow-dot"></span>
+        SEO 与 GEO 权威建设系统
+      </div>
+
+      <h1 class="geo-hero__heading reveal-up" data-delay="0.1">
+        在搜索中排名，<br />
+        <em>在 AI 回答里</em><br />
+        出现。
+      </h1>
+
+      <p class="geo-hero__sub reveal-up" data-delay="0.2">
+        大多数品牌仍在优化那十条蓝色链接。我们则致力于将您打造为<strong>被 AI 直接引用、主动总结、优先推荐的权威来源</strong>——全面覆盖 ChatGPT、Deepseek、百度文心、Google SGE、Perplexity，以及所有正在重塑买家发现品牌方式的 AI 问答引擎。
+      </p>
+
+      <div class="geo-hero__actions reveal-up" data-delay="0.3">
+        <a href="index.html#contact" class="btn btn--primary btn--lg">免费获取 GEO 诊断报告 →</a>
+        <a href="#what-is-geo" class="btn btn--ghost btn--lg geo-scroll-btn">什么是 GEO？<i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+
+      <!-- AI 平台引用标签 -->
+      <div class="geo-hero__platforms reveal-up" data-delay="0.4">
+        <span class="geo-platform-label">您的品牌将被以下 AI 引用：</span>
+        <div class="geo-platforms">
+          <div class="geo-platform"><i class="fa-solid fa-robot"></i> ChatGPT</div>
+          <div class="geo-platform"><i class="fa-solid fa-microchip"></i> Deepseek</div>
+          <div class="geo-platform"><i class="fa-brands fa-google"></i> Google SGE</div>
+          <div class="geo-platform"><i class="fa-solid fa-magnifying-glass"></i> Perplexity</div>
+          <div class="geo-platform"><i class="fa-brands fa-microsoft"></i> Copilot</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="geo-hero__scroll" aria-hidden="true">
+      <div class="geo-hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== 问题陈述 THE SHIFT ===================== -->
+  <section id="what-is-geo" class="geo-problem section">
+    <div class="container">
+      <div class="geo-problem__grid">
+        <div class="geo-problem__left reveal-up">
+          <div class="section-overtitle">变局已经来临</div>
+          <h2 class="section-title">搜索已变，<br /><em>多数品牌未变。</em></h2>
+          <p class="geo-problem__body">ChatGPT、Deepseek、百度文心、Google AI 概览……这些 AI 问答引擎已不再单纯对网页进行排名。它们会<strong>主动筛选信息源、合成答案，并点名引用品牌</strong>。若您的品牌不在这一引用池内，对于那些日益增多、从不点击传统搜索结果的高意向买家而言，您的品牌即是隐形。</p>
+          <p class="geo-problem__body">这并非未来问题——它正在当下发生。而绝大多数品牌的 GEO 存在感为零。建立可防御的 AI 权威地位的窗口期有限，不会永远敞开。</p>
+        </div>
+        <div class="geo-problem__right reveal-up" data-delay="0.15">
+          <div class="geo-stat-stack">
+            <div class="geo-stat-card geo-stat-card--warn">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">60%</div>
+                <div class="geo-stat-card__label">的搜索在 AI 直接回答中完成，用户无需点击链接</div>
+              </div>
+            </div>
+            <div class="geo-stat-card geo-stat-card--warn">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-chart-line-down"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">↓ 37%</div>
+                <div class="geo-stat-card__label">自 Google AI 概览上线以来，自然搜索点击率的下滑幅度</div>
+              </div>
+            </div>
+            <div class="geo-stat-card geo-stat-card--good">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">3×</div>
+                <div class="geo-stat-card__label">通过 AI 引用发现品牌的用户，其购买意向是传统搜索用户的 3 倍</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GEO 是什么 ===================== -->
+  <section class="geo-explainer section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">生成式引擎优化</div>
+        <h2 class="section-title reveal-up">GEO：SEO<br /><em>的下一个前沿。</em></h2>
+      </div>
+
+      <div class="geo-explainer__layout">
+        <div class="geo-explainer__visual reveal-up">
+          <img src="../images/geo-ai-ecosystem.jpg" alt="AI 搜索生态系统图示：品牌如何在 ChatGPT、Google、Perplexity、Deepseek 中被引用" class="geo-explainer__img" loading="lazy" />
+          <div class="geo-explainer__img-caption">AI 引擎如何决定引用哪些品牌</div>
+        </div>
+        <div class="geo-explainer__content reveal-up" data-delay="0.15">
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">01</div>
+            <div class="geo-pillar__body">
+              <h3>实体权威性</h3>
+              <p>AI 引擎通过"实体"理解世界——品牌、人物、地点、概念。我们致力于将您的品牌打造为知识图谱中定义清晰、被广泛引用的权威实体，使 AI 模型精确识别您的身份、业务及可信度。</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">02</div>
+            <div class="geo-pillar__body">
+              <h3>AI 可抓取的内容架构</h3>
+              <p>AI 模型偏好结构清晰、权威可信的内容。我们重构您的站点，使每一页面均采用"AI 检索语言"：清晰的语义 HTML、Schema 标记、FAQ 结构，以及可供大型语言模型逐字引用的事实性陈述。</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">03</div>
+            <div class="geo-pillar__body">
+              <h3>引用信号网络</h3>
+              <p>在 AI 输出中被引用的前提，是在全网范围内被广泛引用——权威媒体、行业论坛、垂直数据库、合作伙伴网站。我们构建站外引用生态，向 AI 引擎传递明确信号：您的品牌是所在领域的权威来源。</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">04</div>
+            <div class="geo-pillar__body">
+              <h3>技术基础设施</h3>
+              <p>速度缓慢、技术架构混乱的网站，无法积累 AI 权威——此为铁律。Core Web Vitals、可爬取性、结构化数据、页面加载速度，是每项 GEO 战略不可妥协的基石。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 服务：审计 + 建设 ===================== -->
+  <section id="service" class="geo-service section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">我们的工作方式</div>
+        <h2 class="section-title reveal-up">两个阶段，<br /><em>一次彻底蜕变。</em></h2>
+        <p class="section-sub reveal-up" data-delay="0.1">我们不会将 GEO 策略搭建于破损的地基之上。我们先行彻底审计，再以精准的方式重建——使每一层级均产生复利效应。</p>
+      </div>
+
+      <!-- 阶段一：审计 -->
+      <div class="geo-phase geo-phase--audit reveal-up">
+        <div class="geo-phase__header">
+          <div class="geo-phase__badge geo-phase__badge--1">阶段 01</div>
+          <h3 class="geo-phase__title">GEO 权威审计</h3>
+          <p class="geo-phase__sub">我们从技术、结构、竞争三个维度，对您当前的 SEO 与 GEO 表现进行全面审计——精准定位阻碍您获得 AI 引用与传统搜索排名的根本问题。</p>
+        </div>
+
+        <div class="geo-phase__body">
+          <div class="geo-phase__visual reveal-up" data-delay="0.1">
+            <img src="../images/geo-audit-dashboard.jpg" alt="SEO 与 GEO 审计仪表板，展示改造前后评分对比" class="geo-phase__img" loading="lazy" />
+            <div class="geo-phase__score-overlay">
+              <div class="geo-score-pill geo-score-pill--before">
+                <span class="geo-score-pill__num">32</span>
+                <span class="geo-score-pill__label">改造前</span>
+              </div>
+              <div class="geo-score-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <div class="geo-score-pill geo-score-pill--after">
+                <span class="geo-score-pill__num">88</span>
+                <span class="geo-score-pill__label">改造后</span>
+              </div>
+              <div class="geo-score-context">/100 SEO & GEO 综合评分 · China Fulfillment</div>
+            </div>
+          </div>
+
+          <div class="geo-phase__deliverables">
+            <h4 class="geo-phase__deliverables-title">您将收到：</h4>
+            <ul class="geo-audit-list">
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-file-magnifying-glass"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>全面技术 SEO 审计</strong>
+                  <span>Core Web Vitals、爬取错误、索引状态、规范化处理、移动端优先评估——每项技术信号评分并按优先级排列。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>AI 可见性与引用分析</strong>
+                  <span>我们用您的品牌及类目关键词查询 5+ 大主流 AI 引擎，绘制您的引用现状图谱——您的品牌在何处出现、竞品在何处被引用、二者之间的核心差距。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-sitemap"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>实体与知识图谱评估</strong>
+                  <span>您的品牌作为"实体"的定义有多清晰？我们评估结构化数据、百科/Wikidata 存在感，以及跨平台实体一致性。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-code"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Schema 与结构化数据审查</strong>
+                  <span>全面梳理所有 Schema 机会——Organization、Product、FAQ、HowTo、Article、BreadcrumbList，并按实施优先级和影响力评分。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-link"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>引用来源与外链档案分析</strong>
+                  <span>质量重于数量：我们评估您的站外引用权威性——识别哪些媒体、目录及网络资产正在构建（或损害）您的 AI 可信度。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-file-lines"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>内容结构与 AI 可读性评估</strong>
+                  <span>您的内容结构，能让 AI 引擎提取、引用、推荐吗？我们以 AI 检索最佳实践为标准，逐页诊断。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-chart-bar"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>竞品 GEO 差距报告</strong>
+                  <span>竞争对手在您所在细分市场赢得 AI 引用的全景分析——以及您需要抢占的精确话题和内容形式。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-road"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>优先级行动路线图</strong>
+                  <span>清晰可执行的 90 天路线图——快赢机会、中期建设、战略重点，可直接交给您的团队执行，或交回给我们进入阶段二。</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="geo-phase__cta">
+              <a href="index.html#contact" class="btn btn--primary">从审计开始 →</a>
+              <span class="geo-phase__cta-note">10 个工作日内交付 · 可单独执行，亦可与阶段二联动</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段二：建设 -->
+      <div class="geo-phase geo-phase--build reveal-up">
+        <div class="geo-phase__header">
+          <div class="geo-phase__badge geo-phase__badge--2">阶段 02</div>
+          <h3 class="geo-phase__title">GEO 权威建设</h3>
+          <p class="geo-phase__sub">我们不只给您一张地图——我们亲自上路。每一项修复、每一次架构重建、每一篇 AI 优化内容、每一个引用布局，全部由我们执行到底。您只需一次需求沟通，我们持续深耕落地。</p>
+        </div>
+
+        <div class="geo-phase__body geo-phase__body--reverse">
+          <div class="geo-phase__visual reveal-up" data-delay="0.1">
+            <img src="../images/geo-audit-build.jpg" alt="两阶段审计与建设流程图示" class="geo-phase__img" loading="lazy" />
+            <div class="geo-build-badges">
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> 技术问题全部修复</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> Schema 结构化数据部署</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> 实体权威信号建设</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> AI 优化内容发布</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> 引用网络精准布局</div>
+            </div>
+          </div>
+
+          <div class="geo-phase__deliverables">
+            <h4 class="geo-phase__deliverables-title">我们将为您构建：</h4>
+            <ul class="geo-audit-list">
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-wrench"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>全面技术 SEO 重建</strong>
+                  <span>审计发现的每一项问题逐一解决：页面速度、Core Web Vitals、爬取预算、规范化、Sitemap、robots.txt、内链结构——重建至通过所有性能门槛。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-database"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Schema 与结构化数据部署</strong>
+                  <span>跨站点完整 Schema 部署——类型明确、经过验证、实时上线。我们不用模板套用；每一个 Schema 块都根据您的品牌和内容语境定制。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-fingerprint"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>实体权威工程化建设</strong>
+                  <span>在知识网络中构建您的品牌实体：结构化"关于我们"页面、一致的 NAP 信号、Wikidata 词条、行业目录收录、跨站点实体一致性建立。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>AI 优化内容创作</strong>
+                  <span>以 AI 引擎偏好的格式撰写并发布内容：权威指南、FAQ 专页、对比分析、事实性参考内容——AI 模型会直接从中提取引用。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>引用网络建设</strong>
+                  <span>在权威媒体、垂直目录、行业论坛和权威站点进行战略性内容布局，向 AI 引擎发出话题专业性信号——白帽操作，经得起时间检验。</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-chart-mixed"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>每月 GEO 监测与报告</strong>
+                  <span>追踪您的 AI 引用频率、在 AI 回答中的位置、自然排名变化和 Core Web Vitals——配以清晰的月度报告与战略建议。</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="geo-phase__cta">
+              <a href="index.html#contact" class="btn btn--primary">启动完整建设 →</a>
+              <span class="geo-phase__cta-note">审计已包含在内 · 支持持续月度合作或项目制</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 真实案例 CASE STUDY ===================== -->
+  <section class="geo-case section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">真实结果</div>
+        <h2 class="section-title reveal-up">从 AI 看不见，<br /><em>到被 AI 主动引用。</em></h2>
+      </div>
+
+      <div class="geo-case__card reveal-up">
+        <div class="geo-case__left">
+          <div class="geo-case__client-label">案例研究</div>
+          <h3 class="geo-case__client">China Fulfillment</h3>
+          <p class="geo-case__sector"><i class="fa-solid fa-boxes-stacking"></i> 货运代理与仓储履约服务</p>
+
+          <div class="geo-case__challenge">
+            <h4>面临的挑战</h4>
+            <p>China Fulfillment 的业务实力扎实，但网络存在感在技术层面千疮百孔。其网站在 PageSpeed 与 SEO 综合评分中仅获 32/100：加载缓慢、缺乏结构化数据、内容架构单薄，且无任何 AI 引用记录——在一个高意向、快速增长的关键词类目中，对所有 AI 引擎而言均为隐形状态。</p>
+          </div>
+
+          <div class="geo-case__approach">
+            <h4>我们的方法</h4>
+            <ul>
+              <li>完整技术审计，识别出 47 项严重问题和 120+ 项中级问题</li>
+              <li>全面 Core Web Vitals 重建——LCP 从 8.4 秒压缩至 1.2 秒以内</li>
+              <li>跨服务页面、FAQ 与品牌实体的 Schema 全面部署</li>
+              <li>内容架构重构，发布 AI 可抓取的权威指南</li>
+              <li>在 30+ 行业媒体与目录构建实体权威信号</li>
+              <li>针对 60+ 货运与仓储查询类型制作 GEO 优化 FAQ 内容</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="geo-case__right">
+          <img src="../images/work-chinafulfillment.jpg" alt="China Fulfillment 网站 SEO 与 GEO 重建后效果" class="geo-case__img" loading="lazy" />
+
+          <div class="geo-case__results">
+            <div class="geo-case__result-title">项目成果</div>
+            <div class="geo-case__metrics">
+              <div class="geo-metric">
+                <div class="geo-metric__before"><span class="score score--before">32</span><span class="geo-metric__label">改造前评分</span></div>
+                <div class="geo-metric__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="geo-metric__after"><span class="score score--after">88</span><span class="geo-metric__label">改造后评分</span></div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">8.4s <i class="fa-solid fa-arrow-right"></i> 1.2s</div>
+                <div class="geo-metric__label">页面加载时间（LCP）</div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">60+</div>
+                <div class="geo-metric__label">现已被引用的 AI 查询类型</div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">47</div>
+                <div class="geo-metric__label">严重技术问题全部解决</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 对比表格 COMPARISON ===================== -->
+  <section class="geo-compare section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Eastlink Media 的差异</div>
+        <h2 class="section-title reveal-up">SEO 服务，<br /><em>并非生而平等。</em></h2>
+      </div>
+
+      <div class="geo-compare__table reveal-up">
+        <div class="geo-compare__header">
+          <div class="geo-compare__col geo-compare__col--feature"></div>
+          <div class="geo-compare__col geo-compare__col--theirs">
+            <div class="geo-compare__col-label">普通 SEO 机构</div>
+          </div>
+          <div class="geo-compare__col geo-compare__col--ours">
+            <div class="geo-compare__col-label">Eastlink Media</div>
+            <div class="geo-compare__col-badge">是否具备 GEO 能力？</div>
+          </div>
+        </div>
+
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">技术 SEO 审计</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> 基础级</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 全面深入</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Core Web Vitals 修复</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> 仅提供建议</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 全程执行落地</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Schema 标记</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> 基础模板套用</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 定制化、经验证、全面覆盖</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">AI 引用分析</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> 不提供</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 5 大引擎全面审计</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">实体权威建设</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> 不提供</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 知识图谱全面工程化</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">GEO 优化内容</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> 不提供</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 由我们撰写并发布</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">每月 AI 引用追踪</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> 不提供</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 包含在月度服务中</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">与付费及联盟渠道整合</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> 各自为政</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> 全渠道深度整合</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 适合谁 WHO IS THIS FOR ===================== -->
+  <section class="geo-who section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">这适合您吗？</div>
+        <h2 class="section-title reveal-up">为准备好<br /><em>被发现的品牌而生。</em></h2>
+      </div>
+
+      <div class="geo-who__grid">
+        <div class="geo-who__card geo-who__card--yes reveal-up">
+          <div class="geo-who__card-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>如果您符合以下情况，这正适合您……</h3>
+          <ul>
+            <li>您有自然搜索流量，但眼看着 AI 正在蚕食您的点击</li>
+            <li>您从未在 ChatGPT 或 Perplexity 的行业问答中出现过</li>
+            <li>您的网站技术陈旧——加载慢、结构散、爬取难</li>
+            <li>竞品已出现在 AI 回答中，而您完全缺席</li>
+            <li>您追求可产生复利效应的有机权威，而非仅靠投放获得的短期曝光</li>
+            <li>您处于电商、SaaS、专业服务或 B2B 赛道</li>
+            <li>您在追求长期品牌资产，同时兼顾效果渠道的增长</li>
+          </ul>
+        </div>
+
+        <div class="geo-who__card geo-who__card--no reveal-up" data-delay="0.1">
+          <div class="geo-who__card-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+          <h3>如果您是以下情况，可能不适合……</h3>
+          <ul>
+            <li>您需要即时结果，不愿意投入 3–6 个月的周期</li>
+            <li>您只寻求低成本的批量内容，而无战略基础投入</li>
+            <li>您不愿意在网站上进行任何技术层面的改动</li>
+            <li>您把 SEO 视为成本而非复利资产</li>
+          </ul>
+          <p class="geo-who__card-note">GEO 权威是一种长期资产。我们寻找真正理解这一点的合作伙伴——那些想要构建一套无需日日投广告预算、也能持续运转的增长引擎的品牌。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 时间轴 PROCESS TIMELINE ===================== -->
+  <section class="geo-timeline section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">合作周期</div>
+        <h2 class="section-title reveal-up">从初次沟通，<br /><em>到被 AI 引用。</em></h2>
+      </div>
+
+      <div class="geo-timeline__track">
+        <div class="geo-timeline__step reveal-up" data-delay="0">
+          <div class="geo-timeline__step-num">01</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 1 周</div>
+            <h3>发现沟通与项目简报</h3>
+            <p>我们深入了解您的品牌、市场、竞争格局与当前自然流量现状，并为您提供清晰的项目范围、时间节点与交付物清单。</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.1">
+          <div class="geo-timeline__step-num">02</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 2–3 周</div>
+            <h3>深度审计</h3>
+            <p>技术爬取、AI 引用图谱绘制、实体分析、内容评估、竞品差距研究——每项发现均完成评分、优先级排列与文档记录。</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.2">
+          <div class="geo-timeline__step-num">03</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 4 周</div>
+            <h3>审计报告交付与路线图</h3>
+            <p>您收到完整审计报告和 90 天行动路线图。仅需审计的客户在此阶段完成——拿到清晰计划交给自己团队执行，或随时回来启动阶段二。</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.3">
+          <div class="geo-timeline__step-num">04</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 2–3 个月</div>
+            <h3>技术全面重建</h3>
+            <p>执行每一项关键修复：Core Web Vitals、Schema、可爬取性、站点架构与结构化数据——全部重建、测试并验证通过。</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.4">
+          <div class="geo-timeline__step-num">05</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 3–6 个月</div>
+            <h3>GEO 与内容建设</h3>
+            <p>AI 优化内容持续发布，实体信号在全网扩展布局，引用网络逐步建立——月复一月，您的品牌 AI 引用版图持续扩大。</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.5">
+          <div class="geo-timeline__step-num">06</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">第 6 个月起</div>
+            <h3>权威建立与复利效应</h3>
+            <p>第六个月起，复利效应开始显现——AI 引用频次持续增加，自然流量恢复并增长，形成竞争对手短期内难以复制的可防御权威位置。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 常见问题 FAQ ===================== -->
+  <section class="geo-faq section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">常见问题</div>
+        <h2 class="section-title reveal-up">您想知道的，<br /><em>都在这里。</em></h2>
+      </div>
+
+      <div class="geo-faq__list">
+        <div class="geo-faq__item reveal-up">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>什么是生成式引擎优化（GEO）？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>GEO 是一种优化品牌与内容的实践，旨在让您出现在 AI 生成的答案中，并被其引用。传统 SEO 的目标是 Google 的十条排名链接，而 GEO 的目标则是出现在这些链接之上的 AI 合成答案（以及 ChatGPT、Deepseek 等独立 AI 工具）。它涉及实体权威建设、结构化数据、AI 可读内容架构，以及向 AI 模型传递明确信号的引用网络——使其识别您的品牌为所在领域的权威来源。</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.05">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>我可以只做审计，不做完整建设吗？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>完全可以。GEO 权威审计是一项完全独立的服务。您将收到完整的技术与 GEO 审计、AI 引用分析、实体评估，以及优先级行动路线图——之后您可以交给自己的团队执行。许多客户先从审计入手，全面了解自己的定位，待时机成熟后再回来启动阶段二加速推进。</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.1">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>多久能看到 GEO 的效果？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>技术修复（Core Web Vitals、Schema、页面速度）在实施后 4–8 周内即可改善相关信号。GEO 引用（即在 AI 引擎中被提及）通常会随着实体权威与内容版图的建立，在 3–4 个月后开始显现。有意义的、可复利的 AI 引用存在感一般需要 6 个月。与付费广告不同，这是一种复利资产——它持续增长，无需持续的预算投入。</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.15">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>GEO 会取代传统 SEO 吗？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>不会——GEO 是对传统 SEO 的延伸和升级。传统搜索排名与 AI 引用并不互斥；事实上，扎实的技术 SEO 基础是有效 GEO 的前提条件。我们构建的是双重用途的基础设施：既在传统搜索中排名，又在 AI 生成的答案中被引用。两者的信号互相强化。在 2026 年及以后胜出的品牌，是那些同时掌控两个渠道的品牌。</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.2">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>你们针对哪些 AI 引擎进行优化？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>我们的审计与优化覆盖五大主流 AI 问答引擎：ChatGPT（含网页浏览与购物模式）、Google SGE / AI 概览、Perplexity AI、Deepseek 及 Microsoft Copilot。我们的实体与内容策略与模型无关——让 ChatGPT 引用您的同一套权威信号，同样适用于每一个爬取和索引网络的大型语言模型。</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.25">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>你们需要访问我们的网站后台吗？</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>审计阶段无需。我们可以通过前端结合 Screaming Frog、Ahrefs、PageSpeed Insights 等工具完成大部分分析。建设阶段则需要适当的 CMS 访问权限（Shopify、WordPress、Webflow 等），以便实施技术修复和 Schema 部署。我们熟悉所有主流平台，并有清晰的权限交接流程。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 行动召唤 CTA ===================== -->
+  <section class="geo-cta section">
+    <div class="container">
+      <div class="geo-cta__inner reveal-up">
+        <div class="geo-cta__orb geo-cta__orb--1" aria-hidden="true"></div>
+        <div class="geo-cta__orb geo-cta__orb--2" aria-hidden="true"></div>
+
+        <div class="geo-cta__eyebrow">准备好让 AI 引用您的品牌了吗？</div>
+        <h2 class="geo-cta__heading">先从一次免费的<br /><em>GEO 诊断通话开始。</em></h2>
+        <p class="geo-cta__sub">我们会在通话中直接审查您当前的 AI 可见性——没有幻灯片，没有销售话术。只是清晰地呈现您的现状，以及需要做什么才能被 AI 引用。全程 30 分钟。</p>
+
+        <div class="geo-cta__actions">
+          <a href="index.html#contact" class="btn btn--primary btn--lg">预约免费诊断通话 →</a>
+          <a href="mailto:hello@eastlinkmedia.com" class="btn btn--ghost btn--lg">hello@eastlinkmedia.com</a>
+        </div>
+
+        <div class="geo-cta__trust">
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-shield-check"></i> 无任何义务</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-clock"></i> 仅需 30 分钟</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-chart-line"></i> 即时获得洞察</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-lock"></i> 可签署保密协议</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 页脚 FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <span class="nav__logo-mark">E</span>astlink Media
+          </a>
+          <p class="footer__tagline">SEO、GEO 与全栈数字增长——以复利为目标，精心构建。</p>
+        </div>
+        <div class="footer__nav-cols">
+          <div class="footer__nav-col">
+            <h4>服务</h4>
+            <ul>
+              <li><a href="seo-geo-authority.html">SEO 与 GEO 权威建设</a></li>
+              <li><a href="index.html#services">全链路电商战略</a></li>
+              <li><a href="index.html#services">联盟营销体系建设</a></li>
+              <li><a href="index.html#services">效果广告投放</a></li>
+              <li><a href="index.html#services">品牌创意与视觉</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>公司</h4>
+            <ul>
+              <li><a href="index.html#about">关于我们</a></li>
+              <li><a href="index.html#work">精选案例</a></li>
+              <li><a href="index.html#contact">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>联系方式</h4>
+            <ul>
+              <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 Eastlink Media. 保留所有权利。</div>
+        <div class="footer__legal">
+          <a href="#">隐私政策</a>
+          <a href="#">服务条款</a>
+        </div>
+      </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="返回顶部">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/geo.js"></script>
+  <script src="js/zh-main.js"></script>
+</body>
+</html>

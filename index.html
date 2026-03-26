@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Eastlink Media • Ecommerce Growth & Creative Digital Agency</title>
+  <meta name="description" content="Eastlink Media is a performance-driven creative agency specialising in ecommerce growth, affiliate marketing, brand strategy, and digital solutions." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eastlink Media • Ecommerce Growth & Creative Digital Agency" />
+  <meta property="og:description" content="Performance-driven creative agency specialising in ecommerce growth, affiliate marketing, and digital solutions." />
+  <meta property="og:url" content="https://eastlinkmedia.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="is-loading theme-dark">
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__logo-e">E</span>
+      </div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+      <div class="preloader__count">0%</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <span class="cursor__label"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav" class="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" data-scroll-to="hero">
+        <span class="nav__logo-mark">E</span>
+        <span class="nav__logo-text">astlink<span class="nav__logo-accent"> Media</span></span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#services" class="nav__link" data-scroll-to="services">Services</a></li>
+        <li><a href="seo-geo-authority.html" class="nav__link nav__link--geo">SEO &amp; GEO ✦</a></li>
+        <li><a href="#work" class="nav__link" data-scroll-to="work">Work</a></li>
+        <li><a href="#about" class="nav__link" data-scroll-to="about">About</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta" data-scroll-to="contact">Let's talk →</a></li>
+      </ul>
+
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb">
+            <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+            <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+          </span>
+        </span>
+        <span class="theme-toggle__label" id="themeLabel">Dark</span>
+      </button>
+
+      <!-- Language Switch -->
+      <a href="zh/index.html" class="nav__lang-switch" title="切换至中文版">中文</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobileMenu">
+      <div class="nav__mobile-inner">
+        <ul class="nav__mobile-links">
+          <li><a href="#services" class="nav__mobile-link" data-scroll-to="services">Services</a></li>
+          <li><a href="#work" class="nav__mobile-link" data-scroll-to="work">Work</a></li>
+          <li><a href="#about" class="nav__mobile-link" data-scroll-to="about">About</a></li>
+          <li><a href="#contact" class="nav__mobile-link" data-scroll-to="contact">Contact</a></li>
+        </ul>
+        <div class="nav__mobile-footer">
+          <div class="nav__mobile-theme">
+            <span>Theme</span>
+            <button id="themeToggleMobile" class="theme-toggle theme-toggle--mobile" aria-label="Toggle light/dark mode">
+              <span class="theme-toggle__track">
+                <span class="theme-toggle__thumb">
+                  <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                  <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                </span>
+              </span>
+              <span class="theme-toggle__label" id="themeLabelMobile">Dark</span>
+            </button>
+          </div>
+          <a href="mailto:hello@eastlinkmedia.com" class="nav__mobile-email">hello@eastlinkmedia.com</a>
+          <a href="zh/index.html" class="nav__mobile-lang">🌐 中文版</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="hero__texture hero__texture--1" data-parallax="-0.3"></div>
+    <div class="hero__texture hero__texture--2" data-parallax="0.2"></div>
+    <div class="hero__texture hero__texture--3" data-parallax="-0.15"></div>
+    <div class="hero__light-circle hero__light-circle--1"></div>
+    <div class="hero__light-circle hero__light-circle--2"></div>
+
+    <div class="hero__inner">
+      <div class="hero__overtitle reveal-line">
+        <span class="hero__dot"></span>
+        Ecommerce Growth · Affiliate Marketing · Creative Digital
+      </div>
+
+      <h1 class="hero__heading">
+        <span class="hero__heading-line reveal-line">We Build</span>
+        <span class="hero__heading-line hero__heading-line--accent reveal-line">Brands That</span>
+        <span class="hero__heading-line reveal-line">Convert.</span>
+      </h1>
+
+      <div class="hero__sub reveal-line">
+        <p>Estlink Media is a performance-driven creative agency powering ecommerce stores, affiliate campaigns, and digital ecosystems that scale.</p>
+      </div>
+
+      <div class="hero__actions reveal-line">
+        <a href="#work" class="btn btn--primary" data-scroll-to="work">View our work</a>
+        <a href="#services" class="btn btn--ghost" data-scroll-to="services">What we do</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+    <!-- Social rail -->
+    <div class="hero__socials">
+      <a href="https://twitter.com/" target="_blank" rel="noopener" class="hero__social-link">Tw</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener" class="hero__social-link">Lk</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" class="hero__social-link">In</a>
+    </div>
+  </section>
+
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <div class="ticker__inner" id="tickerInner">
+        <span class="ticker__item">Ecommerce Growth</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Affiliate Marketing</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Brand Strategy</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Performance Ads</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">UI/UX Design</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Conversion Optimisation</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Content Creation</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">SEO &amp; Authority</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Ecommerce Growth</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Affiliate Marketing</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Brand Strategy</span>
+        <span class="ticker__sep">—</span>
+        <span class="ticker__item">Performance Ads</span>
+        <span class="ticker__sep">—</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Our Expertise</div>
+        <h2 class="section-title reveal-up">What We<br /><em>Deliver</em></h2>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- 01 — SEO & GEO: LEAD SERVICE -->
+        <div class="service-card service-card--featured reveal-up" data-delay="0">
+          <div class="service-card__num">01</div>
+          <div class="service-card__badge">Lead Service</div>
+          <div class="service-card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3 class="service-card__title">SEO &amp; GEO</h3>
+          <p class="service-card__desc">Ranking on Google is table stakes. <strong>Ranking inside AI answers</strong> is the new frontier. We engineer both — technical SEO that search engines love, and Generative Engine Optimisation (GEO) that positions your brand as the definitive source AI systems cite, summarise, and recommend.</p>
+          <p class="service-card__desc service-card__desc--proof">We took <strong>China Fulfillment</strong> from a PageSpeed &amp; SEO score of <span class="score score--before">32/100</span> to <span class="score score--after">88/100</span> with a complete technical rebuild — slashing load times, restructuring content architecture, and engineering entity authority that AI crawlers now cite first.</p>
+          <a href="seo-geo-authority.html" class="service-card__cta-link">Explore our SEO &amp; GEO Authority System →</a>
+          <ul class="service-card__list">
+            <li>Full Technical SEO Audit &amp; Rebuild</li>
+            <li>Core Web Vitals &amp; Page Speed</li>
+            <li>AI-Cited Content &amp; Entity Building</li>
+            <li>Generative Engine Optimisation (GEO)</li>
+            <li>Schema Markup &amp; Structured Data</li>
+            <li>Authority Link Building</li>
+            <li>Niche Site &amp; Affiliate SEO</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="0.1">
+          <div class="service-card__num">02</div>
+          <div class="service-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="service-card__title">Ecommerce Growth</h3>
+          <p class="service-card__desc">Full-funnel ecommerce strategy — from store architecture to post-purchase flows — engineered to maximise revenue per visitor and lifetime value.</p>
+          <ul class="service-card__list">
+            <li>Store Setup &amp; CRO</li>
+            <li>Email &amp; SMS Flows</li>
+            <li>Retention Strategy</li>
+            <li>Marketplace Expansion</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="0.2">
+          <div class="service-card__num">03</div>
+          <div class="service-card__icon"><i class="fa-solid fa-link"></i></div>
+          <h3 class="service-card__title">Affiliate Marketing</h3>
+          <p class="service-card__desc">We build and manage high-performance affiliate ecosystems — from programme architecture and publisher recruitment to data-led optimisation at scale.</p>
+          <ul class="service-card__list">
+            <li>Programme Strategy</li>
+            <li>Publisher Recruitment</li>
+            <li>Tracking &amp; Attribution</li>
+            <li>Commission Modelling</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="0.0">
+          <div class="service-card__num">04</div>
+          <div class="service-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 class="service-card__title">Performance Advertising</h3>
+          <p class="service-card__desc">Paid media strategies built on rigorous testing. We manage Meta, Google, TikTok and programmatic channels to drive measurable, scalable returns.</p>
+          <ul class="service-card__list">
+            <li>Meta &amp; Google Ads</li>
+            <li>TikTok Campaigns</li>
+            <li>Creative Testing</li>
+            <li>ROAS Optimisation</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="0.1">
+          <div class="service-card__num">05</div>
+          <div class="service-card__icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3 class="service-card__title">Brand &amp; Creative</h3>
+          <p class="service-card__desc">Identity systems, visual direction, and content that position you as the undeniable leader in your category — online and off.</p>
+          <ul class="service-card__list">
+            <li>Brand Identity</li>
+            <li>Art Direction</li>
+            <li>UI/UX Design</li>
+            <li>Content Production</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="0.2">
+          <div class="service-card__num">06</div>
+          <div class="service-card__icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="service-card__title">Digital Development</h3>
+          <p class="service-card__desc">Headless storefronts, custom landing pages, and integrated digital platforms built for speed, conversion, and seamless user experience.</p>
+          <ul class="service-card__list">
+            <li>Shopify &amp; Headless</li>
+            <li>Landing Pages</li>
+            <li>Web Apps</li>
+            <li>Integrations &amp; APIs</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NUMBERS ===================== -->
+  <section class="numbers section section--dark">
+    <div class="container">
+      <div class="numbers__grid">
+        <div class="numbers__item reveal-up">
+          <div class="numbers__value" data-count="127">0</div>
+          <div class="numbers__label">Brands Scaled</div>
+        </div>
+        <div class="numbers__item reveal-up" data-delay="0.1">
+          <div class="numbers__value" data-count="48">0</div>
+          <div class="numbers__label">Affiliate Programmes Launched</div>
+        </div>
+        <div class="numbers__item reveal-up" data-delay="0.2">
+          <div class="numbers__value numbers__value--prefix" data-count="9.2" data-prefix="£" data-suffix="M+">£0</div>
+          <div class="numbers__label">Revenue Generated for Clients</div>
+        </div>
+        <div class="numbers__item reveal-up" data-delay="0.3">
+          <div class="numbers__value numbers__value--suffix" data-count="340" data-suffix="%">0%</div>
+          <div class="numbers__label">Average ROAS Improvement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SELECTED WORK ===================== -->
+  <section id="work" class="work section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Portfolio</div>
+        <h2 class="section-title reveal-up">Selected<br /><em>Projects</em></h2>
+      </div>
+    </div>
+
+    <div class="work__list" id="workList">
+
+      <!-- China Fulfillment — featured SEO/GEO case study spans full width -->
+      <div class="work-item work-item--featured reveal-up" data-delay="0">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-chinafulfillment.jpg" alt="China Fulfillment SEO & GEO rebuild" class="work-item__img" loading="lazy" style="object-position: center top;" />
+            <div class="work-item__featured-stat">
+              <span class="score score--before">32</span>
+              <span class="score-arrow">→</span>
+              <span class="score score--after">88</span>
+              <span class="score-label">/100 SEO Score</span>
+            </div>
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">SEO &amp; GEO · Technical Rebuild</div>
+            <h3 class="work-item__title">China Fulfillment</h3>
+            <p class="work-item__result">Complete technical SEO &amp; GEO rebuild — PageSpeed score lifted from 32 → 88/100. Site now cited in AI search results for 60+ fulfilment queries.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-novaskin.jpg" alt="NovaSkin Co. ecommerce growth project" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">Ecommerce Growth</div>
+            <h3 class="work-item__title">NovaSkin Co.</h3>
+            <p class="work-item__result">↑ 420% revenue in 6 months</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0.08">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-pulsegear.jpg" alt="PulseGear Sports affiliate programme" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">Affiliate Programme</div>
+            <h3 class="work-item__title">PulseGear Sports</h3>
+            <p class="work-item__result">↑ £2.1M affiliate revenue/yr</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0.16">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-arbor.jpg" alt="Arbor Living brand and design" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">Brand &amp; Design</div>
+            <h3 class="work-item__title">Arbor Living</h3>
+            <p class="work-item__result">Full rebrand + 280% CTR lift</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-verdant.jpg" alt="VerdantTech B2B performance ads" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">Performance Ads</div>
+            <h3 class="work-item__title">VerdantTech B2B</h3>
+            <p class="work-item__result">8.4× ROAS on Google Ads</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0.08">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-crestwell.jpg" alt="CrestWell Finance SEO and content" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">SEO &amp; Content</div>
+            <h3 class="work-item__title">CrestWell Finance</h3>
+            <p class="work-item__result">Top 3 rankings on 400+ keywords</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="work-item reveal-up" data-delay="0.16">
+        <a href="#contact" class="work-item__link" data-scroll-to="contact">
+          <div class="work-item__media">
+            <div class="work-item__overlay"></div>
+            <img src="images/work-luminos.jpg" alt="Luminos headless Shopify store" class="work-item__img" loading="lazy" />
+          </div>
+          <div class="work-item__info">
+            <div class="work-item__tag">Digital Development</div>
+            <h3 class="work-item__title">Luminos Headless Store</h3>
+            <p class="work-item__result">0.8s load · 97 Lighthouse score</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="work__cta reveal-up">
+      <a href="#contact" class="btn btn--primary" data-scroll-to="contact">Start your project →</a>
+    </div>
+  </section>
+
+  <!-- ===================== CLIENTS ===================== -->
+  <section class="clients section">
+    <div class="container">
+      <div class="clients__label reveal-up">Trusted by growth-stage brands &amp; established businesses</div>
+      <div class="clients__ticker-wrap">
+        <div class="clients__ticker">
+          <div class="clients__ticker-inner" id="clientTicker">
+            <span class="client-name">China Fulfillment</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">NovaSkin Co.</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">PulseGear Sports</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">Arbor Living</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">VerdantTech B2B</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">CrestWell Finance</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">Luminos</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">OriginMark</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">Apex Nutrition</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">BlueHaven Travel</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">Evoke Agency</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">NovaSkin Co.</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">PulseGear Sports</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">Arbor Living</span>
+            <span class="client-sep">·</span>
+            <span class="client-name">VerdantTech B2B</span>
+            <span class="client-sep">·</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about section section--dark">
+    <div class="container">
+      <div class="about__layout">
+        <div class="about__left">
+          <div class="section-overtitle reveal-up">Who We Are</div>
+          <h2 class="section-title reveal-up">Built for<br /><em>Ecommerce.</em></h2>
+          <div class="about__visual reveal-up">
+            <div class="about__visual-inner">
+              <div class="about__shape about__shape--1"></div>
+              <div class="about__shape about__shape--2"></div>
+              <div class="about__glyph">E</div>
+            </div>
+          </div>
+        </div>
+        <div class="about__right">
+          <div class="about__intro reveal-up">
+            Eastlink Media is a performance-driven creative agency with one core conviction: <strong>sustainable growth starts with being found</strong>. We are specialists in SEO, Generative Engine Optimisation (GEO), and the full digital stack — from affiliate programmes and paid media to brand identity and technical development.
+          </div>
+          <div class="about__body reveal-up" data-delay="0.1">
+            <p>As AI reshapes how people discover brands — through ChatGPT, Perplexity, Google SGE and beyond — we build the digital foundations that make your brand the answer, not just a result. Our technical SEO and GEO work ensures you rank in traditional search <em>and</em> get cited inside AI-generated responses, delivering compounding organic visibility that paid media can never replicate.</p>
+            <p>We pair that organic authority with full-funnel ecommerce strategy, affiliate ecosystems, and performance media — so every channel works together, not in silos. From day one to scale, we own your growth story end to end.</p>
+          </div>
+
+          <div class="about__skills reveal-up" data-delay="0.2">
+            <h3 class="about__skills-title">Core Disciplines</h3>
+            <ul class="about__skills-list">
+              <li>SEO &amp; GEO (Lead Service)</li>
+              <li>Ecommerce Strategy</li>
+              <li>Affiliate Programme Management</li>
+              <li>Performance Media Buying</li>
+              <li>Brand Identity &amp; Design</li>
+              <li>Conversion Rate Optimisation</li>
+              <li>Web Development &amp; Shopify</li>
+              <li>Data Analytics &amp; Attribution</li>
+            </ul>
+          </div>
+
+          <div class="about__cta reveal-up" data-delay="0.3">
+            <a href="#contact" class="btn btn--outline" data-scroll-to="contact">Work with us →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">How We Work</div>
+        <h2 class="section-title reveal-up">Our <em>Process</em></h2>
+      </div>
+
+      <div class="process__steps">
+        <div class="process__step reveal-up" data-delay="0">
+          <div class="process__step-num">01</div>
+          <div class="process__step-content">
+            <h3>Discover &amp; Diagnose</h3>
+            <p>Deep-dive audit of your current position — traffic, conversion data, brand equity, competitive landscape — to surface the highest-leverage opportunities.</p>
+          </div>
+        </div>
+        <div class="process__step reveal-up" data-delay="0.1">
+          <div class="process__step-num">02</div>
+          <div class="process__step-content">
+            <h3>Strategise &amp; Architect</h3>
+            <p>We craft a bespoke growth roadmap: channel mix, creative direction, technical requirements, and milestone milestones aligned to your revenue targets.</p>
+          </div>
+        </div>
+        <div class="process__step reveal-up" data-delay="0.2">
+          <div class="process__step-num">03</div>
+          <div class="process__step-content">
+            <h3>Build &amp; Launch</h3>
+            <p>Our multidisciplinary team executes across design, development, content, and media — launching fast, iterating relentlessly.</p>
+          </div>
+        </div>
+        <div class="process__step reveal-up" data-delay="0.3">
+          <div class="process__step-num">04</div>
+          <div class="process__step-content">
+            <h3>Optimise &amp; Scale</h3>
+            <p>Continuous performance monitoring, A/B testing, and strategic scaling to compound your gains and protect your margins over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Client Stories</div>
+        <h2 class="section-title reveal-up">What They <em>Say</em></h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal-up" data-delay="0">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">Estlink Media transformed our affiliate programme from a side channel into our number-one revenue driver. Within a year, we were generating over £2M from affiliates alone.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">J</div>
+            <div>
+              <div class="testimonial-card__name">Jamie Thornton</div>
+              <div class="testimonial-card__role">CMO, PulseGear Sports</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up" data-delay="0.12">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">The rebrand Estlink delivered elevated every touchpoint of our brand. Our conversion rate climbed 280% within three months of launch — the ROI was almost immediate.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">S</div>
+            <div>
+              <div class="testimonial-card__name">Sofia Reyes</div>
+              <div class="testimonial-card__role">Founder, Arbor Living</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up" data-delay="0.24">
+          <div class="testimonial-card__quote">"</div>
+          <p class="testimonial-card__text">From day one, the team spoke our language — performance metrics, attribution models, real numbers. They brought strategy and execution together in a way we'd never experienced before.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">M</div>
+            <div>
+              <div class="testimonial-card__name">Marcus Chen</div>
+              <div class="testimonial-card__role">CEO, VerdantTech B2B</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact__layout">
+        <div class="contact__left">
+          <div class="section-overtitle reveal-up">Get In Touch</div>
+          <h2 class="contact__heading reveal-up">Ready to<br /><em>Scale?</em></h2>
+          <p class="contact__sub reveal-up">Tell us about your project. We'll come back to you within 24 hours.</p>
+
+          <div class="contact__info reveal-up" data-delay="0.1">
+            <div class="contact__info-item">
+              <span class="contact__info-label">Email</span>
+              <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a>
+            </div>
+            <div class="contact__info-item">
+              <span class="contact__info-label">Follow</span>
+              <div class="contact__socials">
+                <a href="https://twitter.com/" target="_blank" rel="noopener">Tw</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener">Lk</a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener">In</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__right reveal-up" data-delay="0.15">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" name="name" placeholder="Alex Johnson" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="alex@yourcompany.com" required />
+            </div>
+            <div class="form-group">
+              <label for="fservice">Service Interested In</label>
+              <select id="fservice" name="service">
+                <option value="">Select a service…</option>
+                <option>Ecommerce Growth</option>
+                <option>Affiliate Marketing</option>
+                <option>Performance Advertising</option>
+                <option>Brand &amp; Creative</option>
+                <option>Digital Development</option>
+                <option>SEO &amp; Authority</option>
+                <option>Full-Service Partnership</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Tell Us About Your Project</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Give us the brief — goals, current challenges, timelines, budget range…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo" data-scroll-to="hero">
+            <span class="footer__logo-mark">E</span>astlink Media
+          </a>
+          <p class="footer__tagline">Ecommerce growth, affiliate mastery, and creative digital solutions — built to scale.</p>
+        </div>
+        <div class="footer__nav-cols">
+          <div class="footer__nav-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="seo-geo-authority.html">SEO &amp; GEO Authority ✦</a></li>
+              <li><a href="#services" data-scroll-to="services">Ecommerce Growth</a></li>
+              <li><a href="#services" data-scroll-to="services">Affiliate Marketing</a></li>
+              <li><a href="#services" data-scroll-to="services">Performance Ads</a></li>
+              <li><a href="#services" data-scroll-to="services">Brand &amp; Creative</a></li>
+              <li><a href="#services" data-scroll-to="services">Development</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about" data-scroll-to="about">About</a></li>
+              <li><a href="#work" data-scroll-to="work">Work</a></li>
+              <li><a href="#contact" data-scroll-to="contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 Eastlink Media. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

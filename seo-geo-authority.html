@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SEO & GEO Authority System | Eastlink Media</title>
+  <meta name="description" content="Eastlink Media's AI Authority System: a complete SEO & Generative Engine Optimisation audit and rebuild service. Get cited by ChatGPT, Perplexity, Google SGE and every AI answer engine." />
+  <meta name="keywords" content="GEO, Generative Engine Optimisation, SEO audit, AI citations, AI search, entity authority, technical SEO, Eastlink Media" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SEO & GEO Authority System | Eastlink Media" />
+  <meta property="og:description" content="Stop being invisible to AI. Our two-phase audit and rebuild service engineers your brand into the answers AI gives — before your competitors get there." />
+  <meta property="og:url" content="https://eastlinkmedia.com/seo-geo-authority" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/geo-hero-bg.jpg" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO & GEO Authority System",
+    "provider": {
+      "@type": "Organization",
+      "name": "Eastlink Media",
+      "url": "https://eastlinkmedia.com",
+      "email": "hello@eastlinkmedia.com"
+    },
+    "description": "A complete two-phase SEO audit and Generative Engine Optimisation rebuild service that engineers your brand into AI-generated answers across ChatGPT, Perplexity, Google SGE, Deepseek, and Microsoft Copilot.",
+    "serviceType": "SEO & Generative Engine Optimisation",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO & GEO Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO Authority Audit" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO Authority Build" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/geo.css" />
+</head>
+<body class="is-loading theme-dark">
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__logo-e">E</span>
+      </div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+      <div class="preloader__count">0%</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <span class="cursor__label"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav" class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">E</span>
+        <span class="nav__logo-text">astlink<span class="nav__logo-accent"> Media</span></span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html#services" class="nav__link">Services</a></li>
+        <li><a href="index.html#work" class="nav__link">Work</a></li>
+        <li><a href="index.html#about" class="nav__link">About</a></li>
+        <li><a href="index.html#contact" class="nav__link nav__link--cta">Let's talk →</a></li>
+      </ul>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb">
+            <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+            <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+          </span>
+        </span>
+        <span class="theme-toggle__label" id="themeLabel">Dark</span>
+      </button>
+
+      <a href="zh/index.html" class="nav__lang-switch" title="切换至中文版">中文</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobileMenu">
+      <div class="nav__mobile-inner">
+        <ul class="nav__mobile-links">
+          <li><a href="index.html#services" class="nav__mobile-link">Services</a></li>
+          <li><a href="index.html#work" class="nav__mobile-link">Work</a></li>
+          <li><a href="index.html#about" class="nav__mobile-link">About</a></li>
+          <li><a href="index.html#contact" class="nav__mobile-link">Contact</a></li>
+        </ul>
+        <div class="nav__mobile-footer">
+          <div class="nav__mobile-theme">
+            <span>Theme</span>
+            <button id="themeToggleMobile" class="theme-toggle theme-toggle--mobile" aria-label="Toggle theme">
+              <span class="theme-toggle__track">
+                <span class="theme-toggle__thumb">
+                  <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                  <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                </span>
+              </span>
+              <span class="theme-toggle__label" id="themeLabelMobile">Dark</span>
+            </button>
+          </div>
+          <a href="mailto:hello@eastlinkmedia.com" class="nav__mobile-email">hello@eastlinkmedia.com</a>
+          <a href="zh/index.html" class="nav__mobile-lang">中文版 →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="geo-hero" class="geo-hero">
+    <div class="geo-hero__bg">
+      <img src="images/geo-hero-bg.jpg" alt="" class="geo-hero__bg-img" aria-hidden="true" />
+      <div class="geo-hero__bg-overlay"></div>
+    </div>
+
+    <!-- Animated orbs -->
+    <div class="geo-hero__orb geo-hero__orb--1" aria-hidden="true"></div>
+    <div class="geo-hero__orb geo-hero__orb--2" aria-hidden="true"></div>
+
+    <div class="container geo-hero__content">
+      <div class="geo-hero__eyebrow reveal-up">
+        <span class="geo-hero__eyebrow-dot"></span>
+        SEO &amp; GEO Authority System
+      </div>
+
+      <h1 class="geo-hero__heading reveal-up" data-delay="0.1">
+        Rank in search.<br />
+        <em>Live inside</em><br />
+        the AI answer.
+      </h1>
+
+      <p class="geo-hero__sub reveal-up" data-delay="0.2">
+        Most brands optimise for the ten blue links. We engineer your brand to be <strong>the source AI cites, summarises, and recommends</strong> — across ChatGPT, Google SGE, Perplexity, Deepseek, and every AI answer engine reshaping how buyers discover brands.
+      </p>
+
+      <div class="geo-hero__actions reveal-up" data-delay="0.3">
+        <a href="index.html#contact" class="btn btn--primary btn--lg">Get your free GEO audit →</a>
+        <a href="#what-is-geo" class="btn btn--ghost btn--lg geo-scroll-btn">What is GEO? <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+
+      <!-- AI platform citation badges -->
+      <div class="geo-hero__platforms reveal-up" data-delay="0.4">
+        <span class="geo-platform-label">Your brand cited in:</span>
+        <div class="geo-platforms">
+          <div class="geo-platform"><i class="fa-solid fa-robot"></i> ChatGPT</div>
+          <div class="geo-platform"><i class="fa-brands fa-google"></i> Google SGE</div>
+          <div class="geo-platform"><i class="fa-solid fa-magnifying-glass"></i> Perplexity</div>
+          <div class="geo-platform"><i class="fa-solid fa-microchip"></i> Deepseek</div>
+          <div class="geo-platform"><i class="fa-brands fa-microsoft"></i> Copilot</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="geo-hero__scroll" aria-hidden="true">
+      <div class="geo-hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM STATEMENT ===================== -->
+  <section id="what-is-geo" class="geo-problem section">
+    <div class="container">
+      <div class="geo-problem__grid">
+        <div class="geo-problem__left reveal-up">
+          <div class="section-overtitle">The Shift Has Already Happened</div>
+          <h2 class="section-title">Search changed.<br /><em>Most brands didn't.</em></h2>
+          <p class="geo-problem__body">AI answer engines — ChatGPT, Perplexity, Google's AI Overviews, Deepseek — no longer just rank pages. They <strong>select sources, synthesise answers, and cite brands by name</strong>. If your brand isn't in that citation pool, you're invisible to a growing slice of high-intent buyers who never scroll to the traditional results.</p>
+          <p class="geo-problem__body">This isn't a future problem. It's happening right now — and most brands have zero GEO presence. The window to build a defensible AI authority position is open. It won't be forever.</p>
+        </div>
+        <div class="geo-problem__right reveal-up" data-delay="0.15">
+          <div class="geo-stat-stack">
+            <div class="geo-stat-card geo-stat-card--warn">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">60%</div>
+                <div class="geo-stat-card__label">of searches now end without a click — answered directly by AI</div>
+              </div>
+            </div>
+            <div class="geo-stat-card geo-stat-card--warn">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-chart-line-down"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">↓ 37%</div>
+                <div class="geo-stat-card__label">average organic click-through rate decline since AI Overviews launched</div>
+              </div>
+            </div>
+            <div class="geo-stat-card geo-stat-card--good">
+              <div class="geo-stat-card__icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="geo-stat-card__body">
+                <div class="geo-stat-card__num">3×</div>
+                <div class="geo-stat-card__label">higher purchase intent in users who discovered a brand via AI citation vs. traditional search</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT IS GEO ===================== -->
+  <section class="geo-explainer section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Generative Engine Optimisation</div>
+        <h2 class="section-title reveal-up">GEO is the new<br /><em>SEO frontier.</em></h2>
+      </div>
+
+      <div class="geo-explainer__layout">
+        <div class="geo-explainer__visual reveal-up">
+          <img src="images/geo-ai-ecosystem.jpg" alt="AI search ecosystem showing brand citations across ChatGPT, Google, Perplexity and Deepseek" class="geo-explainer__img" loading="lazy" />
+          <div class="geo-explainer__img-caption">How AI engines decide which brands to cite</div>
+        </div>
+        <div class="geo-explainer__content reveal-up" data-delay="0.15">
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">01</div>
+            <div class="geo-pillar__body">
+              <h3>Entity Authority</h3>
+              <p>AI engines understand the world through entities — brands, people, places, concepts. We engineer your brand as a clearly-defined, well-cited entity in the knowledge graph, so AI models know exactly what you are, what you do, and why you're authoritative.</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">02</div>
+            <div class="geo-pillar__body">
+              <h3>AI-Crawlable Content Architecture</h3>
+              <p>AI models are trained on and crawl structured, authoritative content. We restructure your site so every page speaks the language of AI retrieval: clean semantic HTML, schema markup, FAQ structures, and citation-worthy factual statements that LLMs can surface verbatim.</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">03</div>
+            <div class="geo-pillar__body">
+              <h3>Citation Signal Network</h3>
+              <p>Being cited in AI outputs requires being cited across the web — in reputable publications, forums, industry databases, and partner sites. We build the off-page citation ecosystem that tells AI engines your brand is the authoritative source on your topics.</p>
+            </div>
+          </div>
+          <div class="geo-pillar">
+            <div class="geo-pillar__num">04</div>
+            <div class="geo-pillar__body">
+              <h3>Technical Foundation</h3>
+              <p>A slow, technically broken site cannot earn AI authority — period. Core Web Vitals, crawlability, structured data, and page speed are the non-negotiable infrastructure layer that every GEO strategy is built on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE SERVICE: AUDIT + BUILD ===================== -->
+  <section id="service" class="geo-service section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">How We Work</div>
+        <h2 class="section-title reveal-up">Two phases.<br /><em>One transformation.</em></h2>
+        <p class="section-sub reveal-up" data-delay="0.1">We don't bolt GEO onto a broken foundation. We audit everything first, then rebuild with surgical precision — so every layer compounds.</p>
+      </div>
+
+      <!-- Phase 1: Audit -->
+      <div class="geo-phase geo-phase--audit reveal-up">
+        <div class="geo-phase__header">
+          <div class="geo-phase__badge geo-phase__badge--1">Phase 01</div>
+          <h3 class="geo-phase__title">The GEO Authority Audit</h3>
+          <p class="geo-phase__sub">We tear apart your current SEO and GEO position — technically, structurally, and competitively — to find exactly what's blocking you from AI citations and traditional rankings.</p>
+        </div>
+
+        <div class="geo-phase__body">
+          <div class="geo-phase__visual reveal-up" data-delay="0.1">
+            <img src="images/geo-audit-dashboard.jpg" alt="SEO and GEO audit dashboard showing before and after scores" class="geo-phase__img" loading="lazy" />
+            <div class="geo-phase__score-overlay">
+              <div class="geo-score-pill geo-score-pill--before">
+                <span class="geo-score-pill__num">32</span>
+                <span class="geo-score-pill__label">Before</span>
+              </div>
+              <div class="geo-score-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <div class="geo-score-pill geo-score-pill--after">
+                <span class="geo-score-pill__num">88</span>
+                <span class="geo-score-pill__label">After</span>
+              </div>
+              <div class="geo-score-context">/100 SEO & GEO Score · China Fulfillment</div>
+            </div>
+          </div>
+
+          <div class="geo-phase__deliverables">
+            <h4 class="geo-phase__deliverables-title">What you receive:</h4>
+            <ul class="geo-audit-list">
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-file-magnifying-glass"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Full Technical SEO Audit</strong>
+                  <span>Core Web Vitals, crawl errors, indexation, canonicalisation, mobile-first assessment — every technical signal scored and prioritised.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>AI Visibility & Citation Analysis</strong>
+                  <span>We query 5+ major AI engines with your brand and category keywords to map where you appear, where competitors are cited, and exactly what the gap looks like.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-sitemap"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Entity & Knowledge Graph Assessment</strong>
+                  <span>How clearly is your brand defined as an entity? We assess your structured data, Wikipedia/Wikidata presence, and cross-web entity consistency.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-code"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Schema & Structured Data Review</strong>
+                  <span>Every schema opportunity mapped — Organisation, Product, FAQ, HowTo, Article, BreadcrumbList — with implementation priority and impact scoring.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-link"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Citation & Backlink Profile</strong>
+                  <span>Quality over quantity: we assess your off-page citation authority — which publications, directories, and web properties are building (or undermining) your AI credibility.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-file-lines"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Content Structure & AI Readability</strong>
+                  <span>Is your content structured so AI engines can extract, quote, and recommend it? We assess every page against AI retrieval best practices.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-chart-bar"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Competitor GEO Gap Report</strong>
+                  <span>A ranked analysis of where competitors are winning AI citations in your niche — and the exact topics and formats you need to compete.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-road"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Prioritised Roadmap</strong>
+                  <span>A clear, actionable 90-day roadmap with quick wins, mid-term builds, and strategic priorities — ready to hand to your team or hand back to us for Phase 2.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="geo-phase__cta">
+              <a href="index.html#contact" class="btn btn--primary">Start with the Audit →</a>
+              <span class="geo-phase__cta-note">Delivered within 10 business days · Standalone or paired with Phase 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2: Build -->
+      <div class="geo-phase geo-phase--build reveal-up">
+        <div class="geo-phase__header">
+          <div class="geo-phase__badge geo-phase__badge--2">Phase 02</div>
+          <h3 class="geo-phase__title">The GEO Authority Build</h3>
+          <p class="geo-phase__sub">We don't just show you the map — we do the work. Every fix, every structural rebuild, every piece of AI-optimised content, every citation placed. You brief us once; we execute relentlessly.</p>
+        </div>
+
+        <div class="geo-phase__body geo-phase__body--reverse">
+          <div class="geo-phase__visual reveal-up" data-delay="0.1">
+            <img src="images/geo-audit-build.jpg" alt="Two-phase audit and build process illustration" class="geo-phase__img" loading="lazy" />
+            <div class="geo-build-badges">
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> Technical fixes executed</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> Schema deployed</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> Entity signals built</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> AI content published</div>
+              <div class="geo-build-badge"><i class="fa-solid fa-check"></i> Citation network placed</div>
+            </div>
+          </div>
+
+          <div class="geo-phase__deliverables">
+            <h4 class="geo-phase__deliverables-title">What we build:</h4>
+            <ul class="geo-audit-list">
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-wrench"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Full Technical SEO Rebuild</strong>
+                  <span>Every audit finding resolved: page speed, Core Web Vitals, crawl budget, canonicals, sitemaps, robots.txt, internal linking — rebuilt to pass every performance threshold.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-database"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Schema & Structured Data Implementation</strong>
+                  <span>Complete schema deployment across your site — typed, validated, and live. We don't template it; we customise every schema block to your brand and content context.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-fingerprint"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Entity Authority Engineering</strong>
+                  <span>We build your brand entity across the knowledge web: structured "About" pages, consistent NAP signals, Wikidata entries, industry directory presence, and cross-site entity consistency.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>AI-Optimised Content Creation</strong>
+                  <span>We write and publish content in the formats AI engines prefer: definitive guides, FAQ pages, comparison posts, and factual reference content that AI models pull from directly.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Citation Network Development</strong>
+                  <span>Strategic placement in publications, niche directories, forums, and authority sites that signal topical expertise to AI engines — built white-hat, built to last.</span>
+                </div>
+              </li>
+              <li>
+                <div class="geo-audit-list__icon"><i class="fa-solid fa-chart-mixed"></i></div>
+                <div class="geo-audit-list__body">
+                  <strong>Monthly GEO Monitoring & Reporting</strong>
+                  <span>We track your AI citation frequency, position in AI answers, organic ranking movement, and Core Web Vitals — with a clear monthly report and strategic recommendations.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="geo-phase__cta">
+              <a href="index.html#contact" class="btn btn--primary">Start the Full Build →</a>
+              <span class="geo-phase__cta-note">Audit included · Ongoing retainer or project-based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASE STUDY ===================== -->
+  <section class="geo-case section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Real Results</div>
+        <h2 class="section-title reveal-up">From invisible<br /><em>to AI-cited.</em></h2>
+      </div>
+
+      <div class="geo-case__card reveal-up">
+        <div class="geo-case__left">
+          <div class="geo-case__client-label">Case Study</div>
+          <h3 class="geo-case__client">China Fulfillment</h3>
+          <p class="geo-case__sector"><i class="fa-solid fa-boxes-stacking"></i> Freight forwarding &amp; warehouse fulfilment</p>
+
+          <div class="geo-case__challenge">
+            <h4>The challenge</h4>
+            <p>China Fulfillment had solid operations but a technically broken web presence. Their site scored 32/100 on PageSpeed and SEO metrics: slow load times, zero structured data, thin content architecture, and no AI citation footprint whatsoever — invisible to every AI engine in a high-intent, growing search category.</p>
+          </div>
+
+          <div class="geo-case__approach">
+            <h4>Our approach</h4>
+            <ul>
+              <li>Complete technical audit identifying 47 critical and 120+ moderate issues</li>
+              <li>Full Core Web Vitals rebuild — LCP reduced from 8.4s to under 1.2s</li>
+              <li>Schema implementation across service pages, FAQs, and organisation entity</li>
+              <li>Content architecture restructure with AI-crawlable definitive guides</li>
+              <li>Entity authority build across 30+ industry publications and directories</li>
+              <li>GEO-optimised FAQ content for 60+ freight and fulfilment query types</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="geo-case__right">
+          <img src="images/work-chinafulfillment.jpg" alt="China Fulfillment website after SEO and GEO rebuild" class="geo-case__img" loading="lazy" />
+
+          <div class="geo-case__results">
+            <div class="geo-case__result-title">Results</div>
+            <div class="geo-case__metrics">
+              <div class="geo-metric">
+                <div class="geo-metric__before"><span class="score score--before">32</span><span class="geo-metric__label">Score Before</span></div>
+                <div class="geo-metric__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="geo-metric__after"><span class="score score--after">88</span><span class="geo-metric__label">Score After</span></div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">8.4s <i class="fa-solid fa-arrow-right"></i> 1.2s</div>
+                <div class="geo-metric__label">Page Load Time (LCP)</div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">60+</div>
+                <div class="geo-metric__label">AI query types now citing China Fulfillment</div>
+              </div>
+              <div class="geo-metric geo-metric--single">
+                <div class="geo-metric__value">47</div>
+                <div class="geo-metric__label">Critical technical issues resolved</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU GET: COMPARISON ===================== -->
+  <section class="geo-compare section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">The Eastlink Media Difference</div>
+        <h2 class="section-title reveal-up">Not all SEO is<br /><em>built equal.</em></h2>
+      </div>
+
+      <div class="geo-compare__table reveal-up">
+        <div class="geo-compare__header">
+          <div class="geo-compare__col geo-compare__col--feature"></div>
+          <div class="geo-compare__col geo-compare__col--theirs">
+            <div class="geo-compare__col-label">Typical SEO Agency</div>
+          </div>
+          <div class="geo-compare__col geo-compare__col--ours">
+            <div class="geo-compare__col-label">Eastlink Media</div>
+            <div class="geo-compare__col-badge">GEO-Ready</div>
+          </div>
+        </div>
+
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Technical SEO audit</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> Basic</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Comprehensive</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Core Web Vitals fixes</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> Recommendations only</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Fully executed</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Schema markup</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-check geo-check"></i> Basic / templated</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Custom, validated, comprehensive</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">AI citation analysis</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> Not offered</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Full 5-engine audit</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Entity authority building</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> Not offered</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Full knowledge graph engineering</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">GEO-optimised content</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> Not offered</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Written &amp; published for you</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Monthly AI citation tracking</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> Not offered</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Included in retainer</div>
+        </div>
+        <div class="geo-compare__row">
+          <div class="geo-compare__feature">Integrated with paid &amp; affiliate</div>
+          <div class="geo-compare__theirs"><i class="fa-solid fa-xmark geo-cross"></i> Siloed</div>
+          <div class="geo-compare__ours"><i class="fa-solid fa-check-double geo-check geo-check--ours"></i> Full-channel integration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO IS THIS FOR ===================== -->
+  <section class="geo-who section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Is This Right For You?</div>
+        <h2 class="section-title reveal-up">Built for brands<br /><em>ready to be found.</em></h2>
+      </div>
+
+      <div class="geo-who__grid">
+        <div class="geo-who__card geo-who__card--yes reveal-up">
+          <div class="geo-who__card-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>This is for you if…</h3>
+          <ul>
+            <li>You're getting organic traffic but watch AI eat your clicks</li>
+            <li>You've never appeared in a ChatGPT or Perplexity answer for your category</li>
+            <li>Your site is technically dated — slow, unstructured, or poorly crawled</li>
+            <li>Competitors are showing up in AI answers and you're not</li>
+            <li>You want compounding organic authority — not just rented ad clicks</li>
+            <li>You're in ecommerce, SaaS, professional services, or B2B</li>
+            <li>You're building for long-term brand equity alongside performance channels</li>
+          </ul>
+        </div>
+
+        <div class="geo-who__card geo-who__card--no reveal-up" data-delay="0.1">
+          <div class="geo-who__card-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+          <h3>This isn't for you if…</h3>
+          <ul>
+            <li>You need instant results and won't commit to 3–6 months</li>
+            <li>You want cheap volume content with no strategic foundation</li>
+            <li>You're not willing to implement technical changes on your site</li>
+            <li>You see SEO as a cost, not a compounding asset</li>
+          </ul>
+          <p class="geo-who__card-note">GEO authority is a long-term asset. We're looking for partners who understand that — and want to build something that keeps working without a daily ad budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS TIMELINE ===================== -->
+  <section class="geo-timeline section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Engagement Timeline</div>
+        <h2 class="section-title reveal-up">From brief to<br /><em>AI-cited.</em></h2>
+      </div>
+
+      <div class="geo-timeline__track">
+        <div class="geo-timeline__step reveal-up" data-delay="0">
+          <div class="geo-timeline__step-num">01</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Week 1</div>
+            <h3>Discovery Call &amp; Brief</h3>
+            <p>We learn your brand, your market, your competitors, and your current organic position. You get a clear scope, timeline, and deliverables document.</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.1">
+          <div class="geo-timeline__step-num">02</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Weeks 2–3</div>
+            <h3>Deep Audit</h3>
+            <p>Technical crawl, AI citation mapping, entity analysis, content assessment, competitor gap research. Every finding scored, prioritised, and documented.</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.2">
+          <div class="geo-timeline__step-num">03</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Week 4</div>
+            <h3>Audit Delivery &amp; Roadmap</h3>
+            <p>You receive the full audit report and 90-day roadmap. Audit-only clients finish here — with a clear plan to hand to their team or come back for Phase 2.</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.3">
+          <div class="geo-timeline__step-num">04</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Months 2–3</div>
+            <h3>Technical Rebuild</h3>
+            <p>We execute every critical fix: Core Web Vitals, schema, crawlability, site architecture, and structured data. The foundation is rebuilt, tested, and verified.</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.4">
+          <div class="geo-timeline__step-num">05</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Months 3–6</div>
+            <h3>GEO &amp; Content Build</h3>
+            <p>AI-optimised content published, entity signals built across the web, citation network developed. Month by month, your brand grows its AI citation footprint.</p>
+          </div>
+        </div>
+        <div class="geo-timeline__step reveal-up" data-delay="0.5">
+          <div class="geo-timeline__step-num">06</div>
+          <div class="geo-timeline__step-content">
+            <div class="geo-timeline__step-week">Month 6+</div>
+            <h3>Authority &amp; Compounding</h3>
+            <p>By month six, the compounding effect begins — AI citations increasing, organic traffic recovering and growing, and a defensible authority position your competitors cannot replicate quickly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="geo-faq section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-overtitle reveal-up">Common Questions</div>
+        <h2 class="section-title reveal-up">Everything you<br /><em>need to know.</em></h2>
+      </div>
+
+      <div class="geo-faq__list">
+        <div class="geo-faq__item reveal-up">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>What exactly is Generative Engine Optimisation (GEO)?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>GEO is the practice of optimising your brand and content to appear in — and be cited by — AI-generated answers. Where traditional SEO targets the ranked list of links in Google, GEO targets the AI-synthesised answer that now appears above those links (and in standalone AI tools like ChatGPT and Perplexity). It involves entity authority, structured data, AI-readable content architecture, and a citation network that signals to AI models that your brand is the authoritative source on your topics.</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.05">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>Can I just get the audit without the full build?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>Absolutely. The GEO Authority Audit is a fully standalone service. You'll receive the complete technical and GEO audit, AI citation analysis, entity assessment, and a prioritised 90-day roadmap — then you can implement it with your own team. Many clients start with the audit to understand their position, then return for Phase 2 when they're ready to accelerate.</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.1">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>How long before I see results from GEO?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>Technical fixes (Core Web Vitals, schema, page speed) can improve your signals within 4–8 weeks of implementation. GEO citation appearances in AI engines typically begin emerging at 3–4 months as your entity authority and content footprint builds. Meaningful, compounding AI citation presence generally takes 6 months. Unlike paid media, this is a compounding asset — it keeps growing without continued budget.</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.15">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>Does GEO replace traditional SEO?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>No — it extends it. Traditional search ranking and AI citation are not mutually exclusive; in fact, a strong technical SEO foundation is a prerequisite for effective GEO. What we build is dual-purpose: a site that ranks in traditional search AND gets cited in AI-generated answers. Both signals compound each other. The brands winning in 2026 and beyond are the ones that own both channels.</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.2">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>Which AI engines do you optimise for?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>We audit and optimise for the five major AI answer engines: ChatGPT (including the web browsing and shopping modes), Google SGE / AI Overviews, Perplexity AI, Deepseek, and Microsoft Copilot. Our entity and content strategies are model-agnostic — the same authority signals that get you cited in ChatGPT also work across every other LLM that crawls and indexes the web.</p>
+          </div>
+        </div>
+        <div class="geo-faq__item reveal-up" data-delay="0.25">
+          <button class="geo-faq__q" aria-expanded="false">
+            <span>Do you need access to our website backend?</span>
+            <i class="fa-solid fa-plus geo-faq__icon"></i>
+          </button>
+          <div class="geo-faq__a">
+            <p>For the audit: no. We can conduct most of our analysis from the front end plus tools like Screaming Frog, Ahrefs, and PageSpeed Insights. For the build phase, yes — we'll need appropriate CMS access (Shopify, WordPress, Webflow etc.) to implement technical fixes and schema. We're experienced with all major platforms and have a clear onboarding process for access and permissions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="geo-cta section">
+    <div class="container">
+      <div class="geo-cta__inner reveal-up">
+        <div class="geo-cta__orb geo-cta__orb--1" aria-hidden="true"></div>
+        <div class="geo-cta__orb geo-cta__orb--2" aria-hidden="true"></div>
+
+        <div class="geo-cta__eyebrow">Ready to be cited by AI?</div>
+        <h2 class="geo-cta__heading">Start with a free<br /><em>GEO readiness call.</em></h2>
+        <p class="geo-cta__sub">We'll audit your current AI visibility on the call — no slides, no pitch deck. Just a clear look at where you stand and what it would take to get you cited. Takes 30 minutes.</p>
+
+        <div class="geo-cta__actions">
+          <a href="index.html#contact" class="btn btn--primary btn--lg">Book your free call →</a>
+          <a href="mailto:hello@eastlinkmedia.com" class="btn btn--ghost btn--lg">hello@eastlinkmedia.com</a>
+        </div>
+
+        <div class="geo-cta__trust">
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-shield-check"></i> No obligation</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-clock"></i> 30 minutes</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-chart-line"></i> Immediate insights</div>
+          <div class="geo-cta__trust-item"><i class="fa-solid fa-lock"></i> NDA available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <span class="nav__logo-mark">E</span>astlink Media
+          </a>
+          <p class="footer__tagline">SEO, GEO &amp; full-stack digital growth — built to compound.</p>
+        </div>
+        <div class="footer__nav-cols">
+          <div class="footer__nav-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="seo-geo-authority.html">SEO &amp; GEO Authority</a></li>
+              <li><a href="index.html#services">Ecommerce Growth</a></li>
+              <li><a href="index.html#services">Affiliate Marketing</a></li>
+              <li><a href="index.html#services">Performance Ads</a></li>
+              <li><a href="index.html#services">Brand &amp; Creative</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#work">Work</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 Eastlink Media. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/geo.js"></script>
+</body>
+</html>

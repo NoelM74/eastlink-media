@@ -1,0 +1,409 @@
+/* ============================================================
+   EASTLINK MEDIA — 中文版排版与样式覆盖
+   Chinese typography, layout overrides & cultural adjustments
+   ============================================================ */
+
+/* --- Logo fix: force Syne + no-wrap so E never breaks onto its own line --- */
+.zh-page .nav__logo,
+.zh-page .nav__logo-mark,
+.zh-page .nav__logo-text,
+.zh-page .footer__logo {
+  font-family: 'Syne', sans-serif !important;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.zh-page .nav__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.zh-page .nav__logo-mark {
+  display: inline-block;
+  flex-shrink: 0;
+  line-height: 1;
+  font-size: 1.5rem;
+  /* Re-apply gradient text explicitly so it renders on mobile WebKit */
+  font-family: 'Syne', sans-serif !important;
+  background: linear-gradient(135deg, #7c5ff5, #a883ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  /* Avoid width collapse on some mobile renderers */
+  min-width: 1.1em;
+  text-align: center;
+}
+.zh-page .nav__logo-text {
+  font-family: 'Syne', sans-serif !important;
+  white-space: nowrap;
+  display: inline-block;
+  flex-shrink: 0;
+}
+/* Mobile: ensure logo container doesn't shrink past its content */
+@media (max-width: 768px) {
+  .zh-page .nav__logo {
+    font-size: 1.1rem;
+  }
+  .zh-page .nav__logo-mark {
+    font-size: 1.4rem;
+    min-width: 1.2em;
+  }
+}
+
+/* --- 中文字体系统 Chinese Font Stack ---------------------- */
+.zh-page {
+  --font-sans:    'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  --font-display: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* Chinese body text — slightly looser tracking, taller line-height */
+.zh-page body,
+.zh-page p,
+.zh-page li,
+.zh-page a {
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  line-height: 1.85;
+}
+
+/* Headlines — Chinese characters read better at slightly tighter tracking */
+.zh-page h1,
+.zh-page h2,
+.zh-page h3,
+.zh-page h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+/* --- Hero Heading 首屏标题 -------------------------------- */
+/* Chinese hero headings benefit from tighter vertical rhythm */
+.zh-page .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 8.5vw, 8.5rem);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.zh-page .hero__overtitle {
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.zh-page .hero__sub p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
+
+/* --- Section Titles 版块标题 ------------------------------- */
+.zh-page .section-title {
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.zh-page .section-overtitle {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+}
+
+/* --- Service Cards 服务卡片 ------------------------------- */
+.zh-page .service-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.zh-page .service-card__desc {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .service-card__list li {
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+/* --- Numbers 数字板块 ------------------------------------- */
+.zh-page .numbers__label {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+/* --- Work Items 案例卡片 ---------------------------------- */
+.zh-page .work-item__title {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.zh-page .work-item__tag {
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+}
+
+.zh-page .work-item__result {
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- About Section 关于我们 ------------------------------- */
+.zh-page .about__intro {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.zh-page .about__body p {
+  font-size: 0.98rem;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .about__skills-list li {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .about__skills-title {
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+}
+
+/* --- Process Steps 流程 ----------------------------------- */
+.zh-page .process__step-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.zh-page .process__step-content p {
+  font-size: 0.925rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+/* --- Testimonials 客户评价 -------------------------------- */
+.zh-page .testimonial-card__text {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .testimonial-card__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.zh-page .testimonial-card__role {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- Contact 联系 ----------------------------------------- */
+.zh-page .contact__heading {
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.zh-page .contact__sub {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .form-group label {
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+.zh-page .form-group input,
+.zh-page .form-group select,
+.zh-page .form-group textarea {
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+/* --- Footer 底部 ------------------------------------------ */
+.zh-page .footer__tagline {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+}
+
+.zh-page .footer__nav-col h4 {
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+}
+
+.zh-page .footer__nav-col a {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+.zh-page .footer__copy {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- Nav 导航 --------------------------------------------- */
+.zh-page .nav__link {
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.zh-page .nav__link--cta {
+  letter-spacing: 0.04em;
+}
+
+.zh-page .nav__mobile-link {
+  font-size: clamp(1.8rem, 6.5vw, 3rem);
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+/* --- Ticker 跑马灯 ---------------------------------------- */
+.zh-page .ticker__item {
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+}
+
+.zh-page .client-name {
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+}
+
+/* --- Buttons 按钮 ----------------------------------------- */
+.zh-page .btn {
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+}
+
+/* --- Language Switch 语言切换按钮 ------------------------- */
+.nav__lang-switch {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--c-muted);
+  border: 1.5px solid var(--c-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav__lang-switch:hover {
+  color: var(--c-white);
+  border-color: var(--c-accent);
+  background: rgba(124,95,245,0.1);
+}
+body.theme-light .nav__lang-switch {
+  color: var(--c-muted);
+  border-color: var(--c-border);
+}
+body.theme-light .nav__lang-switch:hover {
+  color: var(--c-text);
+  border-color: var(--c-accent);
+  background: rgba(124,95,245,0.06);
+}
+
+.nav__mobile-lang {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  transition: color 0.25s;
+  letter-spacing: 0.04em;
+}
+.nav__mobile-lang:hover { color: var(--c-accent); }
+
+/* --- Preloader 预加载 ------------------------------------- */
+/* Keep Syne font for the E glyph, it's brand not content */
+.zh-page .preloader__logo-e {
+  font-family: 'Syne', var(--font-display);
+}
+
+/* --- Section Number Glyphs 步骤数字 ----------------------- */
+/* Use Syne for numerals even on ZH page for stylistic consistency */
+.zh-page .service-card__num,
+.zh-page .process__step-num,
+.zh-page .numbers__value {
+  font-family: 'Syne', var(--font-display);
+}
+
+/* ============================================================
+   MOBILE TYPOGRAPHY BOOST (Chinese)
+   ============================================================ */
+@media (max-width: 768px) {
+  .zh-page html { font-size: 16.5px; }
+
+  .zh-page .hero__heading {
+    font-size: clamp(2.6rem, 10vw, 4.5rem);
+    line-height: 1.15;
+  }
+  .zh-page .hero__sub p   { font-size: 1rem; line-height: 1.85; }
+  .zh-page .section-title { font-size: clamp(2rem, 7.5vw, 3rem); }
+
+  .zh-page .service-card__title { font-size: 1.15rem; }
+  .zh-page .service-card__desc  { font-size: 0.95rem; line-height: 1.85; }
+  .zh-page .service-card__list li { font-size: 0.9rem; }
+
+  .zh-page .numbers__label { font-size: 0.9rem; }
+
+  .zh-page .about__intro   { font-size: 1.1rem; }
+  .zh-page .about__body p  { font-size: 0.95rem; line-height: 1.9; }
+
+  .zh-page .process__step-content h3 { font-size: 1.1rem; }
+  .zh-page .process__step-content p  { font-size: 0.925rem; }
+
+  .zh-page .testimonial-card__text { font-size: 0.95rem; line-height: 1.9; }
+
+  .zh-page .contact__heading { font-size: clamp(2.2rem, 8.5vw, 3.4rem); }
+  .zh-page .contact__sub     { font-size: 0.98rem; }
+
+  .zh-page .btn { font-size: 0.95rem; }
+
+  .zh-page .nav__lang-switch { display: none; }
+
+  /* Featured work item on mobile */
+  .zh-page .work-item--featured .work-item__title { font-size: 1.2rem; }
+  .zh-page .work-item--featured .work-item__result { font-size: 0.9rem; }
+
+  /* Featured service card on mobile */
+  .zh-page .service-card--featured .service-card__title { font-size: 1.2rem; }
+  .zh-page .service-card__desc--proof { font-size: 0.875rem; line-height: 1.8; }
+}
+
+@media (max-width: 480px) {
+  .zh-page .hero__heading {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+}
+
+/* ============================================================
+   CULTURAL / LAYOUT ADJUSTMENTS
+   ============================================================ */
+
+/* Slightly more generous padding for Chinese readability */
+.zh-page .service-card { padding: clamp(2rem, 4vw, 3.25rem); }
+.zh-page .testimonial-card { padding: 2.75rem; }
+.zh-page .contact-form { padding: clamp(2rem, 4vw, 3.25rem); }
+
+/* Chinese quotation marks — style the testimonial quote glyph */
+.zh-page .testimonial-card__quote {
+  font-family: 'Syne', sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.9;
+}

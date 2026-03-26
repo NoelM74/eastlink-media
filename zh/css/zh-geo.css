@@ -1,0 +1,258 @@
+/* ============================================================
+   EASTLINK MEDIA — 中文 GEO 页面排版与样式覆盖
+   zh/css/zh-geo.css
+   Chinese typography & layout overrides for seo-geo-authority page
+   ============================================================ */
+
+/* ---- 中文字体系统 ------------------------------------------ */
+.zh-page .geo-hero__heading,
+.zh-page .geo-phase__title,
+.zh-page .geo-cta__heading,
+.zh-page .geo-case__client,
+.zh-page .geo-who__card h3,
+.zh-page .geo-timeline__step-content h3,
+.zh-page .geo-pillar__body h3,
+.zh-page .geo-faq__q span {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Hero heading — tighter for Chinese characters */
+.zh-page .geo-hero__heading {
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  line-height: 1.18;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+
+/* Body text — Chinese readability */
+.zh-page .geo-hero__sub,
+.zh-page .geo-problem__body,
+.zh-page .geo-phase__sub,
+.zh-page .geo-pillar__body p,
+.zh-page .geo-audit-list__body span,
+.zh-page .geo-case__challenge p,
+.zh-page .geo-who__card ul li,
+.zh-page .geo-who__card-note,
+.zh-page .geo-timeline__step-content p,
+.zh-page .geo-faq__a p,
+.zh-page .geo-cta__sub,
+.zh-page .section-sub {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+/* Labels & overlines */
+.zh-page .section-overtitle,
+.zh-page .geo-hero__eyebrow,
+.zh-page .geo-platform-label,
+.zh-page .geo-phase__badge,
+.zh-page .geo-phase__deliverables-title,
+.zh-page .geo-case__client-label,
+.zh-page .geo-case__result-title,
+.zh-page .geo-timeline__step-week,
+.zh-page .geo-cta__eyebrow,
+.zh-page .geo-compare__col-label,
+.zh-page .geo-compare__col-badge,
+.zh-page .geo-stat-card__label,
+.zh-page .geo-metric__label,
+.zh-page .geo-phase__cta-note,
+.zh-page .geo-explainer__img-caption {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Numbers — keep Syne for visual consistency */
+.zh-page .geo-stat-card__num,
+.zh-page .geo-score-pill__num,
+.zh-page .geo-pillar__num,
+.zh-page .geo-timeline__step-num,
+.zh-page .geo-metric__value,
+.zh-page .geo-phase__badge {
+  font-family: 'Syne', 'Noto Sans SC', sans-serif;
+}
+
+/* Audit list strong labels */
+.zh-page .geo-audit-list__body strong {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* Comparison table text */
+.zh-page .geo-compare__feature,
+.zh-page .geo-compare__theirs,
+.zh-page .geo-compare__ours {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 0.875rem;
+}
+
+/* Section titles */
+.zh-page .section-title {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+/* Build badges */
+.zh-page .geo-build-badge {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 0.88rem;
+}
+
+/* CTA trust items */
+.zh-page .geo-cta__trust-item {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Footer */
+.zh-page .footer__tagline,
+.zh-page .footer__nav-col h4,
+.zh-page .footer__nav-col a,
+.zh-page .footer__copy,
+.zh-page .footer__legal a {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Approach list items */
+.zh-page .geo-case__approach ul li {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.85;
+}
+
+/* Who-is-this-for note */
+.zh-page .geo-who__card-note {
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+/* ---- Hero platform badge CJK spacing -------------------- */
+.zh-page .geo-platform {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+/* ---- Logo fix (same as zh-style.css) -------------------- */
+.zh-page .nav__logo,
+.zh-page .nav__logo-mark,
+.zh-page .nav__logo-text,
+.zh-page .footer__logo {
+  font-family: 'Syne', sans-serif !important;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.zh-page .nav__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.zh-page .nav__logo-mark {
+  display: inline-block;
+  flex-shrink: 0;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-family: 'Syne', sans-serif !important;
+  background: linear-gradient(135deg, #7c5ff5, #a883ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  min-width: 1.1em;
+  text-align: center;
+}
+.zh-page .nav__logo-text {
+  font-family: 'Syne', sans-serif !important;
+  white-space: nowrap;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ---- Phase score overlay label CJK ---------------------- */
+.zh-page .geo-score-pill__label {
+  font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+}
+.zh-page .geo-score-context {
+  font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---- FAQ button CJK ------------------------------------- */
+.zh-page .geo-faq__q {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+/* ---- Mobile responsive adjustments ---------------------- */
+@media (max-width: 768px) {
+  .zh-page .geo-hero__heading {
+    font-size: clamp(2.4rem, 9.5vw, 3.8rem);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+  .zh-page .geo-hero__sub {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+  .zh-page .geo-phase__title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+  .zh-page .geo-audit-list__body strong {
+    font-size: 0.92rem;
+  }
+  .zh-page .geo-audit-list__body span {
+    font-size: 0.87rem;
+    line-height: 1.85;
+  }
+  .zh-page .geo-faq__q {
+    font-size: 0.92rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .zh-page .geo-cta__heading {
+    font-size: clamp(1.9rem, 7.5vw, 2.8rem);
+    letter-spacing: 0.04em;
+  }
+  .zh-page .geo-compare__feature,
+  .zh-page .geo-compare__theirs,
+  .zh-page .geo-compare__ours {
+    font-size: 0.78rem;
+    padding: 0.65rem 0.75rem;
+  }
+  .zh-page .nav__logo-mark {
+    font-size: 1.4rem;
+    min-width: 1.2em;
+  }
+  .zh-page .geo-who__card h3 {
+    font-size: 1.05rem;
+  }
+  .zh-page .geo-timeline__step-content h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .zh-page .geo-hero__heading {
+    font-size: clamp(2.1rem, 11vw, 3.2rem);
+  }
+  .zh-page .geo-platforms {
+    gap: 0.45rem;
+  }
+  .zh-page .geo-platform {
+    font-size: 0.7rem;
+    padding: 0.3em 0.7em;
+  }
+}

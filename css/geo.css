@@ -68,6 +68,7 @@
   position: relative;
   z-index: 2;
   max-width: 780px;
+  width: 100%;
 }
 
 .geo-hero__eyebrow {
@@ -1086,7 +1087,7 @@ body.theme-light .geo-problem__body strong { color: var(--c-heading); }
 
 @media (max-width: 768px) {
   .geo-hero { padding: 8rem 0 5rem; }
-  .geo-hero__heading { font-size: clamp(2.6rem, 10vw, 4rem); }
+  .geo-hero__heading { font-size: clamp(2.0rem, 10vw, 4rem); }
   .geo-hero__actions { flex-direction: column; align-items: flex-start; }
   .geo-hero__platforms { flex-direction: column; align-items: flex-start; }
 

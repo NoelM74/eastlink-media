@@ -25,7 +25,7 @@
 
 /* --- Reset ------------------------------------------------ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: auto; font-size: 16px; }
+html { scroll-behavior: auto; font-size: 16px; overflow-x: hidden; }
 body {
   font-family: var(--font-sans);
   background: var(--c-bg);
@@ -364,6 +364,7 @@ input, textarea, select {
   transform: translateY(-2px);
 }
 .btn--full { width: 100%; justify-content: center; }
+.btn--lg   { padding: 1rem 2.25rem; font-size: 1rem; letter-spacing: 0.03em; }
 
 /* --- Sections -------------------------------------------- */
 .section {
@@ -1514,6 +1515,7 @@ input, textarea, select {
   .nav__lang-switch { display: none; }
   .theme-toggle__label { display: none; }
   .nav__burger   { display: flex; }
+  .nav__inner    { gap: 0.75rem; }
 
   /* On mobile: single column, reset all span overrides */
   .services__grid                   { grid-template-columns: 1fr; }

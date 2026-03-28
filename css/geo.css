@@ -730,6 +730,9 @@
   display: flex;
   align-items: center;
   gap: 0.6em;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .geo-compare__feature {
   color: var(--c-text);

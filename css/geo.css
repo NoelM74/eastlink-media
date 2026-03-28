@@ -400,6 +400,7 @@
 .geo-phase__score-overlay {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
   background: rgba(0,0,0,0.4);
@@ -1075,6 +1076,9 @@ body.theme-light .geo-problem__body strong { color: var(--c-heading); }
   .geo-phase__body--reverse { grid-template-columns: 1fr; }
   .geo-phase__body--reverse .geo-phase__visual { order: 0; }
   .geo-phase__body--reverse .geo-phase__deliverables { order: 0; }
+  /* Prevent grid track min-width:auto from forcing content wider than viewport */
+  .geo-phase__visual,
+  .geo-phase__deliverables { min-width: 0; }
   .geo-phase__visual {
     border-right: none;
     border-left: none !important;
@@ -1092,8 +1096,9 @@ body.theme-light .geo-problem__body strong { color: var(--c-heading); }
   .geo-hero__actions { flex-direction: column; align-items: flex-start; }
   .geo-hero__platforms { flex-direction: column; align-items: flex-start; }
 
-  .geo-phase__header { padding: 2rem; }
-  .geo-phase__deliverables { padding: 2rem; }
+  .geo-phase__header { padding: 1.25rem; }
+  .geo-phase__deliverables { padding: 1.25rem; }
+  .geo-phase__visual { padding: 1.25rem; }
 
   .geo-compare__header,
   .geo-compare__row {

@@ -731,8 +731,6 @@
   align-items: center;
   gap: 0.6em;
   min-width: 0;
-  overflow-wrap: break-word;
-  word-break: break-word;
 }
 .geo-compare__feature {
   color: var(--c-text);
@@ -1103,10 +1101,12 @@ body.theme-light .geo-problem__body strong { color: var(--c-heading); }
   .geo-phase__deliverables { padding: 1.25rem; }
   .geo-phase__visual { padding: 1.25rem; }
 
+  /* Use minmax so columns have a minimum px width — table scrolls
+     horizontally rather than squeezing text into unreadable fragments */
   .geo-compare__header,
   .geo-compare__row {
-    grid-template-columns: 1.2fr 1fr 1fr;
-    font-size: 0.8rem;
+    grid-template-columns: minmax(140px, 1.2fr) minmax(110px, 1fr) minmax(140px, 1fr);
+    font-size: 0.85rem;
   }
   .geo-compare__feature,
   .geo-compare__theirs,

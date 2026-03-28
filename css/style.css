@@ -277,7 +277,7 @@ input, textarea, select {
   flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.5s var(--ease-out);
-  z-index: 5;
+  z-index: 895;
   overflow: hidden;
 }
 .nav__mobile.is-open { transform: translateX(0); }
@@ -302,6 +302,8 @@ input, textarea, select {
   padding: 0.2rem 0;
 }
 .nav__mobile-link:hover { color: var(--c-white); }
+.nav__mobile-link--geo { color: var(--c-accent); }
+.nav__mobile-link--geo:hover { color: var(--c-accent-2); }
 .nav__mobile-footer {
   display: flex;
   flex-direction: column;
@@ -1611,7 +1613,7 @@ input, textarea, select {
   .hero__sub p   { font-size: 1.05rem; }
   .hero__overtitle { font-size: 0.8rem; }
 
-  .section-title        { font-size: clamp(2.2rem, 8vw, 3.2rem); }
+  .section-title        { font-size: clamp(1.6rem, 8vw, 3.2rem); }
   .section-overtitle    { font-size: 0.8rem; }
 
   .service-card__title  { font-size: 1.25rem; }

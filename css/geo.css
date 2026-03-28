@@ -503,6 +503,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 0;
 }
 .geo-audit-list__body strong {
   font-size: 0.95rem;
@@ -1115,4 +1116,5 @@ body.theme-light .geo-problem__body strong { color: var(--c-heading); }
 
   .geo-case__left { padding: 2rem; }
   .geo-case__results { padding: 1.5rem 2rem; }
+  .geo-case__client { font-size: clamp(1.5rem, 6vw, 2.2rem); }
 }

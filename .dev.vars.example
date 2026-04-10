@@ -1,0 +1,8 @@
+# Resend API key — get yours at https://resend.com/api-keys
+RESEND_API_KEY=re_xxxxxxxxxxxx
+
+# Email address that receives contact form submissions
+CONTACT_EMAIL=eastlinktrade@gmail.com
+
+# Verified sender address in Resend (use onboarding@resend.dev for testing)
+FROM_EMAIL=onboarding@resend.dev

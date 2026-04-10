@@ -315,12 +315,13 @@
       this.form.addEventListener('submit', e => this.handle(e));
     },
 
-    handle(e) {
+    async handle(e) {
       e.preventDefault();
       const data = new FormData(this.form);
-      const name  = data.get('name')?.trim();
-      const email = data.get('email')?.trim();
-      const msg   = data.get('message')?.trim();
+      const name    = data.get('name')?.trim();
+      const email   = data.get('email')?.trim();
+      const service = data.get('service')?.trim() || '';
+      const msg     = data.get('message')?.trim();
 
       if (!name || !email || !msg) {
         this.setStatus('Please fill in all required fields.', 'error');
@@ -335,17 +336,34 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      // Simulate async send
-      setTimeout(() => {
-        btn.textContent = 'Message Sent ✓';
-        this.setStatus('Thank you! We\'ll be in touch within 24 hours.', 'success');
-        this.form.reset();
-        setTimeout(() => {
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, service, message: msg }),
+        });
+
+        const result = await res.json();
+
+        if (res.ok && result.success) {
+          btn.textContent = 'Message Sent ✓';
+          this.setStatus('Thank you! We\'ll be in touch within 24 hours.', 'success');
+          this.form.reset();
+          setTimeout(() => {
+            btn.textContent = 'Send Message →';
+            btn.disabled = false;
+            this.setStatus('', '');
+          }, 5000);
+        } else {
           btn.textContent = 'Send Message →';
           btn.disabled = false;
-          this.setStatus('', '');
-        }, 5000);
-      }, 1200);
+          this.setStatus(result.error || 'Something went wrong. Please try again.', 'error');
+        }
+      } catch {
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        this.setStatus('Network error. Please check your connection and try again.', 'error');
+      }
     },
 
     setStatus(msg, type) {

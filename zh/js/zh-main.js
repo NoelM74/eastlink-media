@@ -272,12 +272,13 @@
       this.form.addEventListener('submit', e => this.handle(e));
     },
 
-    handle(e) {
+    async handle(e) {
       e.preventDefault();
-      const data  = new FormData(this.form);
-      const name  = data.get('name')?.trim();
-      const email = data.get('email')?.trim();
-      const msg   = data.get('message')?.trim();
+      const data    = new FormData(this.form);
+      const name    = data.get('name')?.trim();
+      const email   = data.get('email')?.trim();
+      const service = data.get('service')?.trim() || '';
+      const msg     = data.get('message')?.trim();
 
       if (!name || !email || !msg) {
         this.setStatus('请填写所有必填项目。', 'error');
@@ -292,16 +293,34 @@
       btn.textContent = '发送中…';
       btn.disabled = true;
 
-      setTimeout(() => {
-        btn.textContent = '发送成功 ✓';
-        this.setStatus('感谢您的留言！我们将在 24 小时内与您联系。', 'success');
-        this.form.reset();
-        setTimeout(() => {
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, service, message: msg }),
+        });
+
+        const result = await res.json();
+
+        if (res.ok && result.success) {
+          btn.textContent = '发送成功 ✓';
+          this.setStatus('感谢您的留言！我们将在 24 小时内与您联系。', 'success');
+          this.form.reset();
+          setTimeout(() => {
+            btn.textContent = '发送消息 →';
+            btn.disabled = false;
+            this.setStatus('', '');
+          }, 5000);
+        } else {
           btn.textContent = '发送消息 →';
           btn.disabled = false;
-          this.setStatus('', '');
-        }, 5000);
-      }, 1200);
+          this.setStatus(result.error || '发送失败，请稍后重试。', 'error');
+        }
+      } catch {
+        btn.textContent = '发送消息 →';
+        btn.disabled = false;
+        this.setStatus('网络错误，请检查网络连接后重试。', 'error');
+      }
     },
 
     setStatus(msg, type) {

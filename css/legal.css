@@ -1,0 +1,213 @@
+/* ============================================================
+   EASTLINK MEDIA — LEGAL PAGES & COOKIE BANNER
+   ============================================================ */
+
+/* --- Legal Hero ------------------------------------------- */
+.legal-hero {
+  padding: calc(var(--nav-h) + 5rem) 0 4rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.legal-hero__overtitle {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 1rem;
+}
+
+.legal-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.legal-hero__meta {
+  font-size: 0.875rem;
+  color: var(--c-muted);
+}
+
+/* --- Legal Content ---------------------------------------- */
+.legal-content {
+  padding: 4rem 0 6rem;
+  max-width: 780px;
+}
+
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 3rem 0 1rem;
+  color: var(--c-text);
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+  color: var(--c-text);
+}
+
+.legal-content p {
+  color: var(--c-muted);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.legal-content ul,
+.legal-content ol {
+  color: var(--c-muted);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.legal-content ul { list-style: disc; }
+.legal-content ol { list-style: decimal; }
+
+.legal-content li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-content a {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-content a:hover {
+  color: var(--c-accent-2);
+}
+
+.legal-content strong {
+  color: var(--c-text);
+  font-weight: 600;
+}
+
+.legal-content .legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.legal-content .legal-table th,
+.legal-content .legal-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--c-border);
+  color: var(--c-muted);
+  line-height: 1.6;
+}
+
+.legal-content .legal-table th {
+  color: var(--c-text);
+  font-weight: 600;
+  background: var(--c-surface);
+}
+
+.legal-divider {
+  border: none;
+  border-top: 1px solid var(--c-border);
+  margin: 3rem 0;
+}
+
+/* --- Cookie Banner --------------------------------------- */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8000;
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cookie-banner.is-visible {
+  transform: translateY(0);
+}
+
+.cookie-banner__text {
+  flex: 1;
+  min-width: 260px;
+  font-size: 0.875rem;
+  color: var(--c-muted);
+  line-height: 1.6;
+}
+
+.cookie-banner__text a {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.cookie-banner__btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+  font-family: var(--font-sans);
+  border: none;
+  white-space: nowrap;
+}
+
+.cookie-banner__btn--accept {
+  background: var(--c-accent);
+  color: var(--c-white);
+}
+
+.cookie-banner__btn--accept:hover {
+  opacity: 0.85;
+}
+
+.cookie-banner__btn--essential {
+  background: transparent;
+  color: var(--c-muted);
+  border: 1px solid var(--c-border);
+}
+
+.cookie-banner__btn--essential:hover {
+  color: var(--c-text);
+  border-color: var(--c-muted);
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: 1.25rem 1.25rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cookie-banner__actions {
+    width: 100%;
+  }
+  .cookie-banner__btn {
+    flex: 1;
+    text-align: center;
+  }
+}

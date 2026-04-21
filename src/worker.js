@@ -119,6 +119,20 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Redirect HTTP → HTTPS (permanent)
+    if (url.protocol === 'http:') {
+      url.protocol = 'https:';
+      return Response.redirect(url.toString(), 301);
+    }
+
+    // Redirect /index.html and /zh/index.html to canonical clean URLs (permanent)
+    if (url.pathname === '/index.html') {
+      return Response.redirect(`https://${url.hostname}/`, 301);
+    }
+    if (url.pathname === '/zh/index.html') {
+      return Response.redirect(`https://${url.hostname}/zh/`, 301);
+    }
+
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: CORS_HEADERS });

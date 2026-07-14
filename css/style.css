@@ -10,8 +10,8 @@
   --c-border:    rgba(255,255,255,0.10);
   --c-text:      #f0f0f0;
   --c-muted:     #b0b0b0;
-  --c-accent:    #7c5ff5;
-  --c-accent-2:  #c47cff;
+  /* Accent tokens (--c-accent, --c-accent-2, --c-on-accent, --c-ember, *-rgb)
+     are theme-scoped — see css/theme.css body.theme-dark / body.theme-light */
   --c-white:     #ffffff;
 
   --font-sans:   'Inter', system-ui, sans-serif;
@@ -254,7 +254,7 @@ body.menu-open .nav.is-scrolled {
 .nav__link--cta:hover {
   background: var(--c-accent);
   border-color: var(--c-accent);
-  color: var(--c-white);
+  color: var(--c-on-accent);
 }
 .nav__burger {
   display: none;
@@ -343,14 +343,15 @@ body.menu-open .nav.is-scrolled {
 }
 .btn--primary {
   background: var(--c-accent);
-  color: var(--c-white);
+  color: var(--c-on-accent);
   border-color: var(--c-accent);
 }
 .btn--primary:hover {
   background: var(--c-accent-2);
   border-color: var(--c-accent-2);
+  color: var(--c-on-accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124,95,245,0.4);
+  box-shadow: 0 8px 24px rgba(var(--c-accent-rgb),0.4);
 }
 .btn--ghost {
   background: transparent;
@@ -489,7 +490,7 @@ body.menu-open .nav.is-scrolled {
 .hero__texture--3 {
   width: clamp(150px, 20vw, 300px);
   height: clamp(150px, 20vw, 300px);
-  background: radial-gradient(circle, #5cf, transparent 70%);
+  background: radial-gradient(circle, var(--c-ember), transparent 70%);
   top: 40%;
   right: 25%;
   opacity: 0.08;
@@ -673,7 +674,7 @@ body.menu-open .nav.is-scrolled {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(124,95,245,0.06), transparent);
+  background: linear-gradient(135deg, rgba(var(--c-accent-rgb),0.06), transparent);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -742,7 +743,7 @@ body.menu-open .nav.is-scrolled {
 /* --- Featured service card (SEO/GEO lead) ------------------- */
 .service-card--featured {
   grid-column: 1 / -1;          /* full row on all breakpoints */
-  background: linear-gradient(140deg, rgba(124,95,245,0.12) 0%, var(--c-bg) 60%);
+  background: linear-gradient(140deg, rgba(var(--c-accent-rgb),0.12) 0%, var(--c-bg) 60%);
   border-bottom: 1.5px solid var(--c-border);
   position: relative;
 }
@@ -750,7 +751,7 @@ body.menu-open .nav.is-scrolled {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(124,95,245,0.08), transparent 70%);
+  background: linear-gradient(135deg, rgba(var(--c-accent-rgb),0.08), transparent 70%);
   pointer-events: none;
 }
 .service-card--featured .service-card__title {
@@ -773,8 +774,8 @@ body.menu-open .nav.is-scrolled {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--c-accent-2);
-  background: rgba(168,131,255,0.12);
-  border: 1px solid rgba(168,131,255,0.28);
+  background: rgba(var(--c-accent-2-rgb),0.12);
+  border: 1px solid rgba(var(--c-accent-2-rgb),0.28);
   border-radius: 2rem;
   padding: 0.25em 0.85em;
   margin-bottom: 1rem;
@@ -806,13 +807,13 @@ body.menu-open .nav.is-scrolled {
   margin-bottom: 1.5rem;
   letter-spacing: 0.02em;
   transition: color 0.2s, gap 0.2s;
-  border-bottom: 1px solid rgba(124,95,245,0.3);
+  border-bottom: 1px solid rgba(var(--c-accent-rgb),0.3);
   padding-bottom: 0.25rem;
 }
 .service-card__cta-link:hover {
   color: var(--c-accent-2);
   gap: 0.65em;
-  border-bottom-color: rgba(168,131,255,0.5);
+  border-bottom-color: rgba(var(--c-accent-2-rgb),0.5);
 }
 
 /* Score pills (32 → 88 badge) */
@@ -1167,7 +1168,7 @@ body.menu-open .nav.is-scrolled {
   transition: background 0.35s;
 }
 .process__step:first-child { border-left: none; }
-.process__step:hover { background: rgba(124,95,245,0.04); }
+.process__step:hover { background: rgba(var(--c-accent-rgb),0.04); }
 
 .process__step-num {
   font-family: var(--font-display);
@@ -1211,7 +1212,7 @@ body.menu-open .nav.is-scrolled {
   transition: border-color 0.3s, transform 0.3s;
 }
 .testimonial-card:hover {
-  border-color: rgba(124,95,245,0.4);
+  border-color: rgba(var(--c-accent-rgb),0.4);
   transform: translateY(-4px);
 }
 .testimonial-card__quote {
@@ -1248,7 +1249,7 @@ body.menu-open .nav.is-scrolled {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--c-white);
+  color: var(--c-on-accent);
   flex-shrink: 0;
 }
 .testimonial-card__name {
@@ -1351,7 +1352,7 @@ body.menu-open .nav.is-scrolled {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--c-accent);
-  background: rgba(124,95,245,0.04);
+  background: rgba(var(--c-accent-rgb),0.04);
   outline: none;
 }
 .form-group select option { background: #1a1a1a; color: var(--c-text); }
@@ -1451,7 +1452,7 @@ body.menu-open .nav.is-scrolled {
   right: 2rem;
   width: 44px; height: 44px;
   background: var(--c-accent);
-  color: var(--c-white);
+  color: var(--c-on-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1489,7 +1490,7 @@ body.menu-open .nav.is-scrolled {
 .nav__lang-switch:hover {
   color: var(--c-white);
   border-color: var(--c-accent);
-  background: rgba(124,95,245,0.1);
+  background: rgba(var(--c-accent-rgb),0.1);
 }
 .nav__mobile-lang {
   font-size: 0.95rem;
@@ -1750,7 +1751,7 @@ body.menu-open .nav.is-scrolled {
   white-space: nowrap;
 }
 .equation__term--result {
-  color: var(--c-white);
+  color: var(--c-on-accent);
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
   border-color: transparent;
 }

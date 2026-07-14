@@ -162,7 +162,7 @@
   line-height: 1;
   font-size: 1.5rem;
   font-family: 'Syne', sans-serif !important;
-  background: linear-gradient(135deg, #7c5ff5, #a883ff) !important;
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2)) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;

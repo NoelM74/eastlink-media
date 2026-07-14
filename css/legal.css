@@ -178,7 +178,7 @@
 
 .cookie-banner__btn--accept {
   background: var(--c-accent);
-  color: var(--c-white);
+  color: var(--c-on-accent);
 }
 
 .cookie-banner__btn--accept:hover {

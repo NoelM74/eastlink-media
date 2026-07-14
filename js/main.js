@@ -54,72 +54,6 @@
   };
 
   /* ----------------------------------------------------------
-     CUSTOM CURSOR
-  ---------------------------------------------------------- */
-  const Cursor = {
-    el:    document.getElementById('cursor'),
-    dot:   null,
-    ring:  null,
-    label: null,
-    mx: window.innerWidth / 2,
-    my: window.innerHeight / 2,
-    rx: window.innerWidth / 2,
-    ry: window.innerHeight / 2,
-    raf: null,
-
-    init() {
-      if (!this.el) return;
-      // Only on non-touch
-      if (window.matchMedia('(pointer: coarse)').matches) return;
-
-      this.dot   = this.el.querySelector('.cursor__dot');
-      this.ring  = this.el.querySelector('.cursor__ring');
-      this.label = this.el.querySelector('.cursor__label');
-
-      document.addEventListener('mousemove', e => {
-        this.mx = e.clientX;
-        this.my = e.clientY;
-      });
-
-      document.addEventListener('mouseenter', () => {
-        this.el.style.opacity = '1';
-      });
-      document.addEventListener('mouseleave', () => {
-        this.el.style.opacity = '0';
-      });
-
-      // Hover states
-      document.querySelectorAll('a, button, [data-cursor]').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          this.el.classList.add('is-hover');
-          const label = el.dataset.cursor;
-          if (label) {
-            this.label.textContent = label;
-            this.el.classList.add('has-label');
-          }
-        });
-        el.addEventListener('mouseleave', () => {
-          this.el.classList.remove('is-hover', 'has-label');
-          this.label.textContent = '';
-        });
-      });
-
-      this.tick();
-    },
-
-    tick() {
-      // Smooth lag on ring
-      this.rx += (this.mx - this.rx) * 0.14;
-      this.ry += (this.my - this.ry) * 0.14;
-
-      if (this.dot)  { this.dot.style.transform  = `translate(${this.mx}px, ${this.my}px) translate(-50%,-50%)`; }
-      if (this.ring) { this.ring.style.transform  = `translate(${this.rx}px, ${this.ry}px) translate(-50%,-50%)`; }
-
-      requestAnimationFrame(() => this.tick());
-    }
-  };
-
-  /* ----------------------------------------------------------
      NAVIGATION
   ---------------------------------------------------------- */
   const Nav = {
@@ -519,7 +453,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     ThemeToggle.init();
     Preloader.init();
-    Cursor.init();
     Nav.init();
     Parallax.init();
     ContactForm.init();

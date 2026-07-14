@@ -1,6 +1,10 @@
 # Eastlink Media — Website Project
 
-A modern, motion-forward agency website for **Eastlink Media** — a creative-media and ecommerce-growth agency specialising in **SEO, GEO (Generative Engine Optimisation), affiliate marketing, performance advertising, brand & creative, and digital development**.
+A modern, motion-forward agency website for **Eastlink Media** — an **accountable direct response marketing agency** founded by Noel Murphy (25 years in direct response, $130M+ in sales from his own businesses). The purpose of advertising is to sell: every campaign — paid media (Meta, Google, TikTok), email/SMS/direct mail, offers & funnels, and **SEO & GEO (Generative Engine Optimisation)** — is treated as a tool in the toolbox, tested, measured, and answerable for the sales it produces.
+
+The homepage copy follows the classic direct-response positioning of Gary Bencivenga's "Accountable Advertising" — salesmanship multiplied, the Persuasion Equation (Problem + Promise + Proof + Proposition = Persuasion), and a low-pressure, proof-first engagement process.
+
+> Note: `zh/index.html` (Mandarin homepage) still carries the previous ecommerce-agency positioning and needs re-translation to match.
 
 ---
 

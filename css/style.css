@@ -1667,3 +1667,147 @@ body.menu-open .nav.is-scrolled {
   /* Extra breathing room on mobile sections */
   .section { padding: clamp(4rem, 10vw, 7rem) 0; }
 }
+
+/* ============================================================
+   PHILOSOPHY — Salesmanship, Multiplied
+   ============================================================ */
+.philosophy__lede {
+  max-width: 72ch;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.philosophy__lede p {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--c-muted);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.philosophy__lede strong {
+  color: var(--c-text);
+}
+.philosophy__list {
+  border-top: 1px solid var(--c-border);
+}
+.philosophy__item {
+  display: grid;
+  grid-template-columns: minmax(64px, 120px) 1fr;
+  gap: clamp(1rem, 4vw, 3rem);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.philosophy__num {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--c-accent);
+  opacity: 0.55;
+}
+.philosophy__content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--c-heading);
+  margin-bottom: 0.6rem;
+}
+.philosophy__content p {
+  font-size: 1rem;
+  color: var(--c-muted);
+  line-height: 1.8;
+  max-width: 72ch;
+}
+.philosophy__content em {
+  color: var(--c-text);
+  font-style: italic;
+}
+
+/* ============================================================
+   PERSUASION EQUATION
+   ============================================================ */
+.equation__lede {
+  max-width: 72ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--c-muted);
+  line-height: 1.8;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.equation__formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.equation__term {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 0.35em 0.75em;
+  white-space: nowrap;
+}
+.equation__term--result {
+  color: var(--c-white);
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+  border-color: transparent;
+}
+.equation__op {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  font-weight: 800;
+  color: var(--c-accent);
+}
+.equation__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.equation-card {
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  background: var(--c-surface);
+}
+.equation-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  margin-bottom: 0.7rem;
+}
+.equation-card p {
+  font-size: 0.925rem;
+  color: var(--c-muted);
+  line-height: 1.75;
+}
+.equation__footnote {
+  max-width: 72ch;
+  font-size: 0.95rem;
+  color: var(--c-muted);
+  line-height: 1.8;
+  border-left: 3px solid var(--c-accent);
+  padding-left: 1.25rem;
+}
+
+/* Founder's letter signature */
+.about__signature {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--c-heading) !important;
+  margin-top: 1.5rem;
+}
+
+/* Responsive: new sections */
+@media (max-width: 1100px) {
+  .equation__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .equation__grid { grid-template-columns: 1fr; }
+  .philosophy__item { grid-template-columns: 48px 1fr; gap: 1rem; }
+  .philosophy__content p { font-size: 1rem; }
+  .philosophy__lede p, .equation__lede { font-size: 1.05rem; }
+}

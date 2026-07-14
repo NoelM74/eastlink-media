@@ -1812,3 +1812,115 @@ body.menu-open .nav.is-scrolled {
   .philosophy__content p { font-size: 1rem; }
   .philosophy__lede p, .equation__lede { font-size: 1.05rem; }
 }
+
+/* ============================================================
+   GUARANTEE — ember accent, reserved for this moment only
+   ============================================================ */
+.nav__link--guarantee {
+  color: var(--c-ember) !important;
+  font-weight: 600;
+}
+.nav__link--guarantee:hover { color: var(--c-accent) !important; }
+.nav__mobile-link--guarantee { color: var(--c-ember); }
+.nav__mobile-link--guarantee:hover { color: var(--c-accent); }
+
+.guarantee__card {
+  position: relative;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid rgba(var(--c-ember-rgb), 0.3);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(var(--c-ember-rgb), 0.14), transparent 60%),
+    var(--c-surface);
+  overflow: hidden;
+}
+
+.guarantee__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-ember);
+  margin-bottom: 1.25rem;
+}
+.guarantee__eyebrow::before,
+.guarantee__eyebrow::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--c-ember);
+}
+
+.guarantee__headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--c-heading);
+  max-width: 20ch;
+  margin: 0 auto 1.25rem;
+  text-wrap: balance;
+}
+.guarantee__pct {
+  color: var(--c-ember);
+}
+.guarantee__or {
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.guarantee__sub {
+  font-size: 1.02rem;
+  color: var(--c-muted);
+  max-width: 52ch;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  line-height: 1.7;
+}
+
+.guarantee__terms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--c-border);
+}
+.guarantee-term__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-ember);
+  margin-bottom: 0.6rem;
+}
+.guarantee-term p {
+  font-size: 0.925rem;
+  color: var(--c-muted);
+  line-height: 1.65;
+}
+.guarantee-term p strong { color: var(--c-text); }
+
+.guarantee__eligibility {
+  font-size: 0.82rem;
+  color: var(--c-muted);
+  max-width: 62ch;
+  margin: 0 auto clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.guarantee__cta { box-shadow: 0 8px 28px rgba(var(--c-ember-rgb), 0.3); }
+
+@media (max-width: 900px) {
+  .guarantee__terms { grid-template-columns: 1fr; }
+}

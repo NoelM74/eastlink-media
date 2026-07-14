@@ -3,12 +3,12 @@
    Chinese typography, layout overrides & cultural adjustments
    ============================================================ */
 
-/* --- Logo fix: force Syne + no-wrap so E never breaks onto its own line --- */
+/* --- Logo fix: force Fraunces + no-wrap so E never breaks onto its own line --- */
 .zh-page .nav__logo,
 .zh-page .nav__logo-mark,
 .zh-page .nav__logo-text,
 .zh-page .footer__logo {
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   white-space: nowrap;
   flex-wrap: nowrap;
 }
@@ -26,7 +26,7 @@
   line-height: 1;
   font-size: 1.5rem;
   /* Re-apply gradient text explicitly so it renders on mobile WebKit */
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2)) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -36,7 +36,7 @@
   text-align: center;
 }
 .zh-page .nav__logo-text {
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   white-space: nowrap;
   display: inline-block;
   flex-shrink: 0;
@@ -330,17 +330,17 @@ body.theme-light .nav__lang-switch:hover {
 .nav__mobile-lang:hover { color: var(--c-accent); }
 
 /* --- Preloader 预加载 ------------------------------------- */
-/* Keep Syne font for the E glyph, it's brand not content */
+/* Keep Fraunces font for the E glyph, it's brand not content */
 .zh-page .preloader__logo-e {
-  font-family: 'Syne', var(--font-display);
+  font-family: 'Fraunces', var(--font-display);
 }
 
 /* --- Section Number Glyphs 步骤数字 ----------------------- */
-/* Use Syne for numerals even on ZH page for stylistic consistency */
+/* Use Fraunces for numerals even on ZH page for stylistic consistency */
 .zh-page .service-card__num,
 .zh-page .process__step-num,
 .zh-page .numbers__value {
-  font-family: 'Syne', var(--font-display);
+  font-family: 'Fraunces', var(--font-display);
 }
 
 /* ============================================================
@@ -403,7 +403,7 @@ body.theme-light .nav__lang-switch:hover {
 
 /* Chinese quotation marks — style the testimonial quote glyph */
 .zh-page .testimonial-card__quote {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 3.5rem;
   line-height: 0.9;
 }

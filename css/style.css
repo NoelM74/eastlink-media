@@ -15,7 +15,7 @@
   --c-white:     #ffffff;
 
   --font-sans:   'Inter', system-ui, sans-serif;
-  --font-display:'Syne', sans-serif;
+  --font-display:'Fraunces', 'Georgia', serif;
 
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -138,7 +138,7 @@ body.menu-open .nav.is-scrolled {
   gap: 2rem;
 }
 .nav__logo {
-  font-family: 'Syne', var(--font-display);
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -151,7 +151,7 @@ body.menu-open .nav.is-scrolled {
   text-decoration: none;
 }
 .nav__logo-mark {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-display);
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -162,7 +162,7 @@ body.menu-open .nav.is-scrolled {
   flex-shrink: 0;
 }
 .nav__logo-text {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-display);
   white-space: nowrap;
   display: inline-block;
 }

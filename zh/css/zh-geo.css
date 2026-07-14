@@ -63,14 +63,14 @@
   letter-spacing: 0.05em;
 }
 
-/* Numbers — keep Syne for visual consistency */
+/* Numbers — keep Fraunces for visual consistency */
 .zh-page .geo-stat-card__num,
 .zh-page .geo-score-pill__num,
 .zh-page .geo-pillar__num,
 .zh-page .geo-timeline__step-num,
 .zh-page .geo-metric__value,
 .zh-page .geo-phase__badge {
-  font-family: 'Syne', 'Noto Sans SC', sans-serif;
+  font-family: 'Fraunces', 'Noto Sans SC', sans-serif;
 }
 
 /* Audit list strong labels */
@@ -144,7 +144,7 @@
 .zh-page .nav__logo-mark,
 .zh-page .nav__logo-text,
 .zh-page .footer__logo {
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   white-space: nowrap;
   flex-wrap: nowrap;
 }
@@ -161,7 +161,7 @@
   flex-shrink: 0;
   line-height: 1;
   font-size: 1.5rem;
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2)) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -170,7 +170,7 @@
   text-align: center;
 }
 .zh-page .nav__logo-text {
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Fraunces', serif !important;
   white-space: nowrap;
   display: inline-block;
   flex-shrink: 0;

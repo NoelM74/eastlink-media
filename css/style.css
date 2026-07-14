@@ -15,7 +15,7 @@
   --c-white:     #ffffff;
 
   --font-sans:   'Inter', system-ui, sans-serif;
-  --font-display:'Syne', sans-serif;
+  --font-display:'Fraunces', 'Georgia', serif;
 
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -107,50 +107,6 @@ input, textarea, select {
   font-family: var(--font-display);
 }
 
-/* --- Custom Cursor --------------------------------------- */
-.cursor {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 9998;
-  mix-blend-mode: difference;
-}
-.cursor__dot {
-  position: absolute;
-  width: 6px; height: 6px;
-  background: var(--c-white);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s;
-}
-.cursor__ring {
-  position: absolute;
-  width: 36px; height: 36px;
-  border: 1.5px solid rgba(255,255,255,0.6);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.35s var(--ease-out),
-              height 0.35s var(--ease-out),
-              opacity 0.35s;
-}
-.cursor.is-hover .cursor__ring {
-  width: 64px; height: 64px;
-  opacity: 0.4;
-}
-.cursor__label {
-  position: absolute;
-  transform: translate(-50%, -50%) translateY(28px);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--c-white);
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.25s;
-}
-.cursor.has-label .cursor__label { opacity: 1; }
-@media (pointer: coarse) { .cursor { display: none; } }
-
 /* --- Navigation ------------------------------------------ */
 .nav {
   position: fixed;
@@ -182,7 +138,7 @@ body.menu-open .nav.is-scrolled {
   gap: 2rem;
 }
 .nav__logo {
-  font-family: 'Syne', var(--font-display);
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -195,7 +151,7 @@ body.menu-open .nav.is-scrolled {
   text-decoration: none;
 }
 .nav__logo-mark {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-display);
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -206,7 +162,7 @@ body.menu-open .nav.is-scrolled {
   flex-shrink: 0;
 }
 .nav__logo-text {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-display);
   white-space: nowrap;
   display: inline-block;
 }
@@ -417,6 +373,7 @@ body.menu-open .nav.is-scrolled {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--c-white);
+  overflow-wrap: break-word;
 }
 .section-title em {
   font-style: normal;
@@ -541,6 +498,12 @@ body.menu-open .nav.is-scrolled {
 }
 .hero__heading-line {
   display: block;
+  /* No child span to translate here (unlike other .reveal-line uses), so the
+     inherited overflow:hidden buys no animation and only risks silently
+     clipping text if a visitor's text-size setting pushes the clamp() rem
+     floor past what actually fits — wrap instead of losing letters. */
+  overflow: visible;
+  overflow-wrap: break-word;
 }
 .hero__heading-line--accent {
   background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-accent-2) 100%);
@@ -601,14 +564,11 @@ body.menu-open .nav.is-scrolled {
   gap: 1.2rem;
 }
 .hero__social-link {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--c-muted);
-  transition: color 0.25s;
-  writing-mode: vertical-rl;
+  font-size: 1rem;
+  color: var(--c-text);
+  transition: color 0.25s, transform 0.25s;
 }
-.hero__social-link:hover { color: var(--c-white); }
+.hero__social-link:hover { color: var(--c-accent); transform: translateY(-2px); }
 
 /* ============================================================
    TICKER
@@ -1280,6 +1240,7 @@ body.menu-open .nav.is-scrolled {
   letter-spacing: -0.02em;
   color: var(--c-white);
   margin-bottom: 1.25rem;
+  overflow-wrap: break-word;
 }
 .contact__heading em {
   font-style: normal;
@@ -1313,6 +1274,11 @@ body.menu-open .nav.is-scrolled {
   display: flex;
   gap: 1.25rem;
 }
+.contact__socials a {
+  font-size: 1.15rem;
+  transition: color 0.25s, transform 0.25s;
+}
+.contact__socials a:hover { transform: translateY(-2px); }
 
 /* Form */
 .contact-form {
@@ -1867,6 +1833,7 @@ body.menu-open .nav.is-scrolled {
   max-width: 20ch;
   margin: 0 auto 1.25rem;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 .guarantee__pct {
   color: var(--c-ember);

@@ -752,3 +752,6 @@ html:lang(zh) .duo__card h3, html:lang(zh) .feat h3, html:lang(zh) .tl__step h3,
 html:lang(zh) .faq summary, html:lang(zh) .sub { font-weight: 700; }
 html:lang(zh) .cmp tbody th { line-height: 1.6; }
 html:lang(zh) .ph { display: inline-block; }
+html:lang(zh) .hero__h1:not(.hero__h1--page) { font-size: clamp(36px, 5.4vw, 68px); }
+@media (min-width: 900px) { html:lang(zh) .hero__h1:not(.hero__h1--page) { max-width: 10em; } }
+html:lang(zh) .tile small { letter-spacing: 0; }

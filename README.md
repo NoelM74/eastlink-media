@@ -76,10 +76,9 @@ Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). N
 
 ## Next Steps
 
-1. Have the privacy policy and terms reviewed for the company's country (they currently cite UK GDPR, the ICO and the law of England and Wales)
+1. Have a solicitor review the privacy policy and terms (they now cite the GDPR, Ireland's Data Protection Commission, US state privacy law and Irish governing law)
 2. Add Chinese versions of the legal pages
 3. Add analytics (with consent) to measure enquiries per page
-4. Confirm merch MOQs and lead times, then show them on the English homepage
 
 ---
 

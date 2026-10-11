@@ -71,7 +71,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   font-size: clamp(32px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.012em;
   text-wrap: balance; max-width: 20ch;
 }
-.h2 em, .hero__h1 em { font-style: italic; font-weight: 500; color: var(--gold-ink); }
+.h2 em, .hero__h1 em { font-style: normal; font-weight: inherit; color: var(--gold-ink); }
 .lede { color: var(--muted); font-size: clamp(17px, 1.5vw, 19px); max-width: 58ch; margin-top: 18px; }
 .more { display: inline-block; margin-top: 18px; font-weight: 600; color: var(--gold-ink); text-underline-offset: 4px; }
 .more:hover { color: var(--ink); }

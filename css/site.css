@@ -156,7 +156,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .hero__grid { display: grid; gap: 36px; align-items: center; }
 .hero__h1 {
   font-family: var(--f-display); font-weight: 580; font-optical-sizing: auto;
-  font-size: clamp(46px, 8.2vw, 92px); line-height: 1; letter-spacing: -0.018em;
+  font-size: clamp(44px, 6.6vw, 80px); line-height: 1; letter-spacing: -0.018em;
   text-wrap: balance;
 }
 .hero__sub { margin-top: 22px; font-size: clamp(17.5px, 1.7vw, 20px); max-width: 46ch; color: var(--ink); }
@@ -220,7 +220,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 @media (min-width: 900px) {
   .hero__grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; }
-  .hero__h1 { max-width: 11ch; }
+  .hero__h1 { max-width: 12ch; }
   .stage { padding: 24px; }
 }
 
@@ -517,8 +517,8 @@ a.build:hover .build__img img { transform: scale(1.03); }
 /* ============================================================
    SEO & GEO PAGE
    ============================================================ */
-.hero__h1--page { font-size: clamp(44px, 7.4vw, 84px); }
-@media (min-width: 900px) { .hero__h1--page { max-width: 10ch; } }
+.hero__h1--page { font-size: clamp(38px, 6.2vw, 72px); }
+@media (min-width: 900px) { .hero__h1--page { max-width: 11ch; } }
 
 /* Diagram: your site climbing the results, and cited in an AI answer */
 .looks { background: var(--linen); border-radius: 24px; padding: 20px; display: grid; gap: 12px; }

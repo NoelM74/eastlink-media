@@ -93,11 +93,13 @@ images/
 index.html                     ← English homepage
 seo-geo-authority.html         ← English GEO service page
 css/
-  style.css                    ← Main design system & styles
-  theme.css                    ← Dark / Light theme variables
+  site.css                     ← English homepage (light "Gold, Daylight" design)
+  style.css                    ← Older design system, still used by the other pages
+  theme.css                    ← Dark / Light theme variables (other pages)
   geo.css                      ← GEO service page styles
 js/
-  main.js                      ← All interactive JS
+  site.js                      ← English homepage: nav, reveals, currency switch, contact form
+  main.js                      ← Interactive JS for the other pages
   geo.js                       ← GEO page FAQ + scroll behaviour
 images/                        ← Portfolio & GEO images
 zh/
@@ -116,9 +118,10 @@ zh/
 
 | What | Where |
 |------|-------|
-| Accent colour | `css/style.css` → `--c-accent: #7c5ff5` |
+| Homepage colours & fonts | `css/site.css` → `:root` tokens |
+| Package prices | `index.html` → `.price` elements (`data-gbp`, `data-eur`, `data-usd`) and the JSON-LD offers |
 | Company email | All pages → footer `mailto:` links |
-| Contact form endpoint | `js/main.js` → `ContactForm.handle()` — wire to Formspree/EmailJS |
+| Contact form endpoint | `js/site.js` (homepage) posts to `/api/contact`, handled in `src/worker.js` |
 | Portfolio images | Replace `images/work-*.jpg` with real screenshots |
 | GEO page hero image | Replace `images/geo-hero-bg.jpg` |
 | SEO/GEO score data | Service card: both `index.html` & `zh/index.html` line ~207; GEO pages: Phase 01 score overlay |

@@ -11,14 +11,14 @@
 
   const TEXT = ZH ? {
     label: 'Cookie 设置',
-    body: `我们只使用让网站正常运行的必要 Cookie，不使用追踪或广告 Cookie。点击<strong>全部接受</strong>，即表示您也同意第三方 CDN 服务（Google Fonts）处理您的 IP 地址以加载字体。详情请见我们的<a href="/privacy-policy.html">隐私政策</a>（英文）。`,
+    body: `我们只使用让网站正常运行的必要 Cookie，不使用追踪或广告 Cookie。点击<strong>全部接受</strong>，即表示您也同意第三方 CDN 服务（Google Fonts）处理您的 IP 地址以加载字体。详情请见我们的<a href="/privacy-policy">隐私政策</a>（英文）。`,
     essential: '仅必要',
     accept: '全部接受',
   } : {
     label: 'Cookie consent',
     body: `We use essential cookies to make this site work. We don't use tracking or advertising cookies.
         By clicking <strong>Accept All</strong> you also consent to Google Fonts receiving your IP address
-        so it can serve the site's fonts. Read our <a href="/privacy-policy.html">Privacy Policy</a> for details.`,
+        so it can serve the site's fonts. Read our <a href="/privacy-policy">Privacy Policy</a> for details.`,
     essential: 'Essential Only',
     accept: 'Accept All',
   };

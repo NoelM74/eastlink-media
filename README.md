@@ -1,149 +1,92 @@
 # Eastlink Media — Website Project
 
-A modern, motion-forward agency website for **Eastlink Media** — an **accountable direct response marketing agency** founded by Noel Murphy (25 years in direct response, $130M+ in sales from his own businesses). The purpose of advertising is to sell: every campaign — paid media (Meta, Google, TikTok), email/SMS/direct mail, offers & funnels, and **SEO & GEO (Generative Engine Optimisation)** — is treated as a tool in the toolbox, tested, measured, and answerable for the sales it produces.
+The website for **Eastlink Media**, founded by Noel Murphy. Eastlink builds websites that are written to sell and built to rank on Google and in AI answers (SEO and GEO), plus logo and brand design and branded merch ordered factory-direct.
 
-The homepage copy follows the classic direct-response positioning of Gary Bencivenga's "Accountable Advertising" — salesmanship multiplied, the Persuasion Equation (Problem + Promise + Proof + Proposition = Persuasion), and a low-pressure, proof-first engagement process.
+Static HTML, CSS and JavaScript, served by a Cloudflare Worker (`src/worker.js`) that also handles the contact form.
 
-> Note: `zh/index.html` (Mandarin homepage) still carries the previous ecommerce-agency positioning and needs re-translation to match.
-
----
-
-## ✅ Completed Features
-
-### Pages
-| File | Language | Description |
-|------|----------|-------------|
-| `index.html` | English | Homepage (dark/light toggle, full sections) |
-| `seo-geo-authority.html` | English | Full SEO & GEO Authority System service page |
-| `zh/index.html` | 中文 | Full Mandarin Chinese homepage — native copywriting |
-| `zh/seo-geo-authority.html` | 中文 | Full Mandarin GEO Authority System service page |
-
-### Functional Navigation Links
-- English homepage → SEO & GEO Authority page: **nav "SEO & GEO ✦"** + **featured card CTA**
-- Mandarin homepage → Mandarin GEO page: **nav "SEO & GEO ✦"** + **featured card CTA** + **footer**
-- GEO pages → respective homepage contact section: all CTAs
-- Language switcher: EN ↔ 中文 on all four pages (cross-linked)
-
-### Homepage Sections (both language versions)
-- **Preloader** — branded "E" glyph + progress bar
-- **Navigation** — sticky, dark/light toggle, language switcher, mobile full-screen menu
-- **Hero** — full-viewport with parallax blobs, social rail, scroll indicator
-- **Ticker** — infinite scrolling service-area marquee
-- **Services** — 6-card grid (6-column CSS grid, no orphan gaps)
-  - **Card 01 (SEO & GEO): full-width featured** with China Fulfillment proof (32→88/100)
-  - Cards 02–04 each span 2 of 6 cols; Cards 05–06 each span 3 of 6 cols (fills last row evenly)
-  - CTA link on featured card → dedicated GEO service page
-- **Numbers** — animated count-up stats (127 brands, 48 programmes, £9.2M revenue, 340% ROAS)
-- **Selected Work** — portfolio grid, China Fulfillment featured full-width (first position)
-  - 7 project cards total with real images + animated 32→88 score overlay
-- **Clients ticker** — infinite name scroll incl. China Fulfillment
-- **About** — SEO/GEO-led intro copy, skills matrix, two-column layout
-- **Process** — 4-step layout
-- **Testimonials** — 3 cards
-- **Contact** — split layout with validated form
-- **Footer** — full nav columns incl. GEO page link, back-to-top, legal
-
-### SEO & GEO Authority Service Page (English & Mandarin)
-- **Hero** — cinematic AI-network background image, animated orbs, AI platform citation badges
-- **Problem Statement** — 3 stat cards (60% zero-click, –37% CTR, 3× purchase intent)
-- **GEO Explainer** — 4 pillars with AI ecosystem visual
-- **Phase 01 Audit** — 8-item deliverables list, 32→88 score overlay on dashboard image
-- **Phase 02 Build** — 6-item deliverables list, build-badge checklist
-- **Case Study** — China Fulfillment: full challenge, approach, results (score, LCP, 60+ queries)
-- **Comparison Table** — 8-row Eastlink Media vs. typical SEO agency
-- **Who It's For** — yes/no card pair
-- **Process Timeline** — 6 steps with week/month labels
-- **FAQ** — 6 accordions with JS-powered expand/collapse
-- **CTA** — free 30-min readiness call with trust signals
-- **Schema.org Service** structured data (SEO + GEO service entities)
-
-### Custom-generated Images
-```
-images/
-  geo-hero-bg.jpg         ← AI neural-network hero background
-  geo-ai-ecosystem.jpg    ← Brand-citation ecosystem diagram
-  geo-audit-dashboard.jpg ← Before/after audit score UI mockup
-  geo-audit-build.jpg     ← Two-phase process illustration
-  work-chinafulfillment.jpg
-  work-novaskin.jpg
-  work-pulsegear.jpg
-  work-arbor.jpg
-  work-verdant.jpg
-  work-crestwell.jpg
-  work-luminos.jpg
-```
-
-### Interactivity
-- Magnetic custom cursor (desktop)
-- Scroll-reveal via IntersectionObserver (`reveal-up` class)
-- Count-up numbers on viewport entry
-- Scroll-parallax hero blobs
-- 3D tilt on work cards
-- Active nav-link tracking
-- Dark / Light theme toggle (persisted in `localStorage`)
-- EN ↔ 中文 language switcher
-- FAQ accordion (GEO pages) with smooth expand/collapse
-- Smooth-scroll for `geo-scroll-btn` anchor link
+> Note: `zh/index.html` (Mandarin homepage) still uses the old design and the old agency positioning, and needs rebuilding to match.
 
 ---
 
-## 🗺️ File Structure
+## Pages
+
+| File | Language | Design | Description |
+|------|----------|--------|-------------|
+| `index.html` | English | New (`site.css`) | Homepage: hero, case studies, latest launches and videos, packages with £/€/$ prices, SEO & GEO summary, merch, process, guarantee, founder letter, client quotes, contact form |
+| `seo-geo-authority.html` | English | New (`site.css`) | SEO & GEO: real results, SEO vs GEO explainer, what each package includes, Grow timeline, guarantee, FAQ, contact form |
+| `zh/seo-geo-authority.html` | 中文 | New (`site.css`) | Mandarin version of the SEO & GEO page, written for Chinese exporters |
+| `zh/index.html` | 中文 | Old (`style.css`) | Mandarin homepage, to be rebuilt |
+| `privacy-policy.html`, `terms-of-service.html` | English | Old (`style.css` + `legal.css`) | Legal pages |
+
+All proof on the site is real client results (China Fulfillment, Tech Aluminum, Eriu Sourcing, PFC Express). Don't add figures that can't be checked.
+
+## Features (new design)
+
+- Light "Gold, Daylight" design: Fraunces headlines, Hanken Grotesk body, DM Mono labels and prices; Noto Serif SC / Noto Sans SC for Chinese
+- Built for phones first, no horizontal scroll at 390px
+- Motion: hero underline sweep, brand-stage animation, search/AI diagram, reveal on scroll; all off under `prefers-reduced-motion`
+- Currency switch (£ / € / $) that defaults from the visitor's time zone and remembers their choice
+- Package buttons preselect the service in the contact form
+- Contact form posts to `/api/contact`; messages in English or Chinese depending on the page language
+- FAQ uses native `<details>`; FAQPage JSON-LD matches the visible answers
+- Launch videos: 720p MP4 with WebM fallback, nothing loads until play
+
+---
+
+## File Structure
 
 ```
 index.html                     ← English homepage
-seo-geo-authority.html         ← English GEO service page
+seo-geo-authority.html         ← English SEO & GEO page
+privacy-policy.html, terms-of-service.html
 css/
-  site.css                     ← English homepage (light "Gold, Daylight" design)
-  style.css                    ← Older design system, still used by the other pages
-  theme.css                    ← Dark / Light theme variables (other pages)
-  geo.css                      ← GEO service page styles
+  site.css                     ← New design system (both English pages + zh SEO page)
+  style.css, theme.css         ← Old design, still used by zh/index.html and legal pages
+  legal.css                    ← Legal page styles
 js/
-  site.js                      ← English homepage: nav, reveals, currency switch, contact form
-  main.js                      ← Interactive JS for the other pages
-  geo.js                       ← GEO page FAQ + scroll behaviour
-images/                        ← Portfolio & GEO images
+  site.js                      ← New pages: nav, reveals, currency switch, contact form
+  main.js                      ← Old pages
+  cookie-consent.js            ← Cookie banner (all pages)
+images/
+  work-*.jpg                   ← Case study screenshots
+  build-*.jpg                  ← Latest launches screenshots
+  *-promo-poster.jpg           ← Video poster frames
+  noel-murphy.jpg
+videos/                        ← Launch videos (MP4 + WebM)
 zh/
-  index.html                   ← Mandarin Chinese homepage
-  seo-geo-authority.html       ← Mandarin GEO service page
-  css/
-    zh-style.css               ← Chinese typography & logo overrides
-    zh-geo.css                 ← Chinese GEO page typography overrides
-  js/
-    zh-main.js                 ← Chinese JS (form labels, theme labels)
+  index.html                   ← Mandarin homepage (old design)
+  seo-geo-authority.html       ← Mandarin SEO & GEO page (new design)
+  css/zh-style.css, js/zh-main.js  ← Old zh homepage only
+src/worker.js                  ← Contact form handler (Resend)
 ```
 
 ---
 
-## 🔧 Quick Customisation
+## Quick Customisation
 
 | What | Where |
 |------|-------|
-| Homepage colours & fonts | `css/site.css` → `:root` tokens |
-| Package prices | `index.html` → `.price` elements (`data-gbp`, `data-eur`, `data-usd`) and the JSON-LD offers |
-| Company email | All pages → footer `mailto:` links |
-| Contact form endpoint | `js/site.js` (homepage) posts to `/api/contact`, handled in `src/worker.js` |
-| Portfolio images | Replace `images/work-*.jpg` with real screenshots |
-| GEO page hero image | Replace `images/geo-hero-bg.jpg` |
-| SEO/GEO score data | Service card: both `index.html` & `zh/index.html` line ~207; GEO pages: Phase 01 score overlay |
+| Colours & fonts | `css/site.css` → `:root` tokens; Chinese font rules at the end of the file |
+| Package prices | `.price` elements (`data-gbp`, `data-eur`, `data-usd`) in `index.html`, `seo-geo-authority.html` and `zh/seo-geo-authority.html`, plus the JSON-LD offers on each page |
+| Company email | Footer and contact `mailto:` links on every page |
+| Contact form | `js/site.js` posts to `/api/contact`, handled in `src/worker.js` (`RESEND_API_KEY`, `CONTACT_EMAIL`, `FROM_EMAIL`) |
+| Case study screenshots | `images/work-*.jpg` |
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
-Go to the **Publish tab** to deploy with one click. No build step required — 100% static files.
-
----
-
-## 📋 Recommended Next Steps
-
-1. Wire the contact form to **Formspree** or **EmailJS**
-2. Replace placeholder portfolio images with real client screenshots
-3. Add Google Tag Manager / Analytics snippet to all four pages
-4. Add WeChat / Weibo links in `zh/index.html` footer (currently Twitter/LinkedIn)
-5. Expand FAQ on GEO pages with more client-specific questions
-6. Add a blog/content section for ongoing SEO compounding
-7. Add `hreflang` tags linking EN↔ZH pages for international SEO
+Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). No build step: static files plus the Worker.
 
 ---
 
-*Last updated: March 2026*
+## Next Steps
+
+1. Rebuild `zh/index.html` on the new design and positioning
+2. Move the legal pages onto `site.css`
+3. Add analytics (with consent) to measure enquiries per page
+4. Confirm merch MOQs and lead times, then show them on the homepage
+
+---
+
+*Last updated: October 2026*

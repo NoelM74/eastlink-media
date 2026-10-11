@@ -7,6 +7,8 @@
   'use strict';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isZh = /^zh/i.test(document.documentElement.lang);
+  const MENU = isZh ? ['打开菜单', '关闭菜单'] : ['Open menu', 'Close menu'];
 
   /* ---------- Nav: stuck state, mobile menu, active link ---------- */
   const nav    = document.getElementById('nav');
@@ -21,14 +23,14 @@
     menu.hidden = true;
     nav.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
-    burger.setAttribute('aria-label', 'Open menu');
+    burger.setAttribute('aria-label', MENU[0]);
   };
   burger.addEventListener('click', () => {
     const open = menu.hidden;
     menu.hidden = !open;
     nav.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    burger.setAttribute('aria-label', open ? MENU[1] : MENU[0]);
   });
   menu.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { closeMenu(); burger.focus(); } });
@@ -135,6 +137,22 @@
   }));
 
   /* ---------- Contact form ---------- */
+  const zh = /^zh/i.test(document.documentElement.lang);
+  const T = zh ? {
+    missing: '请填写姓名、邮箱，并简单介绍一下您的业务。',
+    badEmail: '邮箱地址格式不正确，请检查。',
+    sending: '发送中…',
+    thanks: () => '谢谢！我们会在一个工作日内回复您。',
+    failed: '发送失败，请重试，或直接发邮件到 hello@eastlinkmedia.com。',
+    offline: '网络连接失败，请检查网络后重试，或直接发邮件到 hello@eastlinkmedia.com。',
+  } : {
+    missing: 'Please add your name, email and a few words about your business.',
+    badEmail: 'That email address doesn\'t look right. Please check it.',
+    sending: 'Sending…',
+    thanks: name => 'Thanks, ' + name.split(' ')[0] + '. We\'ll reply within one working day.',
+    failed: 'That didn\'t send. Please try again, or email hello@eastlinkmedia.com.',
+    offline: 'No connection. Check your internet and try again, or email hello@eastlinkmedia.com.',
+  };
   const form   = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   if (form) {
@@ -154,12 +172,12 @@
       const website = (data.get('website') || '').trim();
       let message   = (data.get('message') || '').trim();
 
-      if (!name || !email || !message) { say('Please add your name, email and a few words about your business.', 'error'); return; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { say('That email address doesn\'t look right. Please check it.', 'error'); return; }
+      if (!name || !email || !message) { say(T.missing, 'error'); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { say(T.badEmail, 'error'); return; }
       if (website) message = 'Website: ' + website + '\n\n' + message;
 
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = T.sending;
       say('', '');
 
       try {
@@ -171,12 +189,12 @@
         const result = await res.json().catch(() => ({}));
         if (res.ok && result.success) {
           form.reset();
-          say('Thanks, ' + name.split(' ')[0] + '. We\'ll reply within one working day.', 'success');
+          say(T.thanks(name), 'success');
         } else {
-          say(result.error || 'That didn\'t send. Please try again, or email hello@eastlinkmedia.com.', 'error');
+          say(zh ? T.failed : (result.error || T.failed), 'error');
         }
       } catch {
-        say('No connection. Check your internet and try again, or email hello@eastlinkmedia.com.', 'error');
+        say(T.offline, 'error');
       } finally {
         btn.disabled = false;
         btn.innerHTML = label;

@@ -410,6 +410,10 @@ a.build:hover .build__img img { transform: scale(1.03); }
 .merch { display: grid; gap: 8px; }
 .merch .head { margin-bottom: 28px; }
 .merch .head .btn { margin-top: 26px; }
+.merch__facts { display: grid; gap: 8px; margin-top: 22px; }
+.merch__facts li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.merch__facts li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none; translate: 0 -1px; }
+.merch__facts b { font-family: var(--f-mono); font-weight: 500; color: var(--gold-ink); white-space: nowrap; }
 .goods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .good {
   background: var(--card); border-radius: 16px; padding: 18px 16px; display: grid; gap: 12px; align-content: start;

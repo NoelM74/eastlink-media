@@ -1,0 +1,11 @@
+# Files that must not be served as public website assets
+.git
+.gitignore
+.assetsignore
+.wrangler
+.dev.vars*
+.env*
+node_modules
+src
+wrangler.jsonc
+README.md

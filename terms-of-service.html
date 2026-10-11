@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service | Eastlink Media</title>
-  <meta name="description" content="Eastlink Media's Terms of Service — the conditions governing use of our website and services." />
+  <meta name="description" content="The terms for using the Eastlink Media website and hiring us, including how our prices and the Grow results guarantee work." />
   <meta name="robots" content="noindex, follow" />
-
-  <!-- Canonical -->
+  <meta name="theme-color" content="#FAFAF7" />
   <link rel="canonical" href="https://eastlinkmedia.com/terms-of-service.html" />
 
   <!-- Favicon -->
@@ -19,265 +17,165 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300..900&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/legal.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="is-loading theme-dark">
+<body>
 
-  <!-- Preloader -->
-  <div id="preloader" class="preloader">
-    <div class="preloader__inner">
-      <div class="preloader__logo">
-        <span class="preloader__logo-e">E</span>
-      </div>
-      <div class="preloader__bar"><div class="preloader__fill"></div></div>
-      <div class="preloader__count">0%</div>
-    </div>
-  </div>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Custom Cursor -->
-  <div id="cursor" class="cursor">
-    <div class="cursor__dot"></div>
-    <div class="cursor__ring"></div>
-    <span class="cursor__label"></span>
-  </div>
-
-  <!-- Navigation -->
-  <nav id="nav" class="nav">
-    <div class="nav__inner">
-      <a href="/" class="nav__logo">
-        <span class="nav__logo-mark">E</span>
-        <span class="nav__logo-text">astlink<span class="nav__logo-accent"> Media</span></span>
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__bar">
+      <a href="index.html" class="logo" aria-label="Eastlink Media home">
+        <span class="logo__e">E</span>astlink <span class="logo__media">Media</span>
       </a>
 
-      <ul class="nav__links">
-        <li><a href="/#services" class="nav__link">Services</a></li>
-        <li><a href="seo-geo-authority.html" class="nav__link nav__link--geo">SEO &amp; GEO ✦</a></li>
-        <li><a href="/#work" class="nav__link">Work</a></li>
-        <li><a href="/#about" class="nav__link">About</a></li>
-        <li><a href="/#contact" class="nav__link nav__link--cta">Let's talk →</a></li>
-      </ul>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="seo-geo-authority.html">SEO &amp; GEO</a>
+        <a href="index.html#merch">Merch</a>
+        <a href="index.html#guarantee">Guarantee</a>
+        <a href="index.html#about">About</a>
+      </nav>
 
-      <!-- Theme Toggle -->
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
-        <span class="theme-toggle__track">
-          <span class="theme-toggle__thumb">
-            <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
-            <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
-          </span>
-        </span>
-        <span class="theme-toggle__label" id="themeLabel">Dark</span>
-      </button>
-
-      <!-- Language Switch -->
-      <a href="zh/" class="nav__lang-switch" title="切换至中文版">中文</a>
-
-      <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav__end">
+        <a href="zh/index.html" class="nav__lang" lang="zh" title="切换至中文版">中文</a>
+        <a href="index.html#contact" class="btn btn--gold btn--sm nav__cta">Free website check</a>
+        <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div class="nav__mobile" id="mobileMenu">
-      <div class="nav__mobile-inner">
-        <ul class="nav__mobile-links">
-          <li><a href="seo-geo-authority.html" class="nav__mobile-link nav__mobile-link--geo">SEO &amp; GEO ✦</a></li>
-          <li><a href="/#services" class="nav__mobile-link">Services</a></li>
-          <li><a href="/#work" class="nav__mobile-link">Work</a></li>
-          <li><a href="/#about" class="nav__mobile-link">About</a></li>
-          <li><a href="/#contact" class="nav__mobile-link">Contact</a></li>
-        </ul>
-        <div class="nav__mobile-footer">
-          <div class="nav__mobile-theme">
-            <span>Theme</span>
-            <button id="themeToggleMobile" class="theme-toggle theme-toggle--mobile" aria-label="Toggle light/dark mode">
-              <span class="theme-toggle__track">
-                <span class="theme-toggle__thumb">
-                  <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
-                  <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
-                </span>
-              </span>
-              <span class="theme-toggle__label" id="themeLabelMobile">Dark</span>
-            </button>
-          </div>
-          <a href="mailto:hello@eastlinkmedia.com" class="nav__mobile-email">hello@eastlinkmedia.com</a>
-          <a href="zh/" class="nav__mobile-lang">🌐 中文版</a>
+    <div class="menu" id="mobileMenu" hidden>
+      <nav class="wrap menu__inner" aria-label="Mobile">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="seo-geo-authority.html">SEO &amp; GEO</a>
+        <a href="index.html#merch">Merch</a>
+        <a href="index.html#guarantee">Guarantee</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact" class="btn btn--gold">Get my free website check</a>
+        <div class="menu__foot">
+          <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a>
+          <a href="zh/index.html" lang="zh">中文版</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="legal-head">
+      <div class="wrap">
+        <p class="eyebrow">Legal</p>
+        <h1 class="h2">Terms of <em>service</em></h1>
+        <p class="legal-meta">Last updated 11 October 2026</p>
+        <nav class="legal-toc" aria-label="Legal pages"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html" aria-current="page">Terms of Service</a></nav>
+      </div>
+    </section>
+
+    <section class="legal">
+      <div class="wrap">
+        <div class="legal__body">
+          <h2>1. Accepting these terms</h2>
+          <p>By using the website at <strong>eastlinkmedia.com</strong> (the "Site") or hiring Eastlink Media for any work, you agree to these Terms of Service ("Terms"). If you don't agree, please don't use the Site or our services.</p>
+          <p>These Terms apply to visitors to the Site and to clients. Each project is also covered by a separate written agreement (a quote, Statement of Work or Service Agreement). If that agreement and these Terms conflict, the agreement takes precedence.</p>
+
+          <h2>2. About Eastlink Media</h2>
+          <p>Eastlink Media designs and builds websites, provides SEO and generative engine optimisation (GEO), designs logos and brands, makes launch videos, and supplies branded merchandise.</p>
+          <p><strong>Contact:</strong> <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></p>
+
+          <h2>3. Using the website</h2>
+          <p>You may use the Site for lawful purposes only. You agree not to:</p>
+          <ul>
+            <li>Use the Site in any way that breaks local, national or international law</li>
+            <li>Send unsolicited or unauthorised advertising through it</li>
+            <li>Try to gain unauthorised access to the Site or the systems behind it</li>
+            <li>Do anything that stops other people using or enjoying the Site</li>
+            <li>Scrape, crawl or extract data from the Site with automated tools without our written permission</li>
+          </ul>
+
+          <h2>4. Services, prices and the Grow guarantee</h2>
+          <p>Prices on the Site are starting prices. We confirm a fixed price for your project in writing before any work starts, and the written agreement for your project sets out what's included.</p>
+          <p>The 25% results guarantee applies only to clients on the Grow plan, and only on the terms written into their Grow agreement, including the agreed baseline, the 90-day window and the eligibility conditions. Nothing else on the Site is a guarantee of specific results.</p>
+          <p>We may decline any project at our discretion.</p>
+
+          <h2>5. Intellectual property</h2>
+          <p>Everything on the Site, including text, graphics, logos, images, video and code, belongs to Eastlink Media or the people who licensed it to us, and is protected by copyright and other intellectual property law.</p>
+          <p>You may not copy, distribute, change or create derivative works from Site content without our written permission.</p>
+          <h3>Client work</h3>
+          <p>Who owns the work we create for you is set out in the written agreement for your project. Unless that agreement says otherwise, Eastlink Media keeps ownership of its own tools, frameworks, methods and any intellectual property it had before the project.</p>
+
+          <h2>6. Confidentiality</h2>
+          <p>Both sides agree to keep confidential any non-public information shared during a project that is marked as confidential, or that a reasonable person would treat as confidential. This doesn't apply to information that is already public, developed independently, or that the law requires to be disclosed.</p>
+
+          <h2>7. Disclaimers</h2>
+          <p>The Site and its content are provided "as is" and "as available", without warranties of any kind, whether express or implied, including warranties of merchantability, fitness for a particular purpose or non-infringement.</p>
+          <p>We don't promise that the Site will be uninterrupted, error-free or free of viruses. Client results shown on the Site are real, but they describe what happened for those clients and don't predict your results. The only results guarantee we give is the Grow guarantee described in section 4.</p>
+
+          <h2>8. Limitation of liability</h2>
+          <p>As far as the law allows, Eastlink Media is not liable for any indirect, incidental, special, consequential or punitive losses, including lost profits, data or goodwill, arising from your use of the Site or our services, even if we were told such losses were possible.</p>
+          <p>Our total liability for any claim arising from these Terms or our services is limited to the greater of (a) the amount you paid us in the 12 months before the claim, or (b) £500.</p>
+          <p>Nothing in these Terms limits our liability for death or personal injury caused by our negligence, for fraud, or for anything else that the law doesn't allow us to limit.</p>
+
+          <h2>9. Indemnity</h2>
+          <p>You agree to compensate Eastlink Media, its directors, employees and agents for any claims, losses, damages, liabilities and costs (including reasonable legal fees) that arise from your use of the Site, your breach of these Terms, or your breach of anyone else's rights.</p>
+
+          <h2>10. Links to other websites</h2>
+          <p>The Site links to other websites, including our clients' sites. We include those links for convenience. We don't control those sites and aren't responsible for them, or for any loss that comes from using them.</p>
+
+          <h2>11. Privacy</h2>
+          <p>Our <a href="privacy-policy.html">Privacy Policy</a> also applies when you use the Site and forms part of these Terms.</p>
+
+          <h2>12. Changes to these terms</h2>
+          <p>We may update these Terms from time to time. When we do, we'll change the "Last updated" date at the top of this page. If you keep using the Site after a change, you accept the updated Terms.</p>
+
+          <h2>13. Governing law</h2>
+          <p>These Terms, and any dispute arising from them, are governed by the laws of <strong>England and Wales</strong>. The courts of England and Wales have exclusive jurisdiction over any such dispute.</p>
+
+          <h2>14. Contact us</h2>
+          <p>For any question about these Terms, email us:</p>
+          <p><strong>Eastlink Media</strong><br /><a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></p>
         </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="legal-hero">
-    <div class="container">
-      <div class="legal-hero__overtitle">Legal</div>
-      <h1 class="legal-hero__title">Terms of Service</h1>
-      <p class="legal-hero__meta">Last updated: 21 April 2026 &nbsp;·&nbsp; Effective: 21 April 2026</p>
-    </div>
-  </section>
-
-  <!-- ===================== CONTENT ===================== -->
-  <section class="section">
-    <div class="container">
-      <div class="legal-content">
-
-        <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using the website at <strong>eastlinkmedia.com</strong> (the "Site") or engaging Eastlink Media for any services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the Site or engage our services.</p>
-        <p>These Terms apply to visitors to the Site and to clients who engage Eastlink Media for professional services. Specific service engagements are governed by a separate written agreement (Statement of Work or Service Agreement) which, in the event of conflict, takes precedence over these Terms.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>2. About Eastlink Media</h2>
-        <p>Eastlink Media is a digital agency providing services including ecommerce growth, affiliate marketing, SEO &amp; GEO, performance advertising, brand &amp; creative, and digital development.</p>
-        <p><strong>Contact:</strong> <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></p>
-
-        <hr class="legal-divider" />
-
-        <h2>3. Use of the Website</h2>
-        <p>You may use this Site for lawful purposes only. You agree not to:</p>
-        <ul>
-          <li>Use the Site in any way that violates applicable local, national, or international law or regulation</li>
-          <li>Transmit any unsolicited or unauthorised advertising or promotional material</li>
-          <li>Attempt to gain unauthorised access to any part of the Site or its related systems</li>
-          <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Site</li>
-          <li>Use automated tools to scrape, crawl, or extract data from the Site without our written permission</li>
-        </ul>
-
-        <hr class="legal-divider" />
-
-        <h2>4. Services</h2>
-        <p>The services described on this Site are provided subject to a separate engagement agreement between Eastlink Media and the client. Nothing on this Site constitutes a binding offer or guarantee of specific results.</p>
-        <p>We reserve the right to refuse service to any party at our discretion.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>5. Intellectual Property</h2>
-        <p>All content on this Site — including text, graphics, logos, images, and code — is the property of Eastlink Media or its licensors and is protected by applicable copyright and intellectual property laws.</p>
-        <p>You may not reproduce, distribute, modify, or create derivative works from any Site content without our prior written consent.</p>
-
-        <h3>Client Work</h3>
-        <p>Ownership of deliverables created during a client engagement is governed by the applicable Statement of Work or Service Agreement. Unless otherwise agreed in writing, Eastlink Media retains ownership of all tools, frameworks, proprietary methodologies, and pre-existing intellectual property used in delivering services.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>6. Confidentiality</h2>
-        <p>Both parties agree to keep confidential any non-public information disclosed during an engagement that is identified as confidential or that a reasonable person would understand to be confidential given the nature of the disclosure. This obligation does not apply to information that is publicly known, independently developed, or required to be disclosed by law.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>7. Disclaimers</h2>
-        <p>The Site and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-        <p>We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components. We do not guarantee specific results from any services described on this Site.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>8. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, Eastlink Media shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of profits, data, or goodwill — arising out of or in connection with your use of the Site or our services, even if we have been advised of the possibility of such damages.</p>
-        <p>Our total aggregate liability to you for any claim arising out of or relating to these Terms or our services shall not exceed the greater of (a) the amounts paid by you to us in the 12 months preceding the claim, or (b) £500.</p>
-        <p>Nothing in these Terms limits our liability for death or personal injury caused by our negligence, fraud, or any other liability that cannot be excluded under applicable law.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>9. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless Eastlink Media, its directors, employees, and agents from any claims, losses, damages, liabilities, and expenses (including reasonable legal fees) arising from your use of the Site, your breach of these Terms, or your violation of any third-party right.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>10. Third-Party Links</h2>
-        <p>The Site may contain links to third-party websites. These links are provided for convenience only. We have no control over the content of those sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>11. Privacy</h2>
-        <p>Your use of the Site is also governed by our <a href="privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>12. Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. Your continued use of the Site after any changes constitutes acceptance of the updated Terms. We encourage you to review this page periodically.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>13. Governing Law and Jurisdiction</h2>
-        <p>These Terms and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong>. The courts of England and Wales shall have exclusive jurisdiction to settle any such disputes.</p>
-
-        <hr class="legal-divider" />
-
-        <h2>14. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us:</p>
-        <p>
-          <strong>Eastlink Media</strong><br />
-          <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a>
-        </p>
-
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="/" class="footer__logo">
-            <span class="footer__logo-mark">E</span>astlink Media
-          </a>
-          <p class="footer__tagline">Ecommerce growth, affiliate mastery, and creative digital solutions — built to scale.</p>
-        </div>
-        <div class="footer__nav-cols">
-          <div class="footer__nav-col">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="seo-geo-authority.html">SEO &amp; GEO Authority ✦</a></li>
-              <li><a href="/#services">Ecommerce Growth</a></li>
-              <li><a href="/#services">Affiliate Marketing</a></li>
-              <li><a href="/#services">Performance Ads</a></li>
-              <li><a href="/#services">Brand &amp; Creative</a></li>
-              <li><a href="/#services">Development</a></li>
-            </ul>
-          </div>
-          <div class="footer__nav-col">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#work">Work</a></li>
-              <li><a href="/#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer__nav-col">
-            <h4>Connect</h4>
-            <ul>
-              <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a></li>
-              <li><a href="https://www.linkedin.com/in/noel-murphy-ecommerce-china/" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a></li>
-            </ul>
-          </div>
-        </div>
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__brand">
+        <a href="index.html" class="logo"><span class="logo__e">E</span>astlink <span class="logo__media">Media</span></a>
+        <p>Websites that turn searches into customers, with the branding and merch to match.</p>
       </div>
-      <div class="footer__bottom">
-        <div class="footer__copy">© 2026 Eastlink Media. All rights reserved.</div>
-        <div class="footer__legal">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-of-service.html" aria-current="page">Terms of Service</a>
-        </div>
+      <nav class="foot__col" aria-label="Footer">
+        <h3>Site</h3>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="seo-geo-authority.html">SEO &amp; GEO</a>
+        <a href="index.html#merch">Merch</a>
+        <a href="index.html#guarantee">Guarantee</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <div class="foot__col">
+        <h3>Contact</h3>
+        <a href="mailto:hello@eastlinkmedia.com">hello@eastlinkmedia.com</a>
+        <a href="https://www.linkedin.com/in/noel-murphy-ecommerce-china/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="zh/index.html" lang="zh">中文版</a>
       </div>
     </div>
-
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <div class="wrap foot__base">
+      <span>© 2026 Eastlink Media</span>
+      <span class="foot__legal"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html" aria-current="page">Terms</a></span>
+    </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/site.js"></script>
   <script src="js/cookie-consent.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ Static HTML, CSS and JavaScript, served by a Cloudflare Worker (`src/worker.js`)
 | `seo-geo-authority.html` | English | New (`site.css`) | SEO & GEO: real results, SEO vs GEO explainer, what each package includes, Grow timeline, guarantee, FAQ, contact form |
 | `zh/index.html` | 中文 | New (`site.css`) | Mandarin homepage, written for Chinese exporters: same sections, prices and proof as the English homepage |
 | `zh/seo-geo-authority.html` | 中文 | New (`site.css`) | Mandarin version of the SEO & GEO page |
-| `privacy-policy.html`, `terms-of-service.html` | English | Old (`style.css` + `legal.css`) | Legal pages |
+| `privacy-policy.html`, `terms-of-service.html` | English | New (`site.css`) | Privacy policy and terms of service |
 
 All proof on the site is real client results (China Fulfillment, Tech Aluminum, Eriu Sourcing, PFC Express). Don't add figures that can't be checked.
 
@@ -38,12 +38,9 @@ index.html                     ← English homepage
 seo-geo-authority.html         ← English SEO & GEO page
 privacy-policy.html, terms-of-service.html
 css/
-  site.css                     ← Design system for all EN and 中文 pages
-  style.css, theme.css         ← Old design, still used by the legal pages
-  legal.css                    ← Legal page styles
+  site.css                     ← Design system for every page (EN, 中文, legal)
 js/
   site.js                      ← New pages: nav, reveals, currency switch, contact form
-  main.js                      ← Legal pages (old design)
   cookie-consent.js            ← Cookie banner (all pages)
 images/
   work-*.jpg                   ← Case study screenshots
@@ -79,9 +76,10 @@ Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). N
 
 ## Next Steps
 
-1. Move the legal pages onto `site.css` (and add Chinese versions)
-2. Add analytics (with consent) to measure enquiries per page
-3. Confirm merch MOQs and lead times, then show them on both homepages
+1. Have the privacy policy and terms reviewed for the company's country (they currently cite UK GDPR, the ICO and the law of England and Wales)
+2. Add Chinese versions of the legal pages
+3. Add analytics (with consent) to measure enquiries per page
+4. Confirm merch MOQs and lead times, then show them on the English homepage
 
 ---
 

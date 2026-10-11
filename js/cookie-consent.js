@@ -17,9 +17,8 @@
   } : {
     label: 'Cookie consent',
     body: `We use essential cookies to make this site work. We don't use tracking or advertising cookies.
-        By clicking <strong>Accept All</strong> you also consent to third-party CDN services (Google Fonts,
-        Font Awesome) processing your IP address to serve assets. Read our
-        <a href="/privacy-policy.html">Privacy Policy</a> for details.`,
+        By clicking <strong>Accept All</strong> you also consent to Google Fonts receiving your IP address
+        so it can serve the site's fonts. Read our <a href="/privacy-policy.html">Privacy Policy</a> for details.`,
     essential: 'Essential Only',
     accept: 'Accept All',
   };

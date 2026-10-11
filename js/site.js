@@ -37,10 +37,17 @@
   const spy = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      navLinks.forEach(a => a.setAttribute('aria-current', String(a.hash === '#' + entry.target.id)));
+      navLinks.forEach(a => {
+        if (a.getAttribute('aria-current') === 'page') return;
+        a.setAttribute('aria-current', String(a.hash === '#' + entry.target.id));
+      });
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
-  navLinks.forEach(a => { const s = document.querySelector(a.hash); if (s) spy.observe(s); });
+  navLinks.forEach(a => {
+    if (!a.hash || a.pathname !== location.pathname) return; // links to other pages
+    const s = document.querySelector(a.hash);
+    if (s) spy.observe(s);
+  });
 
   /* ---------- Reveal on scroll, staggered within each group ---------- */
   const reveals = document.querySelectorAll('.rv');

@@ -29,7 +29,7 @@ All proof on the site is real client results (China Fulfillment, Tech Aluminum, 
 - Contact form posts to `/api/contact`; form messages and menu labels switch to Chinese on `lang="zh-CN"` pages
 - FAQ uses native `<details>`; FAQPage JSON-LD matches the visible answers
 - Launch videos: 720p MP4 with WebM fallback, nothing loads until play
-- No cookies and no third-party requests, so there is no cookie banner
+- No cookies and no third-party requests apart from Cloudflare Web Analytics (cookieless), so there is no cookie banner
 
 ---
 
@@ -81,7 +81,7 @@ Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). N
 
 ## Security
 
-- `_headers` sets HSTS, a strict Content-Security-Policy, and frame, MIME-sniffing, referrer and permissions headers. The CSP only allows files from this domain plus the hash of the one inline script (`document.documentElement.classList.add('js');`). Adding analytics, a chat widget or any embed means adding its domain to the CSP, or the browser will block it.
+- `_headers` sets HSTS, a strict Content-Security-Policy, and frame, MIME-sniffing, referrer and permissions headers. The CSP only allows files from this domain plus the hash of the one inline script (`document.documentElement.classList.add('js');`) and Cloudflare Web Analytics (`static.cloudflareinsights.com`, `cloudflareinsights.com`), which Cloudflare adds to every page. Adding other analytics, a chat widget or any embed means adding its domain to the CSP, or the browser will block it.
 - The contact form API only accepts JSON POSTs from the site's own pages, has a hidden spam-trap field (`company`), caps field lengths, escapes everything it puts in the email, and allows each visitor 5 messages a minute (`CONTACT_LIMITER` in `wrangler.jsonc`).
 - `.assetsignore` keeps the Worker code, config, README and tools off the public site.
 
@@ -91,7 +91,7 @@ Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). N
 
 1. Have a solicitor review the privacy policy and terms (they now cite the GDPR, Ireland's Data Protection Commission, US state privacy law and Irish governing law)
 2. Add Chinese versions of the legal pages
-3. Add analytics (with consent, and allowed in the CSP) to measure enquiries per page
+3. Track enquiries per page (Cloudflare Web Analytics already counts visits; any new tool must be allowed in the CSP)
 
 ---
 

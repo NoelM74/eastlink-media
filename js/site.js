@@ -170,6 +170,7 @@
       const email   = (data.get('email') || '').trim();
       const service = (data.get('service') || '').trim();
       const website = (data.get('website') || '').trim();
+      const company = data.get('company') || '';
       let message   = (data.get('message') || '').trim();
 
       if (!name || !email || !message) { say(T.missing, 'error'); return; }
@@ -184,14 +185,15 @@
         const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, service, message }),
+          body: JSON.stringify({ name, email, service, message, company }),
         });
         const result = await res.json().catch(() => ({}));
         if (res.ok && result.success) {
           form.reset();
           say(T.thanks(name), 'success');
         } else {
-          say(zh ? T.failed : (result.error || T.failed), 'error');
+          // Only show the server's wording for problems the visitor can fix
+          say(!zh && res.status === 400 && result.error ? result.error : T.failed, 'error');
         }
       } catch {
         say(T.offline, 'error');

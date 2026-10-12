@@ -1,0 +1,4 @@
+Contact: mailto:hello@eastlinkmedia.com
+Expires: 2027-10-12T00:00:00.000Z
+Preferred-Languages: en, zh
+Canonical: https://eastlinkmedia.com/.well-known/security.txt

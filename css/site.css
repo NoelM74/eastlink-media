@@ -679,28 +679,8 @@ a.build:hover .build__img img { transform: scale(1.03); }
   .faq summary { font-size: 22px; }
 }
 
-/* ---------- Cookie banner ---------- */
-.cookie-banner {
-  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 80;
-  max-width: 760px; margin-inline: auto;
-  background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: 16px;
-  box-shadow: 0 20px 50px -20px rgba(22, 20, 15, .4);
-  padding: 18px; display: grid; gap: 14px;
-  transform: translateY(calc(100% + 24px)); transition: transform .5s var(--ease);
-}
-.cookie-banner.is-visible { transform: translateY(0); }
-.cookie-banner__text { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 0; }
-.cookie-banner__text a { color: var(--gold-ink); }
-.cookie-banner__actions { display: flex; gap: 8px; }
-.cookie-banner__btn {
-  flex: 1; min-height: 44px; border-radius: 999px; cursor: pointer; font-weight: 600; font-size: 15px;
-  border: 1.5px solid var(--ink); background: transparent;
-}
-.cookie-banner__btn--accept { background: var(--gold); border-color: var(--gold); }
-@media (min-width: 720px) {
-  .cookie-banner { grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 18px 22px; }
-  .cookie-banner__btn { flex: none; padding: 0 18px; }
-}
+/* Spam trap: hidden from people, filled in by bots */
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 
 /* ---------- Reveal on scroll ---------- */
 .js .rv { opacity: 0; transform: translateY(16px); }

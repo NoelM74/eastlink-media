@@ -187,9 +187,9 @@
   </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/fraunces-v38-6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/hankengrotesk-v12-ieVn2YZDLWuGJpnzaiwFXS9tYtpd59A.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/fonts.css" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/site.css" />
@@ -584,17 +584,18 @@
         </div>
 
         <form id="contactForm" class="form rv" novalidate>
+          <div class="hp" aria-hidden="true"><label for="fcompany">Leave this field empty</label><input type="text" id="fcompany" name="company" tabindex="-1" autocomplete="off" /></div>
           <div class="field">
             <label for="fname">Your name</label>
-            <input type="text" id="fname" name="name" autocomplete="name" required />
+            <input type="text" id="fname" name="name" autocomplete="name" maxlength="100" required />
           </div>
           <div class="field">
             <label for="femail">Email</label>
-            <input type="email" id="femail" name="email" autocomplete="email" required />
+            <input type="email" id="femail" name="email" autocomplete="email" maxlength="254" required />
           </div>
           <div class="field">
             <label for="fsite">Your website</label>
-            <input type="url" id="fsite" name="website" inputmode="url" autocomplete="url" placeholder="https://" />
+            <input type="url" id="fsite" name="website" inputmode="url" autocomplete="url" maxlength="200" placeholder="https://" />
           </div>
           <div class="field">
             <label for="fservice">What are you after?</label>
@@ -609,7 +610,7 @@
           </div>
           <div class="field">
             <label for="fmessage">Who are your customers, and where are they?</label>
-            <textarea id="fmessage" name="message" rows="4" required></textarea>
+            <textarea id="fmessage" name="message" rows="4" maxlength="5000" required></textarea>
           </div>
           <button type="submit" class="btn btn--gold btn--full">Get my free SEO &amp; GEO check <span aria-hidden="true">→</span></button>
           <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
@@ -649,6 +650,5 @@
   </footer>
 
   <script src="js/site.js"></script>
-  <script src="js/cookie-consent.js"></script>
 </body>
 </html>

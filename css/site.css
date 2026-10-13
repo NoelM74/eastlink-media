@@ -369,11 +369,12 @@ a.build:hover .build__img img { transform: scale(1.03); }
 .pkg--grow .btn--line:hover { background: var(--night-ink); color: var(--ink); }
 
 .extras { margin-top: 44px; }
-.extras__list { display: grid; gap: 0; background: var(--card); border-radius: 16px; padding: 4px 20px; }
+.extras__list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; background: var(--card); border-radius: 16px; padding: 4px 20px; }
 .extras__list div { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--rule); }
 .extras__list div:last-child { border-bottom: 0; }
-.extras__list dt { font-size: 16px; }
-.extras__list dd { font-family: var(--f-mono); font-size: 14px; color: var(--muted); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.extras__list dt { font-size: 16px; min-width: 0; }
+.extras__list dd { font-family: var(--f-mono); font-size: 14px; color: var(--muted); text-align: right; max-width: 55%; font-variant-numeric: tabular-nums; }
+.extras__list dd .price { white-space: nowrap; }
 @media (min-width: 720px) {
   .extras__list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; padding: 8px 28px; }
   .extras__list div:nth-last-child(2) { border-bottom: 0; }
@@ -522,6 +523,7 @@ a.build:hover .build__img img { transform: scale(1.03); }
    SEO & GEO PAGE
    ============================================================ */
 .hero__h1--page { font-size: clamp(38px, 6.2vw, 72px); }
+@media (max-width: 559px) { .hero__h1--page { font-size: min(38px, 9vw); } }
 @media (min-width: 900px) { .hero__h1--page { max-width: 11ch; } }
 
 /* Diagram: your site climbing the results, and cited in an AI answer */
@@ -956,7 +958,15 @@ a.build:hover .build__img img { transform: scale(1.03); }
 @media (min-width: 900px) { .other { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 56px; align-items: center; } }
 
 .foot__grid--4 { gap: 28px; }
-@media (min-width: 720px) { .foot__grid--4 { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); } }
+.foot__col a { overflow-wrap: anywhere; }
+@media (min-width: 720px) {
+  .foot__grid--4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .foot__grid--4 .foot__brand { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+  .foot__grid--4 { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); }
+  .foot__grid--4 .foot__brand { grid-column: auto; }
+}
 
 /* Spam trap: hidden from people, filled in by bots */
 .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
@@ -1017,6 +1027,8 @@ html:lang(zh) .cmp tbody th { line-height: 1.6; }
 html:lang(zh) .ph { display: inline-block; }
 html:lang(zh) .hero__h1:not(.hero__h1--page) { font-size: clamp(36px, 5.4vw, 68px); }
 @media (min-width: 900px) { html:lang(zh) .hero__h1:not(.hero__h1--page) { max-width: 10em; } }
+/* the underlined phrase stays on one line, so it must fit a small phone */
+@media (max-width: 559px) { html:lang(zh) .hero__h1:not(.hero__h1--page), html:lang(zh) .hero__h1.hero__h1--page { font-size: min(34px, 8.4vw); } }
 html:lang(zh) .tile small { letter-spacing: 0; }
 html:lang(zh) .svc__kick, html:lang(zh) .heard__heard { font-style: normal; }
 html:lang(zh) .heard__said::before { content: "写："; }

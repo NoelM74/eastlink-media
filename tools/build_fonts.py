@@ -48,6 +48,7 @@ def zh_chars():
         src = f.read_text(encoding='utf-8')
         text += html.unescape(re.sub(r'<[^>]+>', ' ', src))
     text += (ROOT / 'js' / 'site.js').read_text(encoding='utf-8')
+    text += (ROOT / 'css' / 'site.css').read_text(encoding='utf-8')  # CSS content labels
     return {ord(c) for c in text if ord(c) > 0x2000}
 
 

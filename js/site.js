@@ -35,21 +35,18 @@
   menu.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { closeMenu(); burger.focus(); } });
 
-  const navLinks = Array.from(document.querySelectorAll('.nav__links a'));
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(a => {
-        if (a.getAttribute('aria-current') === 'page') return;
-        a.setAttribute('aria-current', String(a.hash === '#' + entry.target.id));
+  // Highlight the nav link for the section in view; sections with no link clear the highlight
+  const navLinks = Array.from(document.querySelectorAll('.nav__links a'))
+    .filter(a => a.hash && a.pathname === location.pathname && a.getAttribute('aria-current') !== 'page');
+  if (navLinks.length) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(a => a.setAttribute('aria-current', String(a.hash === '#' + entry.target.id)));
       });
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  navLinks.forEach(a => {
-    if (!a.hash || a.pathname !== location.pathname) return; // links to other pages
-    const s = document.querySelector(a.hash);
-    if (s) spy.observe(s);
-  });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
+  }
 
   /* ---------- Reveal on scroll, staggered within each group ---------- */
   const reveals = document.querySelectorAll('.rv');
@@ -93,6 +90,22 @@
         else if (!entry.isIntersecting && timer) { clearInterval(timer); timer = null; }
       }).observe(stage);
     }
+  }
+
+  /* ---------- Buy from China: a parcel rides the chain from factory to customer ---------- */
+  const chain = document.querySelector('.chain');
+  if (chain) {
+    const dots = chain.querySelectorAll('.link__dot');
+    const parcel = chain.querySelector('.chain__parcel');
+    const place = () => {
+      const box = chain.getBoundingClientRect();
+      const first = dots[0].getBoundingClientRect();
+      const last = dots[dots.length - 1].getBoundingClientRect();
+      parcel.style.top = (first.top - box.top + first.height / 2 - 6) + 'px';
+      parcel.style.left = (first.left - box.left + first.width / 2) + 'px';
+      chain.style.setProperty('--ride', (last.top - first.top) + 'px');
+    };
+    if (parcel && dots.length > 1) { place(); window.addEventListener('resize', place); }
   }
 
   /* ---------- Currency switch ---------- */

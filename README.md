@@ -34,6 +34,7 @@ China Fulfillment and PFC Express are the founder's own companies, and the headl
 - Package and service buttons preselect the service in the contact form (`data-service` must match an option in that page's form). Option values stay in English on the Chinese pages, so enquiries arrive in English
 - Graphics are HTML, CSS and inline SVG: the China-to-US-and-Europe bridge with the two doors, the buyer's path, the "where buyers drop away" panel, the "writes / hears" table, and the factory-to-customer chain with a moving parcel. All motion stops under `prefers-reduced-motion`
 - Contact form posts to `/api/contact`; form messages and menu labels switch to Chinese on `lang="zh-CN"` pages
+- Chinese pages show a WeChat card beside the form (QR code, the ID AndreLee8, and a copy button for phone visitors, who can't scan their own screen). The ID is also in the Chinese footers
 - FAQ uses native `<details>`; FAQPage JSON-LD matches the visible answers
 - Launch videos: 720p MP4 with WebM fallback, nothing loads until play
 - No cookies and no third-party requests apart from Cloudflare Web Analytics (cookieless), so there is no cookie banner
@@ -59,6 +60,7 @@ images/
   build-*.jpg                  ← Latest launches screenshots
   *-promo-poster.jpg           ← Video poster frames
   noel-murphy.jpg
+  wechat-andrelee8.png         ← WeChat QR code for the Chinese pages (decodes to the u.wechat.com link for AndreLee8)
   og-en.jpg, og-zh.jpg         ← Share images for LinkedIn, WeChat, etc. (1200×630)
   brands/                      ← Triangl, Spark Paws, Scrubba logos (one colour)
 videos/                        ← Launch videos (MP4 + WebM)
@@ -80,6 +82,7 @@ tools/build_fonts.py           ← Downloads fonts and writes css/fonts*.css (no
 | Colours & fonts | `css/site.css` → `:root` tokens; Chinese font rules at the end of the file |
 | Package prices | `.price` elements (`data-gbp`, `data-eur`, `data-usd`) on the English pages, USD figures on the Chinese pages, the JSON-LD offers on each page, and `llms.txt` |
 | Company email | Footer and contact `mailto:` links on every page |
+| WeChat | `.wechat` card in each Chinese page's contact section, the Chinese footers, `images/wechat-andrelee8.png` and `llms.txt`. If the QR code is reset in WeChat, the old one stops working: replace the image |
 | Contact form | `js/site.js` posts to `/api/contact`, handled in `src/worker.js` (`RESEND_API_KEY`, `CONTACT_EMAIL`, `FROM_EMAIL`) |
 | Case study screenshots | `images/work-*.jpg` |
 
@@ -99,12 +102,11 @@ Pushes to the repository deploy through Cloudflare Workers (`wrangler.jsonc`). N
 
 ## Next Steps
 
-1. Add WeChat (ID or QR code) to the Chinese pages' contact sections
-2. Add real photos (trade shows, factory visits, team, office) and team and office details
-3. Add Importing to China once its description is confirmed (importingtochina.com had an expired SSL certificate on 13 October 2026)
-4. Have a solicitor review the privacy policy and terms, including passing enquiries to the sister companies in China, and check the "Eastlink Borderfree System" name before registering it
-5. Add Chinese versions of the legal pages
-6. Track enquiries per page (Cloudflare Web Analytics already counts visits; any new tool must be allowed in the CSP)
+1. Add real photos (trade shows, factory visits, team, office) and team and office details
+2. Add Importing to China once its description is confirmed (importingtochina.com had an expired SSL certificate on 13 October 2026)
+3. Have a solicitor review the privacy policy and terms, including passing enquiries to the sister companies in China, and check the "Eastlink Borderfree System" name before registering it
+4. Add Chinese versions of the legal pages
+5. Track enquiries per page (Cloudflare Web Analytics already counts visits; any new tool must be allowed in the CSP)
 
 ---
 

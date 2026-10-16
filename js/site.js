@@ -166,6 +166,24 @@
     failed: 'That didn\'t send. Please try again, or email hello@eastlinkmedia.com.',
     offline: 'No connection. Check your internet and try again, or email hello@eastlinkmedia.com.',
   };
+  /* ---------- Copy the WeChat ID (phones can't scan their own screen) ---------- */
+  document.querySelectorAll('[data-copy]').forEach(b => {
+    const card = b.closest('.wechat');
+    const note = card.querySelector('.wechat__status');
+    const id   = card.querySelector('.wechat__id b');
+    const label = b.textContent;
+    b.addEventListener('click', async () => {
+      let ok = false;
+      try { await navigator.clipboard.writeText(b.dataset.copy); ok = true; } catch (e) {
+        // Older in-app browsers: copy the selected ID the old way
+        window.getSelection().selectAllChildren(id);
+        try { ok = document.execCommand('copy'); } catch (e2) { /* not supported */ }
+      }
+      note.textContent = ok ? '已复制。打开微信，点“添加朋友”，粘贴搜索即可。' : '复制没有成功，请长按微信号手动复制。';
+      if (ok) { b.textContent = '已复制 ✓'; setTimeout(() => { b.textContent = label; }, 2500); }
+    });
+  });
+
   const form   = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   if (form) {

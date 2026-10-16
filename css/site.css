@@ -495,6 +495,21 @@ a.build:hover .build__img img { transform: scale(1.03); }
 .form__status { font-size: 15px; min-height: 1.4em; }
 .form__status.is-error { color: #A3301A; }
 .form__status.is-success { color: #2E6B34; }
+/* WeChat card (Chinese pages): QR code, ID and a copy button for phones, which can't scan their own screen */
+.wechat {
+  margin-top: 28px; display: grid; grid-template-columns: minmax(0, 132px) minmax(0, 1fr); gap: 18px; align-items: center;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 16px; max-width: 500px;
+}
+.wechat__qr { display: block; width: 100%; height: auto; }
+.wechat__h { font-family: var(--f-display); font-weight: 700; font-size: 18px; line-height: 1.35; }
+.wechat__p { margin-top: 4px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.wechat__id { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.wechat__id span { font-size: 13px; color: var(--muted); }
+.wechat__id b { font-family: var(--f-mono); font-size: 18px; font-weight: 500; -webkit-user-select: all; user-select: all; }
+.wechat__copy { margin-top: 10px; }
+.wechat__status { font-size: 14px; line-height: 1.6; color: #2E6B34; }
+.wechat__status:not(:empty) { margin-top: 8px; }
+@media (max-width: 379px) { .wechat { grid-template-columns: minmax(0, 1fr); justify-items: start; } .wechat__qr { width: 148px; } }
 @media (min-width: 900px) {
   .contact { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
   .form { padding: 32px; }

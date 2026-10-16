@@ -15,7 +15,7 @@ Static HTML, CSS and JavaScript, served by a Cloudflare Worker (`src/worker.js`)
 
 | File | Language | Design | Description |
 |------|----------|--------|-------------|
-| `index.html` | English | New (`site.css`) | Homepage, for businesses that want a website that sells: proof-led hero (China Fulfillment 7,300 → 28,000+ visits a month, with a before/after bar chart), results, how we build, packages with £/€/$ prices, guarantee, process, merch, founder letter, quotes, the two China doors (Borderfree System, Buy from China), free website check form |
+| `index.html` | English | New (`site.css`) | Homepage, for businesses that want a website that sells: proof-led hero (China Fulfillment 4,862 → 28,430 visits a month, April to September 2026, with a before/after bar chart), results, how we build, packages with £/€/$ prices, guarantee, process, merch, founder letter, quotes, the two China doors (Borderfree System, Buy from China), free website check form |
 | `borderfree-system.html` | English | New (`site.css`) | The Eastlink Borderfree System in full: where buyers drop away, each of the five services, where to start, how we work, FAQ, contact form |
 | `buy-from-china.html` | English | New (`site.css`) | For brands buying from China: factory-to-customer chain, China Factory Sourcing, China Fulfillment, Parcel From China, FAQ, enquiry form |
 | `seo-geo-authority.html` | English | New (`site.css`) | Websites, SEO & GEO (part 02 of the system): results, latest launches and videos, SEO vs GEO, website packages, what each includes, Grow timeline, the guarantee, FAQ, contact form |

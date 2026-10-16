@@ -15,14 +15,14 @@ Static HTML, CSS and JavaScript, served by a Cloudflare Worker (`src/worker.js`)
 
 | File | Language | Design | Description |
 |------|----------|--------|-------------|
-| `index.html` | English | New (`site.css`) | Homepage: two doors (sell abroad / buy from China), proof and brand logos, the export trap, the five parts of the Borderfree System, results, founder letter, sister companies, price list (£/€/$), quotes, process, contact form |
+| `index.html` | English | New (`site.css`) | Homepage, for businesses that want a website that sells: proof-led hero (China Fulfillment 4,862 → 28,430 visits a month, April to September 2026, with a before/after bar chart), results, how we build, packages with £/€/$ prices, guarantee, process, merch, founder letter, quotes, the two China doors (Borderfree System, Buy from China), free website check form |
 | `borderfree-system.html` | English | New (`site.css`) | The Eastlink Borderfree System in full: where buyers drop away, each of the five services, where to start, how we work, FAQ, contact form |
 | `buy-from-china.html` | English | New (`site.css`) | For brands buying from China: factory-to-customer chain, China Factory Sourcing, China Fulfillment, Parcel From China, FAQ, enquiry form |
 | `seo-geo-authority.html` | English | New (`site.css`) | Websites, SEO & GEO (part 02 of the system): results, latest launches and videos, SEO vs GEO, website packages, what each includes, Grow timeline, the guarantee, FAQ, contact form |
-| `zh/index.html`, `zh/borderfree-system.html`, `zh/buy-from-china.html`, `zh/seo-geo-authority.html` | 中文 | New (`site.css`) | Chinese versions, written for Chinese exporters (prices in USD) |
+| `zh/index.html`, `zh/borderfree-system.html`, `zh/buy-from-china.html`, `zh/seo-geo-authority.html` | 中文 | New (`site.css`) | Chinese pages, written for Chinese exporters (prices in USD). The Chinese homepage leads with the Borderfree System and the PFC proof (4.8× enquiries after the English site rebuild) |
 | `privacy-policy.html`, `terms-of-service.html` | English | New (`site.css`) | Privacy policy and terms of service |
 
-All proof on the site is real client results (China Fulfillment, Tech Aluminum, Eriu Sourcing, PFC Express). Don't add figures that can't be checked. Tech Aluminum is an Egyptian smelter, so describe the case studies as "companies that sell across borders", not "Chinese companies". Facts about the sister companies (delivery times, 30+ carriers, 200+ countries, free storage) come from their own websites; update them here if those sites change. The brand logos (Triangl, Spark Paws, Scrubba) are brands China Fulfillment has shipped for, so always label them that way.
+China Fulfillment and PFC Express are the founder's own companies, and the headlines say so. Keep that disclosure next to any headline that uses their numbers. All proof on the site is real client results (China Fulfillment, Tech Aluminum, Eriu Sourcing, PFC Express). Don't add figures that can't be checked. Tech Aluminum is an Egyptian smelter, so describe the case studies as "companies that sell across borders", not "Chinese companies". Facts about the sister companies (delivery times, 30+ carriers, 200+ countries, free storage) come from their own websites; update them here if those sites change. The brand logos (Triangl, Spark Paws, Scrubba) are brands China Fulfillment has shipped for, so always label them that way.
 
 ## Features (new design)
 

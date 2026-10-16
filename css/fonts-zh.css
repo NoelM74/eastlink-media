@@ -20,6 +20,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.87.woff2) format('woff2');
+  unicode-range: U+2651-2655, U+2658, U+265a-265b, U+265d-265e, U+2660-266d, U+266f, U+267b, U+2688, U+2693-2696, U+2698-2699, U+269c, U+26a0-26a1, U+26a4, U+26aa-26ab, U+26bd-26be, U+26c4-26c5, U+26d4, U+26e9, U+26f0-26f1, U+26f3, U+26f5, U+26fd, U+2702, U+2704-2706, U+2708-270f, U+2712-2718, U+271a-271b, U+271d, U+271f, U+2721, U+2724-2730, U+2732-2734, U+273a, U+273d-2744, U+2747-2749, U+274c, U+274e-274f, U+2753-2757, U+275b, U+275d-275e, U+2763, U+2765-2767, U+276e-276f, U+2776-277e, U+2780-2782, U+278a-278c, U+278e, U+2794-2796, U+279c;
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
   src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.90.woff2) format('woff2');
   unicode-range: U+207c-2083, U+208c-208e, U+2092, U+20a6, U+20a8-20ad, U+20af, U+20b1, U+20b4-20b5, U+20b8-20ba, U+20bd, U+20db, U+20dd, U+20e0, U+20e3, U+2105, U+2109, U+2113, U+2116-2117, U+2120-2121, U+2126, U+212b, U+2133, U+2139, U+2194, U+2196-2199, U+21a0, U+21a9-21aa, U+21af, U+21b3, U+21b5, U+21ba-21bb, U+21c4, U+21ca, U+21cc, U+21d0-21d4, U+21e1, U+21e6-21e9, U+2200, U+2202, U+2205-2208, U+220f, U+2211-2212, U+2215, U+2217-2219, U+221d-2220, U+2223, U+2225, U+2227-222b, U+222e, U+2234-2237, U+223c-223d, U+2248, U+224c, U+2252, U+2256, U+2260-2261, U+2266-2267, U+226a-226b, U+226e-226f, U+2282-2283, U+2295, U+2297, U+2299, U+22a5, U+22b0-22b1, U+22b9, U+22bf, U+22c5-22c6, U+22ef, U+2304, U+2307, U+230b, U+2312-2314, U+2318, U+231a-231b, U+2323, U+239b, U+239d-239e, U+23a0, U+23e9;
 }
@@ -164,6 +172,14 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
+  src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.87.woff2) format('woff2');
+  unicode-range: U+2651-2655, U+2658, U+265a-265b, U+265d-265e, U+2660-266d, U+266f, U+267b, U+2688, U+2693-2696, U+2698-2699, U+269c, U+26a0-26a1, U+26a4, U+26aa-26ab, U+26bd-26be, U+26c4-26c5, U+26d4, U+26e9, U+26f0-26f1, U+26f3, U+26f5, U+26fd, U+2702, U+2704-2706, U+2708-270f, U+2712-2718, U+271a-271b, U+271d, U+271f, U+2721, U+2724-2730, U+2732-2734, U+273a, U+273d-2744, U+2747-2749, U+274c, U+274e-274f, U+2753-2757, U+275b, U+275d-275e, U+2763, U+2765-2767, U+276e-276f, U+2776-277e, U+2780-2782, U+278a-278c, U+278e, U+2794-2796, U+279c;
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
   src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.90.woff2) format('woff2');
   unicode-range: U+207c-2083, U+208c-208e, U+2092, U+20a6, U+20a8-20ad, U+20af, U+20b1, U+20b4-20b5, U+20b8-20ba, U+20bd, U+20db, U+20dd, U+20e0, U+20e3, U+2105, U+2109, U+2113, U+2116-2117, U+2120-2121, U+2126, U+212b, U+2133, U+2139, U+2194, U+2196-2199, U+21a0, U+21a9-21aa, U+21af, U+21b3, U+21b5, U+21ba-21bb, U+21c4, U+21ca, U+21cc, U+21d0-21d4, U+21e1, U+21e6-21e9, U+2200, U+2202, U+2205-2208, U+220f, U+2211-2212, U+2215, U+2217-2219, U+221d-2220, U+2223, U+2225, U+2227-222b, U+222e, U+2234-2237, U+223c-223d, U+2248, U+224c, U+2252, U+2256, U+2260-2261, U+2266-2267, U+226a-226b, U+226e-226f, U+2282-2283, U+2295, U+2297, U+2299, U+22a5, U+22b0-22b1, U+22b9, U+22bf, U+22c5-22c6, U+22ef, U+2304, U+2307, U+230b, U+2312-2314, U+2318, U+231a-231b, U+2323, U+239b, U+239d-239e, U+23a0, U+23e9;
 }
@@ -302,6 +318,14 @@
   font-display: swap;
   src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.68.woff2) format('woff2');
   unicode-range: U+622c, U+622e-6230, U+6232, U+6238, U+623b, U+623d-623e, U+6243, U+6246, U+6248-6249, U+624c, U+6255, U+6259, U+625e, U+6260-6261, U+6265-6266, U+626a, U+6271, U+627a, U+627c-627d, U+6283, U+6286, U+6289, U+628e, U+6294, U+629c, U+629e-629f, U+62a1, U+62a8, U+62ba-62bb, U+62bf, U+62c2, U+62c4, U+62c8, U+62ca-62cb, U+62cf, U+62d1, U+62d7, U+62d9-62da, U+62dd, U+62e0-62e1, U+62e3-62e4, U+62e7, U+62eb, U+62ee, U+62f0, U+62f4-62f6, U+6308, U+630a-630e, U+6310, U+6312-6313, U+6317, U+6319, U+631b, U+631d-631f, U+6322, U+6326, U+6329, U+6331-6332, U+6334-6337, U+6339, U+633b-633c, U+633e-6340, U+6343, U+6347, U+634b-634e, U+6354, U+635c-635d, U+6368-6369, U+636d, U+636f-6372, U+6376, U+637a-637b, U+637d, U+6382-6383, U+6387, U+638a-638b, U+638d-638e, U+6391, U+6393-6397, U+6399, U+639b, U+639e-639f, U+63a1, U+63a3-63a4, U+63ac-63ae, U+63b1-63b5;
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/notosanssc-v41-k3kXo84MPvpLmixcA63oeALhLOCT-xWNm8Hqd37g1OkDRZe7lR4sg1IzSy-MNbE9VH8V.87.woff2) format('woff2');
+  unicode-range: U+2651-2655, U+2658, U+265a-265b, U+265d-265e, U+2660-266d, U+266f, U+267b, U+2688, U+2693-2696, U+2698-2699, U+269c, U+26a0-26a1, U+26a4, U+26aa-26ab, U+26bd-26be, U+26c4-26c5, U+26d4, U+26e9, U+26f0-26f1, U+26f3, U+26f5, U+26fd, U+2702, U+2704-2706, U+2708-270f, U+2712-2718, U+271a-271b, U+271d, U+271f, U+2721, U+2724-2730, U+2732-2734, U+273a, U+273d-2744, U+2747-2749, U+274c, U+274e-274f, U+2753-2757, U+275b, U+275d-275e, U+2763, U+2765-2767, U+276e-276f, U+2776-277e, U+2780-2782, U+278a-278c, U+278e, U+2794-2796, U+279c;
 }
 @font-face {
   font-family: 'Noto Sans SC';
@@ -446,6 +470,14 @@
   font-display: swap;
   src: url(/fonts/notoserifsc-v36-H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.68.woff2) format('woff2');
   unicode-range: U+622c, U+622e-6230, U+6232, U+6238, U+623b, U+623d-623e, U+6243, U+6246, U+6248-6249, U+624c, U+6255, U+6259, U+625e, U+6260-6261, U+6265-6266, U+626a, U+6271, U+627a, U+627c-627d, U+6283, U+6286, U+6289, U+628e, U+6294, U+629c, U+629e-629f, U+62a1, U+62a8, U+62ba-62bb, U+62bf, U+62c2, U+62c4, U+62c8, U+62ca-62cb, U+62cf, U+62d1, U+62d7, U+62d9-62da, U+62dd, U+62e0-62e1, U+62e3-62e4, U+62e7, U+62eb, U+62ee, U+62f0, U+62f4-62f6, U+6308, U+630a-630e, U+6310, U+6312-6313, U+6317, U+6319, U+631b, U+631d-631f, U+6322, U+6326, U+6329, U+6331-6332, U+6334-6337, U+6339, U+633b-633c, U+633e-6340, U+6343, U+6347, U+634b-634e, U+6354, U+635c-635d, U+6368-6369, U+636d, U+636f-6372, U+6376, U+637a-637b, U+637d, U+6382-6383, U+6387, U+638a-638b, U+638d-638e, U+6391, U+6393-6397, U+6399, U+639b, U+639e-639f, U+63a1, U+63a3-63a4, U+63ac-63ae, U+63b1-63b5;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/notoserifsc-v36-H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.87.woff2) format('woff2');
+  unicode-range: U+2651-2655, U+2658, U+265a-265b, U+265d-265e, U+2660-266d, U+266f, U+267b, U+2688, U+2693-2696, U+2698-2699, U+269c, U+26a0-26a1, U+26a4, U+26aa-26ab, U+26bd-26be, U+26c4-26c5, U+26d4, U+26e9, U+26f0-26f1, U+26f3, U+26f5, U+26fd, U+2702, U+2704-2706, U+2708-270f, U+2712-2718, U+271a-271b, U+271d, U+271f, U+2721, U+2724-2730, U+2732-2734, U+273a, U+273d-2744, U+2747-2749, U+274c, U+274e-274f, U+2753-2757, U+275b, U+275d-275e, U+2763, U+2765-2767, U+276e-276f, U+2776-277e, U+2780-2782, U+278a-278c, U+278e, U+2794-2796, U+279c;
 }
 @font-face {
   font-family: 'Noto Serif SC';
@@ -590,6 +622,14 @@
   font-display: swap;
   src: url(/fonts/notoserifsc-v36-H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.68.woff2) format('woff2');
   unicode-range: U+622c, U+622e-6230, U+6232, U+6238, U+623b, U+623d-623e, U+6243, U+6246, U+6248-6249, U+624c, U+6255, U+6259, U+625e, U+6260-6261, U+6265-6266, U+626a, U+6271, U+627a, U+627c-627d, U+6283, U+6286, U+6289, U+628e, U+6294, U+629c, U+629e-629f, U+62a1, U+62a8, U+62ba-62bb, U+62bf, U+62c2, U+62c4, U+62c8, U+62ca-62cb, U+62cf, U+62d1, U+62d7, U+62d9-62da, U+62dd, U+62e0-62e1, U+62e3-62e4, U+62e7, U+62eb, U+62ee, U+62f0, U+62f4-62f6, U+6308, U+630a-630e, U+6310, U+6312-6313, U+6317, U+6319, U+631b, U+631d-631f, U+6322, U+6326, U+6329, U+6331-6332, U+6334-6337, U+6339, U+633b-633c, U+633e-6340, U+6343, U+6347, U+634b-634e, U+6354, U+635c-635d, U+6368-6369, U+636d, U+636f-6372, U+6376, U+637a-637b, U+637d, U+6382-6383, U+6387, U+638a-638b, U+638d-638e, U+6391, U+6393-6397, U+6399, U+639b, U+639e-639f, U+63a1, U+63a3-63a4, U+63ac-63ae, U+63b1-63b5;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/notoserifsc-v36-H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.87.woff2) format('woff2');
+  unicode-range: U+2651-2655, U+2658, U+265a-265b, U+265d-265e, U+2660-266d, U+266f, U+267b, U+2688, U+2693-2696, U+2698-2699, U+269c, U+26a0-26a1, U+26a4, U+26aa-26ab, U+26bd-26be, U+26c4-26c5, U+26d4, U+26e9, U+26f0-26f1, U+26f3, U+26f5, U+26fd, U+2702, U+2704-2706, U+2708-270f, U+2712-2718, U+271a-271b, U+271d, U+271f, U+2721, U+2724-2730, U+2732-2734, U+273a, U+273d-2744, U+2747-2749, U+274c, U+274e-274f, U+2753-2757, U+275b, U+275d-275e, U+2763, U+2765-2767, U+276e-276f, U+2776-277e, U+2780-2782, U+278a-278c, U+278e, U+2794-2796, U+279c;
 }
 @font-face {
   font-family: 'Noto Serif SC';

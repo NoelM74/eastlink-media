@@ -65,6 +65,7 @@ images/
   brands/                      ← Triangl, Spark Paws, Scrubba logos (one colour)
 videos/                        ← Launch videos (MP4 + WebM)
 zh/                            ← Chinese versions of the four main pages
+sitemap-images.xml             ← Image sitemap (Bing, Google); rebuild with python3 tools/build_image_sitemap.py after adding images
 llms.txt                       ← Plain-text summary for AI tools (GEO); keep its facts in step with the pages
 src/worker.js                  ← Contact form handler (Resend) + security headers on its responses
 _headers                       ← Security headers (incl. Content-Security-Policy) and caching for static files

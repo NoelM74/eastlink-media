@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://eastlinkmedia.com/sitemap.xml
+Sitemap: https://eastlinkmedia.com/sitemap-images.xml
